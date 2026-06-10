@@ -3,7 +3,7 @@ const siteConfig = {
     // Basic site information
     siteName: "Yoyo",
     siteTagline: "adiabatic.garden",
-    copyright: "by Yoyo from Pawsitive Feedback (out of) ctrl!",
+    copyright: "by Yoyo is defocusing ultrasound",
     
     // Author information
     author: "Yoyo",
@@ -11,7 +11,7 @@ const siteConfig = {
     // Social links
     socialLinks: {
         github: "https://github.com/exanova-y",
-        twitter: "https://twitter.com/adiabaticgarden"
+        twitter: "https://x.com/adiabaticgarden"
     },
     
     // Discord ID for status (find yours at https://www.google.com/search?q=how+to+find+discord+id)

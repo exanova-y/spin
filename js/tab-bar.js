@@ -8,7 +8,8 @@
       { href: 'quests.html',       label: 'Quests' },
       { href: 'readlogs.html',     label: 'Feral scholar readlogs' },
       { href: 'me.html',           label: 'Me' },
-      { href: 'https://wiki.adiabatic.garden', label: 'Wiki (not working yet)' },
+      { href: 'gallery.html',      label: 'Gallery' },
+      // { href: 'https://wiki.adiabatic.garden', label: 'Wiki (not working yet)' },
       { href: 'social-graph.html', label: 'Social graph' },
     ];
 
