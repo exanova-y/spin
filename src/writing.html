@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+title: "Writing"
+---
+<div class="tab-panel">
+
+    <h2 class="trans-gradient">Favs</h2>
+    {% for post in collections.favs %}
+    <p><a href="{{ post.url }}">{{ post.date | formatDate }} {{ post.data.title }}</a></p>
+    {% endfor %}
+    <br>
+
+    <h2 class="trans-gradient">Lab notebook</h2>
+    {% for post in collections.lab %}
+    <p><a href="{{ post.url }}">{{ post.date | formatDate }} {{ post.data.title }}</a></p>
+    {% endfor %}
+    <br>
+
+    <p><h2 class="make-purple">Big social problems!</h2></p>
+    {% for post in collections.problems %}
+    <p><a href="{{ post.url }}">{{ post.date | formatDate }} {{ post.data.title }}</a></p>
+    {% endfor %}
+    <br>
+
+    <h2 class="purple-gradient">Stories existing purely in your imagination</h2>
+    {% for post in collections.stories %}
+    <p><a href="{{ post.url }}">{{ post.date | formatDate }} {{ post.data.title }}</a></p>
+    {% endfor %}
+    <br>
+
+    <h2 class="purple-gradient">Personal blogging</h2>
+    <p><a href="https://pawsitivefeedback.substack.com/p/euphoria">11-07-2025 Euphoria</a></p>
+    <p><a href="https://pawsitivefeedback.substack.com/p/yoyo-2027">11-23-2025 Yoyo 2027</a></p>
+    <br>
+
+</div>

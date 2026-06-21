@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+---
+<div id="content" class="markdown-content">
+  <h3>{{ title }}</h3>
+  {% if date %}
+  <p><em>by {{ author or "Yoyo" }} • {{ date | formatDate }}</em></p>
+  {% endif %}
+  <br>
+  {{ content | safe }}
+</div>
+<div class="post-navigation">
+  <a href="/writing" class="back-link">← Back to writing</a>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const content = document.getElementById('content');
+    if (typeof renderMathInElement === 'function') {
+      renderMathInElement(content, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '$',  right: '$',  display: false }
+        ],
+        throwOnError: false
+      });
+    }
+  });
+</script>

@@ -1,5 +1,8 @@
 .env
 .flox
 .vercel
+.wrangler
 assets/fonts
 node_modules
+_site/
+.DS_Store
