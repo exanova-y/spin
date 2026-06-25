@@ -4,6 +4,7 @@ title: "Low quality education in Africa (memo)"
 date: 2025-01-01
 author: "Yoyo"
 category: problems
+tags: ["education"]
 ---
 
 *by: Aayush Grover, Surya Sure, Yoyo Yuan • 2022-11-20*

@@ -82,7 +82,7 @@ body {
     font-weight: 200;
     line-height: 1.5;
     color: #c6d0f5;
-    background-color: #0f1228;
+    background-color: #0a0a0f;
     max-width: 90%;
     margin: 0 auto;
     padding: 20px;
@@ -96,6 +96,13 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
 }
 
+
+.site-link {
+    color: #d4c896;
+}
+.site-link:hover {
+    color: #e8dba8;
+}
 
 .make-white {
     color: #c6d0f5;
@@ -124,18 +131,8 @@ a {
 }
 
 a:hover {
-    background: linear-gradient(90deg,
-        rgba(0,0,0,0.3),
-        rgba(186,186,186,0.3),
-        rgba(255,255,255,0.3),
-        rgba(255,255,255,0.3),
-        rgba(186,186,186,0.3),
-        rgba(0,0,0,0.3));
-    background-size: 100% 50%;
-    background-repeat: no-repeat;
-    background-position: 0 100%;
+    color: #fff;
 }
-
 
 nav ul {
     list-style: none;
@@ -428,19 +425,8 @@ body.dark-page {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    background: #0a0a0f;
 }
 
-body.dark-page nav a {
-    color: #5900ff;
-    font-family: 'Fira Code', monospace;
-    font-size: 12px;
-}
-
-body.dark-page nav a:hover {
-    color: #fff;
-    background: transparent;
-}
 
 .video-bg {
     position: fixed;
@@ -475,10 +461,10 @@ body.dark-page nav a:hover {
 }
 
 .pane {
-    background: rgb(23, 23, 23);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: #0a0a14;
+    border: 1px solid rgba(127, 61, 232, 0.25);
     border-radius: 3px;
-    box-shadow: 0 2px 32px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 24px rgba(127, 61, 232, 0.06);
     max-width: 1000px;
     width: 100%;
     min-width: 0;
@@ -518,16 +504,7 @@ body.dark-page nav a:hover {
 }
 
 .pane a:hover {
-    background: linear-gradient(90deg,
-        rgba(0,0,0,0.3),
-        rgba(186,186,186,0.3),
-        rgba(255,255,255,0.3),
-        rgba(255,255,255,0.3),
-        rgba(186,186,186,0.3),
-        rgba(0,0,0,0.3));
-    background-size: 100% 50%;
-    background-repeat: no-repeat;
-    background-position: 0 100%;
+    color: #fff;
 }
 
 .pane hr {
@@ -547,46 +524,41 @@ body.dark-page nav a:hover {
     header { padding: 12px 16px; }
 }
 
-.tab-bar {
+body.dark-page nav {
     display: flex;
-    gap: 0;
-    margin-bottom: 8px;
+    align-items: center;
+    gap: 2em;
 }
 
-.tab-link {
-    background: none;
-    border: none;
-    /* border-bottom: 2px solid transparent; */
-    color: #585b70;
-    font-family: 'Fira Code', monospace;
-    font-size: 0.85em;
-    padding: 8px 16px;
-    cursor: pointer;
-    transition: all 0.2s;
+body.dark-page nav a {
+    color: #888;
     text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
 }
 
-.tab-link:hover { color: #c6d0f5; }
-.tab-link:hover { text-decoration: none; }
+body.dark-page nav a:hover { color: #ccc; }
 
-.tab-link.active {
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff;
+body.dark-page nav a[aria-current="page"] {
+    color: #fff;
+    border-bottom-color: #fff;
 }
 
-.pane-toggle {
+body.dark-page nav .theme-toggle {
     margin-left: auto;
     background: none;
     border: none;
-    color: #585b70;
-    font-size: 1.1em;
+    color: #666;
     cursor: pointer;
-    padding: 8px 10px;
+    font-size: 1.1em;
+    padding: 4px 8px;
     transition: color 0.2s;
     line-height: 1;
 }
-.pane-toggle:hover { color: #c6d0f5; }
-.pane-toggle.active { color: #44c1ff; }
+
+body.dark-page nav .theme-toggle:hover { color: #b39ddb; }
+body.dark-page nav .theme-toggle.active { color: #44c1ff; }
 
 .pane.transparent {
     background: transparent;
@@ -652,7 +624,7 @@ body.dark-page.fullscreen .pane {
     overflow-y: auto;
 }
 
-body.dark-page.fullscreen .pane .tab-bar {
+body.dark-page.fullscreen .pane nav {
     position: fixed;
     top: 0;
     right: 0;
@@ -743,4 +715,89 @@ body.dark-page .post-navigation a {
 
 body.dark-page .post-navigation a:hover {
     color: #c6d0f5;
+}
+
+/* ── Writing page: violetswap terminal theme ── */
+
+body.page-writing .tags-cloud {
+    margin-bottom: 25px;
+}
+
+body.page-writing .tags-cloud .tags-label {
+    opacity: 0.6;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+}
+
+/* tag links — thin white border, sharp corners, offset purple rect */
+body.page-writing .tags-cloud a {
+    border: 1px solid #c6d0f5;
+    border-radius: 0px;
+    padding: 2px 6px;
+    margin-left: 8px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #c6d0f5;
+    display: inline-block;
+    margin-bottom: 6px;
+    box-shadow: 2px 2px 0 #7f3de8;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+body.page-writing .tags-cloud a:hover {
+    box-shadow: 2px 2px 0 #7f3de8, 0 0 10px rgba(198, 208, 245, 0.15);
+    text-shadow: 0 0 6px rgba(198, 208, 245, 0.25);
+}
+
+/* joke tags — dotted borders */
+body.page-writing .tags-cloud a[href*="experimentalist-confetti"],
+body.page-writing .tags-cloud a[href*="theorists-attempting-to-touch-ground"] {
+    border-style: dotted;
+}
+
+/* Section headers */
+body.page-writing h2 {
+    color: #b39ddb;
+    border-bottom: 1px solid #2a2a3a;
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
+}
+body.page-writing h2::before {
+    content: "§ ";
+    opacity: 0.5;
+}
+
+/* Post list grid — date column + title column */
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+.post-list li {
+    display: grid;
+    grid-template-columns: 7em 1fr;
+    gap: 1.5em;
+    padding: 0.15em 0;
+}
+.post-list li {
+    position: relative;
+}
+.post-list .date {
+    color: #555;
+    font-variant-numeric: tabular-nums;
+}
+.post-list li::before {
+    content: "▸";
+    position: absolute;
+    left: -1.2em;
+    color: #b39ddb;
+    opacity: 0;
+    transition: opacity 120ms, transform 120ms;
+}
+.post-list li:hover::before {
+    opacity: 1;
+    transform: translateX(2px);
+}
+.post-list li:hover .title {
+    color: #fff;
 }

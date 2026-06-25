@@ -1,9 +1,10 @@
 ---
 layout: layouts/post.njk
-title: "Notes on Swarm intelligence algorithms"
+title: "Reading particle swarm optimization and implementing it in Unity"
 date: 2024-05-14
 author: "Yoyo Yuan"
 category: lab
+tags: ["swarm-algorithms", "robotics", "simulation"]
 ---
 
 *A friend @0xredJ has found this helpful and I decided to share my notes!*

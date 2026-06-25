@@ -1,21 +1,9 @@
 ---
 layout: layouts/post.njk
-title: "Post"
+title: "Every Quora post during the pandemic"
 date: 2020-04-25
 author: "Yoyo"
-category: lab
----
-
----
-layout: post
-title: Every motivational speaker ever
-author: Yoyo Yuan
-image: 
-date: 2020-04-25
-tags:
-  - writing
-  - tech-satire
-  - fiction
+category: stories
 ---
 
 "Ladies and gentlemen, please welcome our speaker from the latest trending startup!" A guy walked on to the stage.
@@ -36,4 +24,4 @@ The professor was waiting forever and forever for grant money, so I took a break
 
 That day, I took a picture of me and set it as my phone background. If this is what a typical teenager can do in two years, what can you?
 
-The motivational speaker stepped off the stage, chugging a can of energy drink and popped a pill into his mouth. "Sleep is for the weak." He said.He suddenly had a heart attack and passed away.
+The motivational speaker stepped off the stage, chugging a can of energy drink and popped a pill into his mouth. "Sleep is for the weak." He said. He suddenly had a heart attack and passed away.

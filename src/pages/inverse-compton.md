@@ -1,12 +1,11 @@
 ---
 layout: layouts/post.njk
 title: "Inverse Compton effect notes"
-date: 2025-01-01
+date: 2021-07-20
 author: "Yoyo"
 category: lab
+tags: ["physics"]
 ---
-
-*by: Yoyo • 2021-07-20*
  
 ![img](/assets/images/scattering.png)   
 The Inverse Compton effect happens when a photon interacts with a relativistic/"hot" electron. The kinetic energy is transferred from the electron to the photon, which emerges with a higher frequency (e.g. X-rays in the image). The electron cools off.

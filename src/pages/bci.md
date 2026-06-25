@@ -1,29 +1,17 @@
 ---
 layout: layouts/post.njk
-title: "(Linkpost) Introduction to brain-computer interface series"
-date: 2025-01-01
+title: "Brain-Computer Interfaces articles, electromyography and electrooculography"
+date: 2022-07-10
 author: "Yoyo"
 category: lab
+tags: ["eeg"]
 ---
 
-*by: Yoyo Yuan • 2022-07-10*
+Completed during high school while under $1000 budget. There were rarely any guided tutorials back then. So, I had to dig through documentation, numerous forums, debug software and hardware.
 
-Completed during high school while under $1000 budget. There were rarely any guided tutorials back then. So, I had to dig through documentation, numerous forums, debug software and hardware. This was followed by helping out with the Multisensory Brain and Cognition lab at UWaterloo.
-
-### Article: [How Neuralink Works and Where It's Going](spin.yoyo.cat/2022/01/04/neuralink-exposition.html)
+### Article: [How Neuralink Works and Where It's Going](https://adiabatic.garden/favs/neuralink-exposition/)
 
 ![](/assets/images/neuralink.jpg)
-
-**Summary:**
-Neuralink’s chip can read and write to the brain. 
-
-In the near term, it plans to tackle brain and spine disorders. The Link, with the size of a coin, aims to replace the dangers of a surgery. It has decoded imagined movement in a monkey, and is capable of detecting touch on a pig. 
-
-Neuralink is mediocre neuroscience but solid engineering. Demos are based on existing research. It has made lab products easy to to use, but the 3 approaches of “better engineering” will eventually hit a neuroscience wall, due to a lack of control at microscale, lack of understanding at macro scale and variation in patient’s nervous systems.
-
-In the long term, Neuralink can provide personalized workplaces, education and help improve learning speed. It lowers the technical knowledge required for creative output as well as helps people sleep. 
-
-There is rarely any information about BCIs online. The best solutions to this are expositions on existing research and funds that require new research to be open access.
 
 ### Project: [Playing the chrome dino game by blinking](https://youtu.be/v1_EIlfJDdc)
 

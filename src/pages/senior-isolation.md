@@ -4,6 +4,7 @@ title: "Notes on Senior loneliness in North America and companion robots"
 date: 2023-04-14
 author: "Yoyo"
 category: problems
+tags: ["isolation", "china"]
 ---
 
 by Yoyo Yuan, contributors Colyi Chen and Elena Mishina • 2023-04-14

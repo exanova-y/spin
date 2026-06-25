@@ -4,6 +4,7 @@ title: "Deterioration reading list"
 date: 2026-02-21
 author: "Yoyo"
 category: stories
+tags: ["literature"]
 ---
 
 ![img](/assets/images/khruschevka.jpg)

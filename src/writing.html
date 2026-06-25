@@ -1,36 +1,51 @@
 ---
 layout: layouts/base.njk
 title: "Writing"
+bodyClass: "page-writing"
 ---
 <div class="tab-panel">
 
-    <h2 class="trans-gradient">Favs</h2>
-    {% for post in collections.favs %}
-    <p><a href="{{ post.url }}">{{ post.date | formatDate }} {{ post.data.title }}</a></p>
-    {% endfor %}
-    <br>
+    <div class="tags-cloud">
+        <span class="tags-label">Tags:</span>
+        {% for name, posts in collections %}
+            {% if name != "all" and name != "pages" and name != "favs" and name != "lab" and name != "problems" and name != "stories" and name != "post" and name != "posts" and posts.length > 0 %}
+                <a href="/tags/{{ name | slugify }}/">#{{ name }} ({{ posts.length }})</a>
+            {% endif %}
+        {% endfor %}
+    </div>
 
-    <h2 class="trans-gradient">Lab notebook</h2>
-    {% for post in collections.lab %}
-    <p><a href="{{ post.url }}">{{ post.date | formatDate }} {{ post.data.title }}</a></p>
+    <h2 class="make-purple">Favs</h2>
+    <ul class="post-list">
+    {% for post in collections.favs %}
+        <li><span class="date">{{ post.date | formatDate }}</span><a class="title" href="{{ post.url }}">{{ post.data.title }}</a></li>
     {% endfor %}
-    <br>
+    </ul>
+
+    <h2 class="make-purple">Lab notebook</h2>
+    <ul class="post-list">
+    {% for post in collections.lab %}
+        <li><span class="date">{{ post.date | formatDate }}</span><a class="title" href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {% endfor %}
+    </ul>
 
     <p><h2 class="make-purple">Big social problems!</h2></p>
+    <ul class="post-list">
     {% for post in collections.problems %}
-    <p><a href="{{ post.url }}">{{ post.date | formatDate }} {{ post.data.title }}</a></p>
+        <li><span class="date">{{ post.date | formatDate }}</span><a class="title" href="{{ post.url }}">{{ post.data.title }}</a></li>
     {% endfor %}
-    <br>
+    </ul>
 
-    <h2 class="purple-gradient">Stories existing purely in your imagination</h2>
+    <h2 class="make-purple">Stories existing purely in your imagination</h2>
+    <ul class="post-list">
     {% for post in collections.stories %}
-    <p><a href="{{ post.url }}">{{ post.date | formatDate }} {{ post.data.title }}</a></p>
+        <li><span class="date">{{ post.date | formatDate }}</span><a class="title" href="{{ post.url }}">{{ post.data.title }}</a></li>
     {% endfor %}
-    <br>
+    </ul>
 
-    <h2 class="purple-gradient">Personal blogging</h2>
-    <p><a href="https://pawsitivefeedback.substack.com/p/euphoria">11-07-2025 Euphoria</a></p>
-    <p><a href="https://pawsitivefeedback.substack.com/p/yoyo-2027">11-23-2025 Yoyo 2027</a></p>
-    <br>
+    <h2 class="make-purple">Personal blogging</h2>
+    <ul class="post-list">
+        <li><span class="date">11-07-2025</span><a class="title" href="https://feralscholars.substack.com/p/euphoria">Euphoria</a></li>
+        <li><span class="date">11-23-2025</span><a class="title" href="https://feralscholars.substack.com/p/yoyo-2027">Yoyo 2027</a></li>
+    </ul>
 
 </div>

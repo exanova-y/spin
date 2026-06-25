@@ -1,22 +1,10 @@
 ---
 layout: layouts/post.njk
-title: "Post"
+title: "Teja's failed attempt to interview potential users"
 date: 2023-02-26
 author: "Yoyo"
-category: lab
+category: stories
 ---
-
----
-layout: post
-title: Sarcastic interactions
-image: 
-date: 2023-02-26
-tags:
-  - writing
-  - personal
-author: Yoyo Yuan
----
-a/n: from my high school journal, nearing the end of grade 12.
 
 “Yoyo!” Teja screamed into my face as his voice broke.
 

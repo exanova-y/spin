@@ -1,22 +1,9 @@
 ---
 layout: layouts/post.njk
-title: "Post"
+title: "Skateboarding rationality with fintech"
 date: 2024-12-15
-author: "Yoyo"
-category: lab
----
-
----
-layout: post
-title: Skateboarding rationality
-image: /assets/images/discourse.png
-date: 2024-12-15
-tags:
-  - fiction
-  - rationality
-  - writing
-author: GPT-4 and Yoyo Yuan
-show_on_home: true
+author: Yoyo and GPT-4o
+category: stories
 ---
 
 The clock ticked closer to 2 a.m. Clusters of sleep-deprived attendees dashed about, some clutching laptops, others discussing GANs with the intensity of caffeinated philosophers. Someone’s holographic demo malfunctioned nearby, projecting spinning memecoins into the air above them.

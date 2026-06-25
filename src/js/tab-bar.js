@@ -4,14 +4,13 @@
     const links = [
       { href: '/',                 label: 'Main' },
       { href: '/writing',          label: 'Writing' },
-      { href: '/readlogs',         label: 'Feral scholar readlogs' },
       { href: '/me',               label: 'Me' },
       { href: '/gallery',          label: 'Gallery' },
       { href: '/social-graph',     label: 'Social graph' },
     ];
 
     const html = `
-      <div class="tab-bar">
+      <nav>
         ${links.map(l => {
           const isExternal = l.href.startsWith('http');
           const href = isExternal ? l.href : l.href;
@@ -22,17 +21,17 @@
                            (href === '/' && (currentPath === '/' || currentPath.endsWith('index.html') || currentPath === ''));
 
           return `
-          <a href="${href}" class="tab-link${isActive ? ' active' : ''}">
+          <a href="${href}"${isActive ? ' aria-current="page"' : ''}>
             ${l.label}
           </a>`;
         }).join('')}
-        <button class="pane-toggle" title="Toggle pane background">❄</button>
-      </div>`;
+        <button class="theme-toggle" title="Toggle pane background">❄</button>
+      </nav>`;
 
     document.currentScript.insertAdjacentHTML('afterend', html);
 
     document.currentScript.nextElementSibling
-      .querySelector('.pane-toggle')
+      .querySelector('.theme-toggle')
       .addEventListener('click', function () {
         const pane = this.closest('.pane');
         pane.classList.toggle('transparent');

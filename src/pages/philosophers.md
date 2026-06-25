@@ -4,6 +4,7 @@ title: "(Linkpost) 10 Significant Philosophers"
 date: 2025-01-01
 author: "Yoyo"
 category: lab
+tags: ["philosophy"]
 ---
 
 by Yoyo Yuan • 2023-03-05

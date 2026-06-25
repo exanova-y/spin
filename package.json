@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "marked": "^16.4.1"
+    "marked": "^16.4.1",
+    "vercel": "^54.14.5"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
@@ -9,7 +10,8 @@
   },
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy",
-    "deploy": "eleventy && wrangler pages deploy _site"
+    "build": "rm -rf _site && eleventy",
+    "deploy": "eleventy && wrangler pages deploy _site",
+    "fetch:curius": "node scripts/fetch-curius.js"
   }
 }

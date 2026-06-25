@@ -1,12 +1,11 @@
 ---
 layout: layouts/post.njk
 title: "Properties of spin"
-date: 2025-01-01
+date: 2021-08-02
 author: "Yoyo"
 category: lab
+tags: ["physics"]
 ---
-
-*by: Yoyo Yuan • 2021-08-02*
 
 Particles have intrinsic properties such as mass and charge. Spin is another fundamental property of particles, distinct from mass and charge.
 

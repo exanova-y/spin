@@ -1,12 +1,12 @@
 ---
 layout: layouts/post.njk
 title: "Reviewing ultracold atoms and integrated photonics simulators!"
-date: 2025-01-01
-author: "Yoyo"
+date: 2021-09-01
+author: Zheng Li, Chenxi Shi, Yoyo Yuan, Shuzhi Zhu
 category: favs
+tags: ["quantum-simulation", "physics"]
 ---
 
-*by: Zheng Li, Chenxi Shi, Yoyo Yuan, Shuzhi Zhu • 2021-09-01*
 
 ### Abstract
 With the development of quantum physics, quantum simulation technology has become more mature and has many applications in real life. This paper introduces two methods of quantum simulation: ultracold atom simulation and integrated photonic simulation. First, ultracold simulation is easy to observe and highly manageable, and its experimental results often agree with the theory. Besides these, it also has limitations. Thus, how to surpass the general theoretical simulation is essential in the future. Then for integrated quantum photonics, it is easy to manufacture, available at room temperature and allows long simulations with a high degree of experimental control. With a few components optimized, large-scale quantum photonic circuits with many photons can likely become a reality in the coming decade.

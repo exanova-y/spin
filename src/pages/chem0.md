@@ -3,11 +3,11 @@ layout: layouts/post.njk
 title: "Chem-0"
 date: 2026-05-18
 author: "Yoyo"
-category: favs
+category: lab
+tags: ["theorists-attempting-to-touch-ground", "chemical-identification", "autoresearch", "robotics"]
 ---
 
-Working on a closed-loop autonomous chemistry lab with several friends.
-
+Robot lab bench setup, which did not work yet because calibration (to be updated)
 
 Lab bench:
 ![](/assets/images/chem0/ui1.png)

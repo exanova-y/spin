@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - pages
+    - favs
+    - lab
+    - problems
+    - stories
+permalink: /tags/{{ tag | slugify }}/
+---
+<div class="tab-panel">
+  <h2 class="make-purple">#{{ tag }}</h2>
+  <br>
+  
+  {% set taglist = collections[tag] %}
+  {% if taglist.length == 0 %}
+    <p style="opacity: 0.6;">No posts with this tag.</p>
+  {% else %}
+    {% for post in taglist %}
+      <p><a href="{{ post.url }}">{{ post.date | formatDate }} {{ post.data.title }}</a></p>
+    {% endfor %}
+  {% endif %}
+  
+  <br>
+  <div class="post-navigation">
+    <a href="/writing" class="back-link">← Back to writing</a>
+  </div>
+</div>

@@ -1,17 +1,14 @@
 ---
 layout: layouts/post.njk
-title: "Getting K-scale's zeroth bot to T-pose"
-date: 2025-01-01
-author: "Yoyo"
+title: "T-posing on humanoid robots"
+date: 2025-01-19
+author: Fred, Homero, Stanley, Yoyo
 category: lab
+tags: ["theorists-attempting-to-touch-ground", "robotics"]
 ---
 
-*by: Fred, Homero, Stanley, Yoyo • 2025-01-19*
+It was really difficult to work with humanoid robots given numerous servo motor incongruences during calibration. So we threw a hail Mary and just told the robot to go to T-pose on demand, given webcam data. Connect to robot, program fixed points, figure out centre of mass and bounds while playing back pose trajectories.
 
-I briefly visited K-scale labs with Verda, and then, two-day hackathon! 🎉 Wow, humanoids are difficult to handle with joint and actuators issues.
-We wanted to tackle the dance pose challenge, planning trajectories from one pose to another. But, too many bugs! So we threw a hail Mary and just recorded the transitions from one pose (e.g. A-Pose) to another (e.g. T-Pose). Connect to robot, program fixed points, figure out centre of mass and bounds while playing back pose trajectories.
+[Repo](https://github.com/HomeroRR/khacks_dancing_robot)
 
-We used tensorflow js + corresponded the transition with robotic arm movement with the help of flask and other python scripts.
-[Repo](https://github.com/HomeroRR/khacks_dancing_robot
-[Demo](https://youtu.be/nen0Na_uitc?si=3nQLfMDK63MiQjNe)
-)
+{% youtube "nen0Na_uitc" %}

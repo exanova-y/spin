@@ -2,11 +2,11 @@
 layout: layouts/post.njk
 title: "Every kindness a category error"
 date: 2025-09-30
-author: "Yoyo Yuan"
+author: "Yoyo"
 category: stories
 ---
 
-*content warning: dysphoria*   
+*content warning*   
 
 Garden roof—a giant Fresnel plate. Crystal lattice pauses, their hair following with a lag effect. The light is wrong. Noon sun refracts off the roof splitting into horizontal lines that spike the eyes. The goalpost once flaring at #FFFFFF now redshifted to be invisible.
 
@@ -98,4 +98,4 @@ Crystal lattice ignores him. They gather their books and papers, stacking them w
 
 The snow has stopped, the street empty except for two figures 3 meters apart, the other typing into Obsidian.
 
-*This story attempts to describe gender dysphoria, abrupt pronouns and alienation people experience via text. Skybeam and Crystal lattice are two different fictional characters. I tried to describe crystal lattice using paratactic sentences, imagistic juxtaposition, everything compressed and hypersensory, while skybeam as more hypotactic, fluid and explicit. The sentence structures are intended to be slightly different.*
+*This story is dedicated to my oomfie Yuxi*

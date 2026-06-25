@@ -1,26 +1,12 @@
 ---
 layout: layouts/post.njk
-title: "Post"
-date: 2025-01-01
-author: "Yoyo"
-category: lab
----
-
----
-layout: post
-title: Quora answer  
-author: Quora user
-image: 
+title: "Quora in 2015"
 date: 2015-01-01
-tags:
-  - writing
-  - psychology
-  - saved
+author: anonymous
+category: stories
 ---
 
-*A dear friend sent this.*
-
-Quora: What does it feel like to have borderline personality disorder?
+Question: What does it feel like to have borderline personality disorder?
 
 Answer: It's like being half in love with death, resigned to having my hopes and dreams raised and dashed against treacherous storms of my own devising. Love is the false prophet and it's prophecy more alluring than any Siren, more deadly, more beautiful, more distracting, more devouring, in the end more self-destructing. The prophet comes in the shape of a smile, a kind word, a friendly soul willing to hear you out. The emperor has no cloth but we are blind. Once it has you in it's grip, once you are over the event horizon; past the point of no return, you will not be never be the same again. I was drawn like a moth to the flame again and again; unaware and naive in the beginning but never again, then afterwards love was to me like Sisyphus to his rock, always pushing and always falling back. Love was my end all and be all. Never was there was a better example of Camus's absurd.
 

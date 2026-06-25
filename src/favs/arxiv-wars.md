@@ -4,6 +4,7 @@ title: "Arxiv wars"
 date: 2025-01-01
 author: "Yoyo"
 category: favs
+tags: ["experimentalist-confetti", "feral-scholars", "autoresearch"]
 ---
 
 *by: Yoyo, Joe and Cassandra from Prototype • 2025-03-16*

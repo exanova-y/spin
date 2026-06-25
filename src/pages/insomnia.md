@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: "Chronic insomnia"
+title: "Graphics rendering under chronic insomniac conditions"
 date: 2023-08-23
 author: "Yoyo"
 category: stories

@@ -1,12 +1,10 @@
 ---
 layout: layouts/post.njk
 title: "Physics and math sources"
-date: 2025-01-01
+date: 2020-07-16
 author: "Yoyo"
 category: lab
 ---
-
-*by: Yoyo Yuan • 2021-07-16*
 
 - Explorable physics. https://landgreen.github.io/physics/
 

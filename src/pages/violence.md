@@ -1,12 +1,11 @@
 ---
 layout: layouts/post.njk
 title: "Domestic violence statistics"
-date: 2025-01-01
-author: "Yoyo"
+date: 2023-03-25
+author: "Elena Mishina, Yoyo Yuan"
 category: problems
+tags: ["human-suffering"]
 ---
-
-*by: Elena Mishina, Yoyo Yuan • 2023-03-25*
 
 *compiled in 45 minutes.*
 

@@ -4,6 +4,7 @@ title: "Explaining Hikikomori in Japan"
 date: 2023-10-23
 author: "Yoyo Yuan"
 category: favs
+tags: ["complex-systems"]
 ---
 
 *Here is my essay for complex systems class at Minerva*

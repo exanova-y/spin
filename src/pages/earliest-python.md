@@ -1,21 +1,10 @@
 ---
 layout: layouts/post.njk
-title: "Post"
+title: "Procrastinator simulator and misc text games"
 date: 2020-06-20
 author: "Yoyo"
 category: lab
 ---
-
----
-layout: post
-title: My earliest python projects!
-date: 2020-06-20
-tags:
-    - fun
-author: Yoyo Yuan
-image: /assets/images/acacia.png
----
-These were completed around spring 2020 during lockdown.
 
 
 **Procrastinator simulator:** A text game where you try to finish a task list but each time a dice determines the duration you take (cursed LOL) by Yoyo "a thousand projects" Yuan. Test it out [here](https://replit.com/@exanova/ProcrastinatorSimulator#main.py)!

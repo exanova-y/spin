@@ -1,12 +1,12 @@
 ---
 layout: layouts/post.njk
 title: "Food waste - The overstocking problem (memo)"
-date: 2025-01-01
-author: "Yoyo"
+date: 2022-10-27
+author: Mansi Katarey, Serjan Kaur, Surya Sure, Yoyo Yuan
 category: problems
+tags: ["food-waste"]
 ---
 
-*by: Mansi Katarey, Serjan Kaur, Surya Sure, Yoyo Yuan • 2022-10-27*
 
 > 💡 Problem Statement: *$50 billion dollars are lost each year in the US due to the overstocking problem. The surplus of goods without corresponding demand results in food wastage.*
 

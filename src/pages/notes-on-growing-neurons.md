@@ -1,14 +1,12 @@
 ---
 layout: layouts/post.njk
-title: "Growing neurons for computation"
+title: "Quick review of growing neurons for computation"
 date: 2025-01-01
 author: "Yoyo"
 category: lab
 ---
 
-*by: Yoyo Yuan • date: 2025-01-01*
-
-Living neurons have been processing images and playing pong in academic settings. Can I also do something with them?
+Living neurons have been processing images and playing pong in academic settings. 
 
 Contents
 - Why use neurons at all?

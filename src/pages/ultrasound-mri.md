@@ -4,20 +4,21 @@ title: "Focused Ultrasound and MRI Physics"
 date: 2026-04-09
 author: "Yoyo"
 category: favs
+tags: ["ultrasound", "MRI"]
 ---
 
 # 1\. A fantastic stimulation at Lucas Center\!
 
 One sleepy morning, I appeared for a transcranial ultrasound study at the Lucas Centre at Stanford, where I was sent into an MRI machine, asked to focus on a visual stimulus and click buttons accordingly. Despite my sleepiness, the force is extremely strong with this one (metaphorical and literal), and I instantly focused\!
 
-<img class="figure" src="../assets/images/tus/tus-flyer.png">
+<img class="figure" src="/assets/images/tus/tus-flyer.png">
 
 <p class="caption">Fig 1. A flyer recruiting for a focused ultrasound study at Lucas Center.</p>
 
 Historically, MRI has dominated the medical imaging of the brain. Ultrasound was traditionally considered inadequate for neuroimaging, due to a series of reflection issues making the image blurry, but algorithmic improvements have caught up to speed these days to remain hopeful.
 
 
-<img class="figure" src="../assets/images/tus/fwi-improvement.webp">
+<img class="figure" src="/assets/images/tus/fwi-improvement.webp">
 
 
 <p class="caption">Fig 2. A resolution enhancement technique from Guasch et al. (2020), contrasting unimproved ultrasound (c) to improved FWI ultrasound (d). Source: Nature Digital Medicine [8].</p>
@@ -26,7 +27,7 @@ Historically, MRI has dominated the medical imaging of the brain. Ultrasound was
 
 Each of MRI and ultrasound exploits different tissue properties and wave physics. Ultrasound stimulates the brain via mechanical pressure waves and is favoured for its capabilities to reach deep structures with a handheld device at a reasonable cost. One simply applies conductive gel on the subject’s head and sets the transducer array on top. Then, pulses of ultrasound are delivered, transmitting via longitudinal pressure waves into the tissue.
 
-<img class="figure" src="../assets/images/tus/transducer.png">
+<img class="figure" src="/assets/images/tus/transducer.png">
 
 <p class="caption">Fig 3. An ultrasound transducer array on the subject’s head. Source: Deffieux et al. [6].</p>
 
@@ -56,7 +57,7 @@ During the time when protons have gained energy, they rotate about their axis, k
 
 where γ is the Larmor constant (magnetogyric ratio) and B is the magnetic field strength. The Larmor frequency is sent back to the computer.
 
-<img class="figure" src="../assets/images/tus/precession.jpg">
+<img class="figure" src="/assets/images/tus/precession.jpg">
 
 <p class="caption">Fig 4. Diagram of a singular proton precessing. Source: UPenn MRI Basics [2].</p>
 
@@ -64,19 +65,19 @@ How does the computer distinguish between multiple different protons with the sa
 
 **First,** the main coil produces a uniform magnetic field for the scanner as a backdrop.
 
-<img class="figure" src="../assets/images/tus/main-coil.png">
+<img class="figure" src="/assets/images/tus/main-coil.png">
 
 <p class="caption">Fig 5. The main coil inside an MRI scanner. Source: MRI coils explanation [3].</p>
 
 **Second,** along the z-axis, several subcoils introduce a linear gradient of intensifying magnetic field. As the magnetic field becomes stronger, the Larmor frequency of protons also increases. Thus, the frequency becomes a function of position along the z-axis, also known as the technique of Motion Encoding Gradients (MEG).
 
-<img class="figure" src="../assets/images/tus/grad-coil.png">
+<img class="figure" src="/assets/images/tus/grad-coil.png">
 
 <p class="caption">Fig 6. Gradient coils showing a linear gradient. Source: MRI coils explanation [3].</p>
 
 **Finally,** the RF coil delivers specific frequencies, perturbing only the protons whose natural precession frequency matches the RF. Each snapshot is a 2D picture which is stacked into a 3D structure of the brain.
 
-<img class="figure" src="../assets/images/tus/rf-coil.png">
+<img class="figure" src="/assets/images/tus/rf-coil.png">
 
 <p class="caption">Fig 7. The RF coil inside MRI. Source: Source: MRI coils explanation [3].</p>
 
@@ -150,7 +151,7 @@ Substituting back and using the property of transposes:
 
 Finally, the algorithm matches the backwards wavefield with the forward wavefield, requiring in total only 2 solves per iteration compared to 10⁸ solves. By using this efficiency trick, the researchers chunked 32 hours of computing into a process that could run under 10 minutes on a small GPU array \[5\]. Ultrasound becomes much more focused and a powerful tool.
 
-<img class="figure" src="../assets/images/tus/claudey-claude.png">
+<img class="figure" src="/assets/images/tus/claudey-claude.png">
 
 <p class="caption">Fig 8. Flowchart of the Full Waveform Inversion algorithm with credits to claude</p>
 

@@ -1,12 +1,11 @@
 ---
 layout: layouts/post.njk
 title: "Lightforest: The geek diaspora brightly glows"
-date: 2025-01-01
+date: 2024-02-22
 author: "Yoyo"
 category: stories
+tags: ["sci-fi", "literature", "isolation"]
 ---
-
-by: Yoyo Yuan • 2024-02-22
 
 Being a biology olympiad champion was not an antidote to the pang of loneliness, dissecting his cardiac essence with scalpel-like intensity. As Endif walked across campus, at every corner, he came across clusters of friends laughing and intertwined. His visual field blurred and the emotional noise-to-signal ratio overflowed.
 
@@ -16,13 +15,11 @@ On a depressing evening, a virtual greeting card appeared in his inbox. Endif ra
 
 “I want to tell you a story. In 1853, Netochka Nezvanova invented a mechanical device capable of plotting the integral of a function decades ahead of anyone else. The early automated ability to solve differential equations could’ve sparked a revolution in physics and engineering, a vision that burned in Netochka’s quiet intense eyes. But Netochka was lonely and broke. No experts cared to reply to her outreach. She died a nameless nobody in some Siberian forest.”
 
-![Netochka, the intense nerd](../assets/images/netochka.jpg)
-
 Repeating the same mistake is dumb. Let’s connect Netochkas of the world to allow flourishing in their ultimate form
 
 c5h9no4 was a glowing molecule floating in the air. They covered Endif’s eyes and took him out on a run. When Endif reopened his eyes, hundreds of geeks waved to him under the sun—a whorling liquid ball of pineapple fire. After a lasting night with the sorrow of the soul, Endif entered a world with awesome heat and intense clarity.
 
-“The world is a dark forest where high-potential nerds hide behind trees fearing ridicule.” c5h9no4 expressed. “If we act as an ant colony that discovers such nerds in the wild and bring back a trail of open source projects and public communications, an intense geeky diaspora building hard sci-fi will emerge.”
+“The world is a dark forest where high-potential nerds hide behind trees fearing ridicule.” The molecule expressed. “If we act as an ant colony that discovers such nerds in the wild and bring back a trail of open source projects and public communications, an intense geeky diaspora building hard sci-fi will emerge.”
 
 
 Fast forward 2 months, Endif was in a well-lit, wooden room with a dozen young energetic geeks. He was sitting on top of soft dry grass. The room smelled faintly of pine. Everything in the room resembled a microforest.

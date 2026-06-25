@@ -1,12 +1,11 @@
 ---
 layout: layouts/post.njk
 title: "Neuralink: neuroscience, engineering and prospects"
-date: 2025-01-01
+date: 2022-01-04
 author: "Yoyo"
 category: favs
+tags: ["neuroscience", "engineering", "invasive-BCIs"]
 ---
-
-*by: Yoyo Yuan • date: 2022-01-04*
 
 A powerful AI is sending your family to Andromeda. You wail loudly, but even so, only at 130 words per minute. You type on a keyboard and even try handwriting in desperation. However, the AI thinks you’re too incompetent and continues regardless.
 The speed of communication will limit a species’ performance — the ability to learn, work, create, have empathy for each other and everything else we do.
@@ -48,7 +47,7 @@ Before we learn about Neuralink, let’s look very briefly at how the brain work
 
 This is a single neuron, the fundamental unit of the brain.   
 
-![img](../assets/images/neuron-doodle.jpg)    
+![img](/assets/images/neuron-doodle.jpg)    
 
 Essentially, a neuron receives inputs, computes and decides to pass on or abandon a message.
 The input comes in the form of neurotransmitters, e.g. Dopamine, serotonin, at the dendrites.
@@ -60,17 +59,17 @@ A number of ions, such as K+, Cl-, Na+ flow in and out of the neuron membrane. E
 As there is a negative charge inside the neuron, Na+ ions flow into the neuron. The membrane potential begins to increase from -70 mV.
 If it goes above -55 mV, then an electrical current is generated and sent down the axon. This is called the action potential, spike, impulse, or firing of the neuron. If the neuron doesn’t match the threshold, then nothing happens.
 
-![img](../assets/images/action-potential.jpg)   
+![img](/assets/images/action-potential.jpg)   
 
 As the neuron is now positively charged, K+ ions travel out of the membrane for the neuron to return to its resting potential.
 Meanwhile, the electrical message has travelled to the end of the axon (see diagram). A way to continue the message is to release neurotransmitters across the synapse into the dendrites of the next neuron. The next neuron then “computes, passes or abandons” accordingly.
 
-![img](../assets/images/synapse.webp)   
+![img](/assets/images/synapse.webp)   
 
 Our “input, compute, pass or abandon” is a vastly simplified model, not to mention from a computational standpoint.
 In the real brain, neurons are more like tangled yarn. Large numbers of them are connected in series and parallel, the signals converge and diverge, as an example, a typical cortical neuron has 1000–5000 synapses.
 
-![img](../assets/images/neuron-yarn.webp)
+![img](/assets/images/neuron-yarn.webp)
 Example: Rat cortical neurons. 
 
 Plus, neurons can fire 100 times per second.
@@ -84,7 +83,7 @@ The device which reads the brain is a kind of a Brain-Computer Interface (BCI), 
 
 An example of a BCI. It decodes [mental handwriting](https://www.hhmi.org/news/brain-computer-interface-turns-mental-handwriting-text-screen). 
 
-![img](../assets/images/write-bci.webp)
+![img](/assets/images/write-bci.webp)
 
 BCIs could also be used to stimulate the brain.
 What is Neuralink
@@ -92,7 +91,7 @@ Neuralink is making a BCI which is implanted in the scalp. Its near-term purpose
 Namely, the company mentioned depression, anxiety, insomnia, memory loss, hearing loss, blindness, kinds of paralysis, paraplegia, etc.
 Presently, patients with neurodegenerative diseases require risky surgeries:
 
-![img](../assets/images/surgery.webp)
+![img](/assets/images/surgery.webp)
 
 7 possible risks of neurosurgery
 1. The patient’s hair must be shaved prior
@@ -105,13 +104,13 @@ Presently, patients with neurodegenerative diseases require risky surgeries:
 
 Some BCIs are already used to partially replace neurosurgery, e.g. *deep brain stimulation*, where the device can send electrical impulses to stop an incoming seizure. However rigid metal probes can cause foreign body responses from the brain, causing scars that eventually deteriorate signals.
 
-![img](../assets/images/utah-array.webp)   
+![img](/assets/images/utah-array.webp)   
 The Utah Array
 
 Often, large boxes, which contain algorithms and batteries, come out of the head, meaning more risk of infection. The device also requires experts to follow around the patient to use.
 Meanwhile, Neuralink is about the size of a small coin (23mm diameter, 8mm tall). It aims to influence a large volume of neurons while being as easy and fast to install as LASIK. it is barely visible after the implant.
 
-![img](../assets/images/link.webp)
+![img](/assets/images/link.webp)
 The Neuralink chip, the Link, with extending electrodes
 
 **How Neuralink works**   
@@ -120,11 +119,11 @@ The chip has a total of 1024 electrodes, each able to record/stimulate between 1
 Every 16 electrodes belong to one thread, with 64 threads in total and spaced out by 200 microns.
 As each electrode is below visible length and should be placed 60 microns near a neuron, a robot is employed for the surgery. An opening the size of Neuralink will be created in the skull, covered by the module and the process will only require partial anesthesia.
 
-![img](../assets/images/cross-section.webp)
-![img](../assets/images/robot.webp)
+![img](/assets/images/cross-section.webp)
+![img](/assets/images/robot.webp)
 The robot can sew electrodes while dodging veins, arteries at a maximum rate of 192 electrodes per min.
 
-![img](../assets/images/sewing.webp)
+![img](/assets/images/sewing.webp)
 
 The needle pincher cartridge of the robot implanting the electrode
 
@@ -133,14 +132,14 @@ Here is the process of reading the brain:
 Neuron spikes → picked up by probes → signal processed on-chip → signal transmission → computer/phone responds
 When there is a voltage change in neurons, an electric field is produced. An electric current passes through the electrode. This is a flexible electrode made by a biocompatible material, polyimide, wrapped around gold.
 
-![img](../assets/images/e-field.webp)
+![img](/assets/images/e-field.webp)
 
 Each of the 1024 electrodes amplifies electrical activity, filters noise and digitizes the spikes.
 From this:
-![img](../assets/images/plot.webp)
+![img](/assets/images/plot.webp)
 
 To this:
-![img](../assets/images/raster.webp)
+![img](/assets/images/raster.webp)
 
 As all 1024 electrodes are simultaneously monitoring electrical activity, there is a huge volume of data to be processed.
 Sending them to a computer would delay the BCI. If a user wants to catch a ball, the BCI has to decode the intent in split seconds which then enables the user to do something else. The set of instant interactions is referred to as a closed-loop system.
@@ -151,7 +150,7 @@ On the ASIC, machine learning algorithms detect spikes and assign them to neuron
 Spikes are detected in 25 ms windows, or bins with the spike count represented by a 4-bit number. In total, there is 40*4*1024 = 20 kB of information per second. Along with the number of spikes, there are extra bits of information about the width, height of the spike etc.
 Information is transmitted via Bluetooth to a smartphone app with controlling software.
 
-![img](../assets/images/app.webp)
+![img](/assets/images/app.webp)
 
 **Writing**
 
@@ -162,7 +161,7 @@ Each electrode can release current to flow along the neuron, causing a chain of 
 An implanted link can last around 12 hours and can be charged inductively.
 
 This means an electric current is sent through a copper coil in the charger, generating a magnetic field that generates another electric current in Neuralink.
-![img](../assets/images/inductive-charging.webp)
+![img](/assets/images/inductive-charging.webp)
 
 So here’s how you would control a cursor:
 
@@ -173,7 +172,7 @@ There are no human trials up to date, but the link’s functionality has been de
 **Pig-Computer interface**
 A Link is implanted in the brain region capable of detecting touch on the snout — a pig’s *somatosensory cortex*. When the Link senses a touch, a series of beeps is emitted from the speaker.
 
-![img](../assets/images/pig-raster.webp)
+![img](/assets/images/pig-raster.webp)
 
 The horizontal lines of the graph represent the activity in each channel, white showing a group of neurons being active; the bottom is a summation of spikes across all channels at any given time.
 
@@ -183,7 +182,7 @@ Meanwhile, an average pig, a pig with removed Neuralink implant and pigs with mu
 
 Limb motion prediction in a strolling pig is showcased.
 
-![img](../assets/images/motion-prediction.gif)
+![img](/assets/images/motion-prediction.gif)
 
 Some are skeptical towards the accuracy, which we’ll discuss in a bit.
 
@@ -197,13 +196,13 @@ There are two N1 links placed across the left and the right motor cortex.
 
 Again, calibration first. Pager used the joystick to guide a cursor to a targeted square while Link recorded neural activities. For example, activity in channel 8 might be correlated to intent for rightwards movement.
 
-![img](../assets/images/monkey-pong.webp)   
+![img](/assets/images/monkey-pong.webp)   
 Pager calibrating the Neuralink implant
 
 The number of spikes is sent to a computer with decoding software, which modelled the relationship between motor cortex activity to joystick movement.
 Later, Pager can play pong relying on his brain activity and the decoder alone.
-![img](../assets/images/pager.webp)
-![img](../assets/images/pager-plot.webp)
+![img](/assets/images/pager.webp)
+![img](/assets/images/pager-plot.webp)
 
 In the raster plot, the blue represents 100 channels with firing activity correlated to intended upwards movement. The red represents 100 channels with downwards movement. The firing intensity correlates to y velocity.
 
@@ -239,7 +238,7 @@ Four main applications would be examined here.
 
 One word sums up our current education system: Approximations.
 
-![img](../assets/images/approximations.webp)
+![img](/assets/images/approximations.webp)
 
 The education system is divided into years to approximate the student’s ability to learn. Then approximating streams are created — applied, academic, AP, enrichment, etc. Tests then again approximate knowledge gained.
 
@@ -257,7 +256,7 @@ Learning involves taking notes, and BCIs again provide us with a shortcut.
 
 A functional BCI notetaker is being able to read words from the brain at ~130 wpm, read commands to search for images and commands on how to connect the concepts together. This is uploaded onto a computer, can be queried and can be viewed by eye.
 
-![img](../assets/images/notetaker.webp)
+![img](/assets/images/notetaker.webp)
 
 A genius BCI notetaker would involve reading words at a faster speed, autocompleting the mental scene, sketches and how the concepts are connected. A viewable version may not be necessary, as concepts could be directly beamed into the brain whenever the user wants. This is an example of *Human-AI symbiosis*.
 
@@ -267,12 +266,12 @@ If you learn a new language after 18, fluency would be troubling to maintain whe
 This is thought to be related to declining *neuroplasticity* with age. Neuroplasticity refers to the brain reorganizing itself — the synapses being strengthened or weakened to fit new habits.
 A stronger synapse means more ions are allowed to enter the neuron’s membrane per time.
 
-![tdcs-rat](../assets/images/tdcs-rat.webp)   
+![tdcs-rat](/assets/images/tdcs-rat.webp)   
 The two types of tDCS are Anodal and Cathodal, differing by the direction of charge flow to either excite or inhibit neural activity.
 
 This shift can be sped up by using *transcranial direct brain stimulation (tDCS)*, where a small current is applied externally to the scalp.
 
-![tdcs](../assets/images/tdcs.webp)   
+![tdcs](/assets/images/tdcs.webp)   
 How tDCS could look like
 
 Some study examples are accelerating the learning of social skills, math skills, motor skills and aiding a stronger memory.
@@ -298,12 +297,12 @@ Similarly, in this video, a working webpage is created from a prompt made in Eng
 
 The MOMENT is a brain-controlled film made in 2018.
 
-![moment](../assets/images/moment.webp)
+![moment](/assets/images/moment.webp)
 
 The watcher wears a NeuroSky MindWave headset that tracks attention levels. It is sent wirelessly to a computer to recombine the scenes as well as the background music.
 The film contains 17 scenes, the user being able to choose from 6 shots per time. Thus, you could watch 16,926,659,444,736 unique versions of it.
 
-![combinations](../assets/images/combinations.webp)
+![combinations](/assets/images/combinations.webp)
 
 Unique journeys through 17 scenes of the film.
 Here’s another example in fashion.
@@ -343,7 +342,7 @@ Human values are constantly evolving. Imagine if we didn’t have computers, as 
 ### How to accelerate BCI development
 Advancing research in BCIs requires research in AI and neuroscience, as well as intersections with fields.
 However, many researchers said the field looks more like:
-![factory](../assets/images/factory.webp)   
+![factory](/assets/images/factory.webp)   
 Paper factory at work!
 
 To get funding, positions and fame, researchers are pressured to continuously publish papers, with the number of citations as an indicator of success.

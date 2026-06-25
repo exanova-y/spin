@@ -4,6 +4,7 @@ title: "Food expiration date labels (memo)"
 date: 2025-01-01
 author: "Yoyo"
 category: problems
+tags: ["food-waste"]
 ---
 
 *by: Saeed Tamboli, Juky Chen Wei Ling, Yoyo Yuan • 2022-10-23*

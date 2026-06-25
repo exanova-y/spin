@@ -2,8 +2,9 @@
 layout: layouts/post.njk
 title: "Bose-Einstein Condensate"
 date: 2021-07-29
-author: "Yoyo Yuan"
+author: "Yoyo"
 category: lab
+tags: ["physics"]
 ---
 
 A state of matter. In sci-fi movies, BECs froze many people to death. In reality, they must be well isolated from the environment using vacuum technology, kept in the dark and in non-magnetic containers to prevent it from heating up. In fact, their heat capacity is so low that you couldn't even cool a small grain of sand with it, not to mention a whole person! Also, the condensate usually only lasts for a few seconds.

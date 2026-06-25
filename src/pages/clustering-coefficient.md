@@ -1,12 +1,11 @@
 ---
 layout: layouts/post.njk
 title: "All about clustering coefficient, a Signal power user"
-date: 2025-01-01
-author: "Yoyo"
+date: 2025-02-28
+author: "Yoyo and the language model shenanigans"
 category: lab
+tags: ["social-networks"]
 ---
-
-*by: language models • 2025-02-28*
 
 *clustering coefficient said it's okay to post this!*
 

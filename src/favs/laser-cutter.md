@@ -4,6 +4,7 @@ title: "Assembling a laser cutter"
 date: 2025-07-05
 author: "Yoyo Yuan, with guidance from Paul Han"
 category: favs
+tags: ["experimentalist-confetti"]
 ---
 
 ![img](/assets/images/laser-cutter.jpg)

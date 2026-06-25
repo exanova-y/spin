@@ -3,7 +3,8 @@ layout: layouts/post.njk
 title: "Hacking the backrooms"
 date: 2026-06-19
 author: "Yoyo"
-category: "lab"
+category: lab
+tags: ["experimentalist-confetti"]
 ---
 
 On a fortunate evening, a friend and I retired from the augmentation lab office for shabbat and he suggested visiting our mutual's place. This particular building had a rooftop that was only accessible by card holders

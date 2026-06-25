@@ -4,6 +4,7 @@ title: "UN Environmental Programme challenge submission (top 5 out of 40)"
 date: 2025-01-01
 author: "Yoyo"
 category: problems
+tags: ["china"]
 ---
 
 *by: Aditya Mahes, Noorish Rizvi, Shirley Yang, Yoyo Yuan • 2022-03-24*

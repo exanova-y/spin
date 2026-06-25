@@ -4,6 +4,7 @@ title: "Notes on processing images with in-vitro neurons paper"
 date: 2025-01-01
 author: "Yoyo"
 category: lab
+tags: ["computational-neuroscience", "image-processing", "quantitative-biology-neurons-and-cognition"]
 ---
 
 by Yoyo Yuan • 2025-01-14
