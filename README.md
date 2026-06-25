@@ -98,3 +98,27 @@ To deploy manually to Cloudflare Pages, run:
 ```bash
 npm run deploy
 ```
+### Sync curius bookmarks
+Fetch all bookmarks from the Curius API into `src/_data/curius.json`:
+```
+npm run fetch:curius
+```
+
+### Related-links recommendations
+Each post shows "Related links from Yoyo's bookshelf" at the bottom. Two engines:
+
+1. **Build-time TF-IDF** (default, no setup): `.eleventy.js` `relatedBookmarks` filter scores
+   bookmarks against each page by keyword cosine similarity. Always works.
+2. **Embeddings + HDBSCAN** (better, optional): precomputes semantic matches with OpenAI
+   embeddings and clusters bookmarks. When `src/_data/related.json` exists it takes priority
+   over the TF-IDF fallback.
+
+To (re)build the embedding matches:
+```
+pip install -r scripts/requirements.txt
+export OPENAI_API_KEY=sk-...
+npm run embed:curius          # writes src/_data/related.json + curius-clusters.json
+npm run build
+```
+`embed:curius` caches vectors in `src/_data/.embed-cache.json` (gitignored), so re-runs only
+embed new/changed bookmarks and pages. Re-run it after `fetch:curius` or after editing posts.

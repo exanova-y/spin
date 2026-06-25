@@ -6,3 +6,5 @@ assets/fonts
 node_modules
 _site/
 .DS_Store
+src/_data/.embed-cache.json
+__pycache__/

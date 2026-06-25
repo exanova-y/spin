@@ -18,12 +18,16 @@ layout: layouts/base.njk
   <br>
   {{ content | safe }}
 
-{% set related = curius | relatedBookmarks(title, tags, content, 5) %}
-{% if related.length %}
+{# Prefer precomputed embedding matches (related.json); fall back to build-time TF-IDF #}
+{% set rel = related[page.url] if related else null %}
+{% if not rel %}
+  {% set rel = curius | relatedBookmarks(title, tags, content, 5) %}
+{% endif %}
+{% if rel.length %}
 <br>
-<h4>similar links from Yoyo's bookshelf</h4>
+<h4>Related links from Yoyo's bookshelf</h4>
 <ul>
-{% for b in related %}
+{% for b in rel %}
   <li><a href="{{ b.link }}" target="_blank" rel="noopener">{{ b.title }}</a>{% if b.snippet %}<br><span style="opacity: 0.6; font-size: 0.85em;">{{ b.snippet | truncate(120) }}</span>{% endif %}</li>
 {% endfor %}
 </ul>

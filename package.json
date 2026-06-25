@@ -12,6 +12,7 @@
     "start": "eleventy --serve",
     "build": "rm -rf _site && eleventy",
     "deploy": "eleventy && wrangler pages deploy _site",
-    "fetch:curius": "node scripts/fetch-curius.js"
+    "fetch:curius": "node scripts/fetch-curius.js",
+    "embed:curius": "uv run scripts/embed-curius.py"
   }
 }
