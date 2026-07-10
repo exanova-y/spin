@@ -48,7 +48,7 @@ In 2022, Kagan et al. from Cortical Labs elegantly demonstrated aspects of learn
 Distinction: BCIs usually interface with whole brains in living organisms, but brain organoids refer to neural tissues in vitro.
 
 ### Scrappy approach
-With just $2000, Viraj and his team have grown neurons on an MEA and communicated with them.
+With just \$2000, Viraj and his team have grown neurons on an MEA and communicated with them.
 
 ### Elaborated approach
 After running the scrappy approach with purchased rat neurons, we could also grow our own neurons: stem cells → neural tissue → plating.
@@ -74,7 +74,7 @@ How long can we keep these stem cells alive?
 
 using mRNA transfection
 
-This protocol has reasonable costs under $3000 and high efficiency. It produces around 160 colonies per chip (27 mm²) in 15 days.
+This protocol has reasonable costs under \$3000 and high efficiency. It produces around 160 colonies per chip (27 mm²) in 15 days.
 
 We first get a microfluidics chip, which is a container for the stem cells
 ![microfluidic chip](/assets/images/microfluidics.jpg)
@@ -94,7 +94,7 @@ Use lentiviral vectors to engineer the cells to express neurogenin-2 (Ngn2), a g
 Activate the Ngn2 gene using doxycycline to start differentiation with the help of biological switch rtTA
 Use antibiotics to ensure only successfully transduced cells survive
 Plate the neurons on MEAs
-[Materials list](https://app.jove.com/pdf-materials/54900/rapid-neuronal-differentiation-of-induced-pluripotent-stem-cells-for-measuring-network-activity-on-microelectrode-arrays), cost estimation: ~$6000
+[Materials list](https://app.jove.com/pdf-materials/54900/rapid-neuronal-differentiation-of-induced-pluripotent-stem-cells-for-measuring-network-activity-on-microelectrode-arrays), cost estimation: ~\$6000
 
 Source: [Rapid Neuronal Differentiation of Induced Pluripotent Stem Cells for Measuring Network Activity on Micro-electrode Arrays](https://pubmed.ncbi.nlm.nih.gov/28117798/)
 

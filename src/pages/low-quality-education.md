@@ -60,7 +60,7 @@ Focuses on gender equality, as well as teaching quality and assessment, early an
 
 ## **Coca-Cola Foundation has funded teachers and low-income schools**
 
-In 2020, the Coca-Cola Foundation spent $52,725 in funds for teacher training and support for virtual learning in 200 low-income schools in Nigeria. This initiative was found by Roberto Goizuela in 1984. They have a strong presence in all African countries.
+In 2020, the Coca-Cola Foundation spent \$52,725 in funds for teacher training and support for virtual learning in 200 low-income schools in Nigeria. This initiative was found by Roberto Goizuela in 1984. They have a strong presence in all African countries.
 
 ## **Unanswered Questions:**
 

@@ -8,7 +8,7 @@ tags: ["food-waste"]
 ---
 
 
-> 💡 Problem Statement: *$50 billion dollars are lost each year in the US due to the overstocking problem. The surplus of goods without corresponding demand results in food wastage.*
+> 💡 Problem Statement: *\$50 billion dollars are lost each year in the US due to the overstocking problem. The surplus of goods without corresponding demand results in food wastage.*
 
 
 ## **Executive Summary**
@@ -36,7 +36,7 @@ Only large grocery stores have forecasting methods despite way more small grocer
 
 **Fear of going out of stock**
 
-Out-of-stocks cost retailers $1 trillion yearly. The consequences of out-of-stocks are severe, from losing profits to losing customers and inevitably market share. The direct and indirect damages of lost sales are so great that retailers prefer to markdown unsold inventory, or even get rid of it at cost. 
+Out-of-stocks cost retailers \$1 trillion yearly. The consequences of out-of-stocks are severe, from losing profits to losing customers and inevitably market share. The direct and indirect damages of lost sales are so great that retailers prefer to markdown unsold inventory, or even get rid of it at cost. 
 
 **Poor inventory management**
 
@@ -54,7 +54,7 @@ During COVID, there was an increase in the number of people who couldn't afford 
 
 Walmart has been undertaking waste-reduction initiatives since 2005. Between 2015 and 2017 alone, Walmart Canada reduced food waste in its operations by 25%. 
 
-- Discounting repackaged bruised or peak-freshness products through a $1/$2 Bag Program and reducing prices on fresh meat, bakery, dairy and produce approaching best before dates.
+- Discounting repackaged bruised or peak-freshness products through a \$1/\$2 Bag Program and reducing prices on fresh meat, bakery, dairy and produce approaching best before dates.
 - Reducing over-production in bakery operations. Providing additional processes, training and resources to help support associates.
 - Implementing organic recycling programs in stores and distribution centres that take unsaleable and unsold food for conversion into animal feed, compost and energy.
 - Partnering with local food banks to assist in maximizing surplus food donations.
@@ -75,7 +75,7 @@ A December 2017 Harvard Business Review article, How Large Food Retailers Can He
 - Its algorithms also factor in the intangibles like weather and peak freshness of produce to help predict demand and manage inventory.
 - Afresh says it helps customers reduce waste by 25% or more. These efforts can also improve profitability
 - The company has announced partnerships with grocers in more than 3,000 stores across 40 states
-- Company’s total funding has reached $148 million.
+- Company’s total funding has reached \$148 million.
 
 ## Gaps: Lack of Integrated and Accurate Forecasting Models.
 

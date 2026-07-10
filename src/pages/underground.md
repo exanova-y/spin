@@ -47,7 +47,7 @@ He shifted towards Rivera and casually mentioned: “This hovel reminded me of m
 
 “Oh yeah? That’s so cool!” Rivera replied, just like his sister—who never uses facial expressions and looks inattentive in conversations. But his sister would’ve continued the conversation. He suddenly realized that, by merely smiling, one took up less social space.
 
-Tri continued to signal his status as a prime persimmon. “A friend came over recently and we made bioplastics for under $1. Need to be careful not to suffocate the frogs.”
+Tri continued to signal his status as a prime persimmon. “A friend came over recently and we made bioplastics for under \$1. Need to be careful not to suffocate the frogs.”
 
 
 Tri and Rivera chit-chatted and found out they both were involved with Thinking Reed during childhood. Tri asked Rivera about the downfall of Thinking Reed.

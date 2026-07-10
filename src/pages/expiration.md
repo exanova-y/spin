@@ -26,7 +26,7 @@ Our world is only getting bigger, and that means that we have more and more mout
 **The outcomes**
 
 - By only preventing waste of meat alone, of the 263 million tonnes of meat produced globally, **over 20%** is lost or wasted, we can prevent **60 million tonnes** of meat going to waste.   
-- If we expand to more food items we can save over **130 billion meals and more than $408 billion each year** within the United States alone.   
+- If we expand to more food items we can save over **130 billion meals and more than \$408 billion each year** within the United States alone.   
 - We can also save more water, land, labor, and energy thus leading to a lower carbon footprint. It also reduces the amount of greenhouse gasses produced, with Municipal solid waste landfill accounting for approximately 14.1 percent greenhouse gasses in america.   
 
  • • •

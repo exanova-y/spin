@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Readlogs — local mirror</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: #e2e0d8;
+    --accent: #8a4a2a;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17161a;
+      --fg: #eeeae2;
+      --muted: #999;
+      --line: #2c2a30;
+      --accent: #e8a878;
+      --card: #1e1c22;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Iowan Old Style",
+          "Palatino Linotype", Georgia, serif;
+    background: var(--bg);
+    color: var(--fg);
+    padding: 2.5rem 1.2rem 4rem;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 {
+    font-size: 1.7rem;
+    margin: 0 0 .25rem;
+    letter-spacing: -0.01em;
+  }
+  h1 .accent { color: var(--accent); }
+  .sub {
+    color: var(--muted);
+    margin: 0 0 2rem;
+    font-size: .95rem;
+  }
+  .legend {
+    font-size: .88rem;
+    color: var(--muted);
+    padding: .75rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin: 0 0 2rem;
+    background: var(--card);
+  }
+  .legend .row { display: flex; gap: 1.2rem; flex-wrap: wrap; align-items: center; }
+  .legend .k {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    color: var(--fg);
+    font-size: 1.1rem;
+    margin-right: .35rem;
+  }
+  ul.bookmarks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li.bm {
+    display: grid;
+    grid-template-columns: 2.4rem 1fr;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 1rem 0;
+    border-top: 1px solid var(--line);
+  }
+  li.bm:last-child { border-bottom: 1px solid var(--line); }
+  .status {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--accent);
+    user-select: all;      /* click-drag to swap the character */
+    cursor: text;
+    line-height: 1;
+    padding-top: .1rem;
+  }
+  /* status semantic hooks — only for reference; visual is identical */
+  .status.liked { color: #c04040; }
+  .status.wip   { color: #c68b1a; }
+  .status.todo  { color: var(--muted); }
+  @media (prefers-color-scheme: dark) {
+    .status.liked { color: #ff8080; }
+    .status.wip   { color: #f0c060; }
+  }
+  .title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--fg);
+  }
+  .title:hover { color: var(--accent); text-decoration: underline; }
+  .meta {
+    font-size: .82rem;
+    color: var(--muted);
+    margin-top: .25rem;
+  }
+  .meta a { color: var(--muted); }
+  .desc {
+    font-size: .93rem;
+    margin: .35rem 0 0;
+    color: var(--fg);
+  }
+  footer {
+    margin-top: 3rem;
+    font-size: .82rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  footer code {
+    background: var(--card);
+    border: 1px solid var(--line);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: .85em;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>readlogs <span class="accent">·</span> local mirror</h1>
+<p class="sub">Four posts by <em>Yoyo is defocusing ultrasound</em>, mirrored offline with images.</p>
+
+<div class="legend">
+  <strong>Bookmark status</strong> — edit the character next to any entry to change state.
+  <div class="row" style="margin-top:.5rem">
+    <span><span class="k">♥</span> liked</span>
+    <span><span class="k">◐</span> in progress</span>
+    <span><span class="k">○</span> not started</span>
+  </div>
+</div>
+
+<ul class="bookmarks">
+
+  <li class="bm">
+    <span class="status liked" title="liked">♥</span>
+    <div>
+      <a class="title" href="march-readlogs.html">March readlogs</a>
+      <div class="desc">Ben Barres autobiography, trying focused ultrasound, floating in sf peninsula, slightly deadish.</div>
+      <div class="meta">
+        11 images ·
+        <a href="https://feralscholars.substack.com/p/march-readlogs">source</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="bm">
+    <span class="status wip" title="in progress">◐</span>
+    <div>
+      <a class="title" href="november-readlogs.html">November readlogs</a>
+      <div class="desc">Coal &amp; the Kardashev scale, Yau biography excerpt, Prolegomena to Omnipotence, misc history. <em>“No analysis this time. Wrote this in 30 mins.”</em></div>
+      <div class="meta">
+        1 image ·
+        <a href="https://feralscholars.substack.com/p/november-readlogs">source</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="bm">
+    <span class="status liked" title="liked">♥</span>
+    <div>
+      <a class="title" href="october-readlog.html">October readlog</a>
+      <div class="desc">Science Agora, Tokyo tech events, parataxis vs hypotaxis, 阿Q正传, Su Shi.</div>
+      <div class="meta">
+        5 images ·
+        <a href="https://feralscholars.substack.com/p/october-readlog">source</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="bm">
+    <span class="status liked" title="liked">♥</span>
+    <div>
+      <a class="title" href="september-readlog.html">September readlog</a>
+      <div class="desc">Moving to Tokyo. Flowers for Algernon. Medea. Chinese history. Epic exiles. Quantum chemistry.</div>
+      <div class="meta">
+        5 images ·
+        <a href="https://feralscholars.substack.com/p/september-readlog">source</a>
+      </div>
+    </div>
+  </li>
+
+  <li class="bm">
+    <span class="status liked" title="liked">♥</span>
+    <div>
+      <a class="title" href="early-may-observelog.html">Early May observelog</a>
+      <div class="desc">3× focused ultrasound stimulation studies at Lucas Center / Koret, subjective FUS effects, computing pendulum, hackathon meta.</div>
+      <div class="meta">
+        5 images ·
+        <a href="https://feralscholars.substack.com/p/early-may-observelog">source</a>
+      </div>
+    </div>
+  </li>
+
+</ul>
+
+<footer>
+  <p>
+    <strong>How the state markers work.</strong> The character in the left column
+    is a plain unicode glyph — no JavaScript. To change a status, open
+    <code>index.html</code> and replace the character (and optionally the
+    <code>class="status …"</code> hook <code>liked</code> / <code>wip</code> /
+    <code>todo</code>) for that row. Suggested set:
+    <code>♥</code>, <code>◐</code>, <code>○</code>.
+    Alternates that still read as text-emoji: <code>★ ☆ ✓ ✗ ⋯ ◑ ● ◌</code>.
+  </p>
+  <p>
+    Publication was originally requested as <code>pawsitivefeedback.substack.com</code>
+    (returns 404); the same posts live at <code>feralscholars.substack.com</code>
+    with identical slugs. See <a href="README.md">README.md</a> for details.
+  </p>
+</footer>
+
+</main>
+</body>
+</html>

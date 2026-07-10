@@ -1,46 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Readlogs</title>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/navigation.js"></script>
-</head>
-<body>
-    <header>
-        <nav><ul><!-- Navigation items will be populated by JavaScript --></ul></nav>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Readlogs</title>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/navigation.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <!-- Navigation items will be populated by JavaScript -->
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <section class="links">
-            <div id="links-content" class="markdown-content">
-                <!-- Content will be loaded here -->
-                <p>Loading links information...</p>
-            </div>
-        </section>
-    </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const linksContent = document.getElementById('links-content');
-            
-            // The markdown content embedded directly in the page
-            const markdown = `
+        <main>
+            <section class="links">
+                <div id="links-content" class="markdown-content">
+                    <!-- Content will be loaded here -->
+                    <p>Loading links information...</p>
+                </div>
+            </section>
+        </main>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const linksContent = document.getElementById("links-content");
 
-Haven't updated this. Latest readlogs are on [curius](https://curius.app/yoyo-yuan)
+                // The markdown content embedded directly in the page
+                const markdown = `
+
+Starred links:
+- [Jiabin Huang - awesome tips repository](https://github.com/jbhuang0604/awesome-tips)
+
+
+
+
 
 ## 2025
 - [Designerly ways of knowing](https://oro.open.ac.uk/39253/8/Designerly%20Ways%20of%20Knowing%20DS.pdf). Liked. Describes my cognitive style.
-- Prolegomena to Omnipotence from Summa Technologiae by Stanislaw Lem
+- Prolegomena to Omnipotence, excerpt fromSumma Technologiae by Stanislaw Lem
 - Post-Crystallization from Hormone Hunters, the Discovery of Adrenaline
 - [Why is cognitive effort experienced as costly?](https://www.sciencedirect.com/science/article/abs/pii/S1364661325002876?dgcid=author)
 - ITER Japan Website and Manga, QST
 - The Gift of Solitude from Recoltes et Semailles by Alexandre Grothendieck
 - [Xenon-135 Reactor Poisoning](http://large.stanford.edu/courses/2014/ph241/alnoaimi2/)
 - Introduction from China's Industrial Revolution by Stephen Andors
-- 1st, 2nd and 3rd industrial revolutions Wikipedia pages
 - Rome from Europe: A History by Norman Davies
 - 2011 Tohoku Earthquake and Tsunami
 - Ontology of Childhood, Viktor Pelevin
@@ -54,7 +62,6 @@ Haven't updated this. Latest readlogs are on [curius](https://curius.app/yoyo-yu
 - [Googling Food Webs: Can an Eigenvector Measure Species' Importance for Coextinctions?](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000494)
 - [Male dolphin alliances in Shark Bay: changing perspectives in a 30-year study](https://www.sciencedirect.com/science/article/abs/pii/S0003347215000810)
 - Medieval thirst traps (Roman de la Rose, and Pican's response)
-- [Trans by default](https://adellama75.github.io/trans-by-default/). So true. Competency trajectory by default!
 - Spring and Autumn periods from 中国通史
 - 江城子：密州出猎，苏轼
 - 丑奴儿·书博山道中壁，辛弃疾
@@ -64,7 +71,6 @@ Haven't updated this. Latest readlogs are on [curius](https://curius.app/yoyo-yu
 - [Awesome Zero Knowledge Proofs](https://github.com/matter-labs/awesome-zero-knowledge-proofs)
 - [Development of the C language](https://csapp.cs.cmu.edu/3e/docs/chistory.html)
 - [Large scale scrums](https://less.works/)
-- [Paper2Video](https://github.com/showlab/Paper2Video)
 - [Fred Cohen's computer virus](https://www.cnsr.ictas.vt.edu/QEpaper/cohen.pdf)
 - Everything I know about good system design by [Sean Goedecke](https://www.seangoedecke.com/good-system-design/)
 - [Covered Mirrors by Jorge Luis Borges](https://biblioklept.org/2019/05/05/covered-mirrors-a-very-short-story-by-jorge-luis-borges/)
@@ -187,10 +193,10 @@ Haven't updated this. Latest readlogs are on [curius](https://curius.app/yoyo-yu
 - The Book Thief
 - His dark materials trilogy
 - The World Without Us, Alan Weisman`;
-            
-            // Render the markdown to HTML using marked.js
-            linksContent.innerHTML = marked.parse(markdown);
-        });
-    </script>
-</body>
+
+                // Render the markdown to HTML using marked.js
+                linksContent.innerHTML = marked.parse(markdown);
+            });
+        </script>
+    </body>
 </html>

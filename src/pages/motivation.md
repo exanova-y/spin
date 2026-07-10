@@ -8,13 +8,13 @@ category: stories
 
 "Ladies and gentlemen, please welcome our speaker from the latest trending startup!" A guy walked on to the stage.
 
-“Two years ago, I lived in a crowded slum and only had $20 in my bank account. I was chronically depressed, unmotivated and lonely. However, one evening changed everything. At that moment, I was crying about the meaningless of life on the balcony. All of a sudden, our senior neighbour screamed at me and warned: “Our building is on fire, get out now!" My tears disappeared as I saw him pour water onto the fire, proceeding to shake violently and fell. It was an electrical fire!
+“Two years ago, I lived in a crowded slum and only had \$20 in my bank account. I was chronically depressed, unmotivated and lonely. However, one evening changed everything. At that moment, I was crying about the meaningless of life on the balcony. All of a sudden, our senior neighbour screamed at me and warned: “Our building is on fire, get out now!" My tears disappeared as I saw him pour water onto the fire, proceeding to shake violently and fell. It was an electrical fire!
 
 I felt pity for the old man and his lack of physics knowledge. From that moment, I decided to master everything about physics. I purchased all of the physics textbooks. Money didn't matter, because I stole the books and into mephistopheles I become. 
 
 I study for 16 hours daily on a polyphasic sleep schedule and ate only bread. My neighbours' kids would squawk at me for being such a loner and self-absorbed. But I, with messianic determination, ignored them.
 
-After a year, the kids revered me like a god. I was nominated for the impressive context, and I achieved 1st place in the city. **But I am NOT satisfied!** With the $3000 prize money, I could buy food, video games and help my parents with their farm. Instead, I bought a plane ticket to Boston.
+After a year, the kids revered me like a god. I was nominated for the impressive context, and I achieved 1st place in the city. **But I am NOT satisfied!** With the \$3000 prize money, I could buy food, video games and help my parents with their farm. Instead, I bought a plane ticket to Boston.
 
 I snuck up into an MIT lecture room, walked up to a lecturer and told him outright he was wrong. He was shaking his head and loudly disagreeing as I delivered a proof on the blackboard. The students were so enthralled that they started throwing **physics textbooks** in the air, from condensed matter physics to quantum mechanics. After class, he admitted that I was right!
 

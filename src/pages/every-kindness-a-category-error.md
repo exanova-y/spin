@@ -98,4 +98,4 @@ Crystal lattice ignores him. They gather their books and papers, stacking them w
 
 The snow has stopped, the street empty except for two figures 3 meters apart, the other typing into Obsidian.
 
-*This story is dedicated to my oomfie Yuxi*
+*This story is dedicated to an oomfie*

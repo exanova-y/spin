@@ -10,9 +10,11 @@ tags: ["lab equipment", "neuroscience", "experimentalist-confetti"]
 ### Motivation: Neuronal headstages bottlenecked researchers
 2025 was full of startup hype about neuron computers. At Frontier Tower's neurotech floor, friends were discussing biological neuronal responses to nootropics and neuropeptides. However, the neuronal headstages were hard to get. Student clubs e.g. UC Berkeley didn't rent them out, nor did neurotech startups e.g. Science.xyz.
 
-For reference, a single microelectrode array of 59 channels from multichannel systems costs $300. Not to mention, integrated neuronal headstage setups from Axion biosystems cost $10 - $50k.
+For reference, a single microelectrode array of 59 channels from multichannel systems costs \$300.
 
-Thus, we experimented with building a cheap MEA, and so far graphene version costs <1$ and 5.5 min per unit. 
+Not to mention, integrated neuronal headstage setups from Axion biosystems cost \$10k - \$50k.
+
+Thus, we experimented with building a cheap MEA, and so far graphene version costs <\$1 and 5.5 min per unit. 
 
 ### We tested 3 laser deposition techniques
 

@@ -1,12 +1,12 @@
 ---
 layout: layouts/post.njk
-title: "return-from-relaxation"
-date: 2025-01-01
+title: "Jan: return from relaxation"
+date: 2025-02-20
 author: "Yoyo"
 category: lab
 ---
 
-## the return from extended relaxation centre, jan 2026 
+## The return from extended relaxation centre, jan 2026 
 
 After 3 months in Tokyo, I relocated to near the Stanford campus. Featuring material access, seminars, furries, rationality-subgraph (eh), quotes
 
@@ -41,12 +41,12 @@ I don't want to become the armchair theorist I don't want to be the wise cynic s
 ### welcome to celeste from celesteland
 [most names replaced by _]
 - the re-*viv*-val was progressing. Saw barton in *viv*arium along with __, __ and “other twinks” (sic). the workbench, furniture have all updated.
-- __ was in *viv* and well-dressed in all black. there’s a stash of nicotine on the shelf. he handed me 6 mg. I told him I take 0 mg.
+- Person 1 was in *viv* and well-dressed in all black. there’s a stash of nicotine on the shelf. he handed me 6 mg. I told him I take 0 mg.
 - yuliya was there;
-- __ did recognize me, he is meeting a boy for sushi and was heading out.
-- __ said he was impending to read critical theory. the political theology class at stanford didn’t match his neural pathways.
-- __ inspected my website live. I gifted her daisong pan’s thesis on microscopy.
-- __ materialized in black dresses. she was hasty: “I even slowed down 50%, and you still didn’t get it!” I gifted her a yamikawaii syringe necklace and celestia. she stared at my necklace and didn't say anything. 
+- Person 2 did recognize me, he is meeting a boy for sushi and was heading out.
+- Person 3 said he was impending to read critical theory. the political theology class at stanford didn't match his neural pathways.
+- Person 4 inspected my website live. I gifted her daisong pan's thesis on microscopy.
+- Person 5 materialized in black dresses. she was hasty: “I even slowed down 50%, and you still didn’t get it!” I gifted her a yamikawaii syringe necklace and celestia. she stared at my necklace and didn't say anything. 
 - celeste from belgium looked less @parafactual celeste and is a well-educated woman. the passerbys gawked at the group holding up white banners with faces full of viva la revolucion y el pueblo socialista y la-- celeste is naturally recursive, rejecting hierarchies right away, aside from climbing the celeste-hill
 - la lucha sigue--the struggle continues: at the hill, tutorvals proved to be an ineffective mosquito shield. celeste, tutorvals, lydia, I went to a hill unexpectedly and did live blogging. tutorvals uses psychology and philosophy like linear algebra. several altruists donated blood under the full moon followed by default-dancing the critters away
 - __, somehow related to activation oracles, made a neel nanda deepfake that redirected us to a hill with jesus presence 🎶
@@ -61,7 +61,7 @@ the Night Market was a place with consensual nsfw. now to be clear, I know nothi
 
 the rave room spectral output was high-saturation—purple/aurora triangular ellipses. the audio frequency was physically, comfortably perceptible against my human substrate. 
 
-on sunday, I was having a blast as I met up with oomfie @hypotheosis. we yapped constructivist modes of thinking and exiting the rationality social graph on 2 hours of sleep; meanwhile cris asked what are we even talking about. we went around the dealers den, first nsfw, then sfw; I traded apple jack (cheap 20 CNY, or ~$3 acrylic key chain with a glorious celestia pin that would sell $20) “you should visit chengdu!” some random asian guy shouted over my head. sourced some stickers “trash 4 trash", applied them onto my waterbottle. talked about rave lighting systems. I greeted several more furries writing de-assembler programs outside. but I made a faux pas and excused myself to the local vietnamese restaurant to eat pho, which was absolutely inundated with furries. 
+on sunday, I was having a blast as I met up with oomfie @hypotheosis. we yapped constructivist modes of thinking and exiting the rationality social graph on 2 hours of sleep; meanwhile cris asked what are we even talking about. we went around the dealers den, first nsfw, then sfw; I traded apple jack (cheap 20 CNY, or ~\$3 acrylic key chain with a glorious celestia pin that would sell \$20) “you should visit chengdu!” some random asian guy shouted over my head. sourced some stickers “trash 4 trash", applied them onto my waterbottle. talked about rave lighting systems. I greeted several more furries writing de-assembler programs outside. but I made a faux pas and excused myself to the local vietnamese restaurant to eat pho, which was absolutely inundated with furries. 
 
 there was a trans meetup (nice but why?) despite trans being the majority at the con which is very my habitat. some talked about transboys in biology, this I haven't witnessed yet. one participant wagged her mechanically assembled tail. another (awoo.boo) talked about her obscure kinks that 99.5% of the participants don't know. the boys talked in low tones. x worked at an event venue and they were not out yet. the other guy dressed up as legends of zelda. 
 

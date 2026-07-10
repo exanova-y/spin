@@ -2,26 +2,89 @@
 
 /* --- Font Imports --- */
 /* Google Fonts: Bitter (Headers), Source serif 4 (Body), Crimson Pro (Body) */
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 /* @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..144,200..900;1,8..144,200..900&display=swap'); */
 
 /* Local Font: Fira Code (kept for code blocks) */
-@font-face { font-family: 'Fira Code'; src: url('../assets/fonts/Fira_Code_v6.2/woff2/FiraCode-Light.woff2') format('woff2'); font-weight: 300; font-style: normal; }
-@font-face { font-family: 'Fira Code'; src: url('../assets/fonts/Fira_Code_v6.2/woff2/FiraCode-Regular.woff2') format('woff2'); font-weight: 400; font-style: normal; }
-@font-face { font-family: 'Fira Code'; src: url('../assets/fonts/Fira_Code_v6.2/woff2/FiraCode-Medium.woff2') format('woff2'); font-weight: 500; font-style: normal; }
-@font-face { font-family: 'Fira Code'; src: url('../assets/fonts/Fira_Code_v6.2/woff2/FiraCode-SemiBold.woff2') format('woff2'); font-weight: 600; font-style: normal; }
-@font-face { font-family: 'Fira Code'; src: url('../assets/fonts/Fira_Code_v6.2/woff2/FiraCode-Bold.woff2') format('woff2'); font-weight: 700; font-style: normal; }
+@font-face {
+    font-family: "Fira Code";
+    src: url("../assets/fonts/Fira_Code_v6.2/woff2/FiraCode-Light.woff2")
+        format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Fira Code";
+    src: url("../assets/fonts/Fira_Code_v6.2/woff2/FiraCode-Regular.woff2")
+        format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Fira Code";
+    src: url("../assets/fonts/Fira_Code_v6.2/woff2/FiraCode-Medium.woff2")
+        format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Fira Code";
+    src: url("../assets/fonts/Fira_Code_v6.2/woff2/FiraCode-SemiBold.woff2")
+        format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Fira Code";
+    src: url("../assets/fonts/Fira_Code_v6.2/woff2/FiraCode-Bold.woff2")
+        format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
 
 /* JetBrains Mono for enhanced readability */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+/* CMU Serif (Computer Modern Unicode) — Knuth's LaTeX default, self-hosted */
+@font-face {
+    font-family: "CMU Serif";
+    src: url("../assets/fonts/cmu-serif/cmu-serif-500-roman.woff2")
+        format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "CMU Serif";
+    src: url("../assets/fonts/cmu-serif/cmu-serif-500-italic.woff2")
+        format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "CMU Serif";
+    src: url("../assets/fonts/cmu-serif/cmu-serif-700-roman.woff2")
+        format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "CMU Serif";
+    src: url("../assets/fonts/cmu-serif/cmu-serif-700-italic.woff2")
+        format("woff2");
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Newsreader — on-screen serif by Production Type, commissioned by Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap");
 
 /* Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 /* Work sans */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Roboto Mono */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;1,300&display=swap");
 
 /* --- Base Styles --- */
 * {
@@ -58,18 +121,36 @@
     color: #00fcb5;
 }
 
-#quote-txt { color: #8c8fa1; }
+#quote-txt {
+    color: #8c8fa1;
+}
 
 #agender-gradient {
-    background: linear-gradient(90deg, #000, #bababa, #fff, #b8f483, #fff, #bababa, #000);
+    background: linear-gradient(
+        90deg,
+        #000,
+        #bababa,
+        #fff,
+        #b8f483,
+        #fff,
+        #bababa,
+        #000
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-
 #rainbow-gradient {
-    background: linear-gradient(90deg, #ff00ea, #ff8a00, #ffe600, #4cff00, #00c3ff, #7b00ff);
+    background: linear-gradient(
+        90deg,
+        #ff00ea,
+        #ff8a00,
+        #ffe600,
+        #4cff00,
+        #00c3ff,
+        #7b00ff
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -78,7 +159,7 @@
 }
 
 body {
-    font-family: 'Fira Code';
+    font-family: "Fira Code";
     font-weight: 200;
     line-height: 1.5;
     color: #c6d0f5;
@@ -90,12 +171,16 @@ body {
 }
 
 /* --- Typography & Links --- */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bitter', serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Bitter", serif;
     font-weight: 200;
     text-align: left;
 }
-
 
 .site-link {
     color: #d4c896;
@@ -122,7 +207,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
 }
 
-
 a {
     color: #9058f8;
     text-decoration: none;
@@ -142,13 +226,15 @@ nav ul {
 }
 
 nav a {
-    font-family: 'Bitter', serif; /* Optional: Use header font for nav */
+    font-family: "Newsreader", serif;
     color: #2d1b4e;
     font-weight: 500;
 }
 
 /* --- Layout Components --- */
-main { margin-bottom: 40px; }
+main {
+    margin-bottom: 40px;
+}
 
 .intro {
     max-width: 600px;
@@ -156,28 +242,54 @@ main { margin-bottom: 40px; }
     text-align: center;
 }
 
-.category { margin-bottom: 15px; }
-.category p:first-child { font-weight: normal; }
-
-
+.category {
+    margin-bottom: 15px;
+}
+.category p:first-child {
+    font-weight: normal;
+}
 
 .particle-toggle {
     text-align: left;
     margin: 20px 0;
 }
 
-.particle-toggle label { cursor: pointer; font-size: 0.9em; }
-.particle-toggle input[type="checkbox"] { margin-right: 8px; cursor: pointer; }
+.particle-toggle label {
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.particle-toggle input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
 
-.markdown-content img.figure { max-width: 60%; display: block; margin: 20px auto; }
+.markdown-content img.figure {
+    max-width: 60%;
+    display: block;
+    margin: 20px auto;
+}
 
 /* caption */
-.caption { text-align: center; display: block; margin: 4px auto 20px; font-style: italic; font-size: 0.9em; color: #8c8fa1; }
-.markdown-content p.caption { max-width: 60%; box-sizing: border-box; }
+.caption {
+    text-align: center;
+    display: block;
+    margin: 4px auto 20px;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #8c8fa1;
+}
+.markdown-content p.caption {
+    max-width: 60%;
+    box-sizing: border-box;
+}
 
 /* equations rendered as standalone italic paragraphs from markdown */
-.equation { text-align: center; display: block; margin: 4px auto 20px; font-style: italic}
-
+.equation {
+    text-align: center;
+    display: block;
+    margin: 4px auto 20px;
+    font-style: italic;
+}
 
 /* writing.html — gradient + tiled SVG noise (TV static), noise at ~50% opacity */
 /* body.page-writing {
@@ -196,14 +308,10 @@ main { margin-bottom: 40px; }
 } */
 
 .writings a {
-    color: #c6d0f5; 
+    color: #c6d0f5;
     /* no underline */
     text-decoration: none;
 }
-
-
-
-
 
 /* --- Gallery Grid --- */
 .gallery-grid {
@@ -307,7 +415,6 @@ main { margin-bottom: 40px; }
     flex-wrap: wrap; /* responsive wrap */
 }
 
-
 .box {
     border: 1px solid #00fcb5; /* Thin line border matching text color */
     padding: 20px;
@@ -330,8 +437,8 @@ main { margin-bottom: 40px; }
 .long-box {
     border: 1px solid #00fc50; /* Thin line border matching text color */
     padding: 10px;
-    width: 100%; 
-    height: 40px; 
+    width: 100%;
+    height: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -347,7 +454,6 @@ main { margin-bottom: 40px; }
     box-shadow: 0 2px 6px rgba(236, 0, 0, 0.1);
 }
 
-
 /* --- Markdown Content --- */
 .markdown-content {
     max-width: 700px;
@@ -355,15 +461,34 @@ main { margin-bottom: 40px; }
     font-size: 16px;
     padding: 20px 0;
     line-height: 1.8; /* Slightly more breathing room for serif body */
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
-.markdown-content h1 { font-size: 2.0em; margin-bottom: 30px; }
-.markdown-content h2 { font-size: 1.6em; margin-top: 40px; margin-bottom: 20px; }
-.markdown-content h3 { font-size: 1.3em; margin-top: 30px; margin-bottom: 15px; }
-.markdown-content p { margin-bottom: 20px; }
-.markdown-content ul, .markdown-content ol { margin-bottom: 20px; padding-left: 30px; }
-.markdown-content li { margin-bottom: 8px; }
+.markdown-content h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+.markdown-content h2 {
+    font-size: 1.6em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.markdown-content h3 {
+    font-size: 1.3em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.markdown-content p {
+    margin-bottom: 20px;
+}
+.markdown-content ul,
+.markdown-content ol {
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+.markdown-content li {
+    margin-bottom: 8px;
+}
 
 .markdown-content blockquote {
     border-left: 3px solid #9a60ff;
@@ -371,14 +496,19 @@ main { margin-bottom: 40px; }
     margin-left: 0;
     color: #8d4bf7;
     font-style: italic;
-    font-family: 'JetBrains Mono', monospace; /* Use Bitter for quotes */
+    font-family: "JetBrains Mono", monospace; /* Use Bitter for quotes */
     margin-bottom: 20px;
 }
 
-.markdown-content img { max-width: 100%; height: auto; margin: 20px 0; }
+.markdown-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
 
 .markdown-content code {
-    font-family: 'JetBrains Mono', monospace; /* Keep Fira Code for inline code */
+    font-family:
+        "JetBrains Mono", monospace; /* Keep Fira Code for inline code */
     background-color: #ede9fe;
     padding: 2px 4px;
     border-radius: 3px;
@@ -398,11 +528,17 @@ main { margin-bottom: 40px; }
     background-color: transparent;
     padding: 0;
     color: inherit;
-    font-family: 'Fira Code', monospace; /* Keep Fira Code for code blocks */
+    font-family: "Fira Code", monospace; /* Keep Fira Code for code blocks */
 }
 
-.markdown-content em, .markdown-content i { font-style: italic; }
-.markdown-content strong, .markdown-content b { font-weight: bold; }
+.markdown-content em,
+.markdown-content i {
+    font-style: italic;
+}
+.markdown-content strong,
+.markdown-content b {
+    font-weight: bold;
+}
 
 /* --- Footer --- */
 footer {
@@ -411,12 +547,26 @@ footer {
     font-size: 0.9em;
     color: #5b21b6;
     opacity: 0.7;
-    font-family: 'Bitter', serif;
+    font-family: "Bitter", serif;
 }
 
-.post-navigation { margin-top: 40px; text-align: left; }
-.footnotes { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ede9fe; font-size: 0.9em; }
-.post-metadata { font-style: italic; color: #5b21b6; opacity: 0.8; margin-bottom: 30px; font-size: 0.9em; }
+.post-navigation {
+    margin-top: 40px;
+    text-align: left;
+}
+.footnotes {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ede9fe;
+    font-size: 0.9em;
+}
+.post-metadata {
+    font-style: italic;
+    color: #5b21b6;
+    opacity: 0.8;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
 
 /* ===== Dark page layout (index, quests, me, readlogs, social-graph) ===== */
 
@@ -427,24 +577,28 @@ body.dark-page {
     overflow-x: hidden;
 }
 
-
 .video-bg {
     position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 0;
     overflow: hidden;
 }
 
 .video-bg video {
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .overlay {
     position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
@@ -470,12 +624,12 @@ body.dark-page {
     min-width: 0;
     padding: 36px 40px;
     overflow-x: wrap;
-    font-family: 'Fira Code', 'JetBrains Mono', 'Roboto Mono', monospace;
+    font-family: "Fira Code", "JetBrains Mono", "Roboto Mono", monospace;
     animation: fadeIn 1.2s ease-out;
 }
 
 .pane h1 {
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
     font-size: 2em;
     font-weight: 200;
     color: #ffffff;
@@ -484,7 +638,7 @@ body.dark-page {
 
 .pane h2 {
     color: #9058f8;
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
     font-weight: 200;
     font-size: 1.5em;
     margin: 18px 0 8px;
@@ -514,14 +668,26 @@ body.dark-page {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 600px) {
-    .pane { padding: 24px 20px; }
-    .pane h1 { font-size: 1.15em; }
-    header { padding: 12px 16px; }
+    .pane {
+        padding: 24px 20px;
+    }
+    .pane h1 {
+        font-size: 1.15em;
+    }
+    header {
+        padding: 12px 16px;
+    }
 }
 
 body.dark-page nav {
@@ -531,18 +697,23 @@ body.dark-page nav {
 }
 
 body.dark-page nav a {
-    color: #888;
+    color: #89dceb;
     text-decoration: none;
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
-    transition: color 0.2s, border-color 0.2s;
+    transition:
+        color 0.2s,
+        border-color 0.2s;
+    font-family: "Newsreader", serif;
 }
 
-body.dark-page nav a:hover { color: #ccc; }
+body.dark-page nav a:hover {
+    color: #a6e3a1;
+}
 
 body.dark-page nav a[aria-current="page"] {
-    color: #fff;
-    border-bottom-color: #fff;
+    color: #89dceb;
+    border-bottom-color: #89dceb;
 }
 
 body.dark-page nav .theme-toggle {
@@ -557,8 +728,12 @@ body.dark-page nav .theme-toggle {
     line-height: 1;
 }
 
-body.dark-page nav .theme-toggle:hover { color: #b39ddb; }
-body.dark-page nav .theme-toggle.active { color: #44c1ff; }
+body.dark-page nav .theme-toggle:hover {
+    color: #b39ddb;
+}
+body.dark-page nav .theme-toggle.active {
+    color: #44c1ff;
+}
 
 .pane.transparent {
     background: transparent;
@@ -576,7 +751,14 @@ body.dark-page nav .theme-toggle.active { color: #44c1ff; }
 }
 
 .trans-gradient {
-    background: linear-gradient(90deg, #5bcefa, #f5a9b8, #fff, #f5a9b8, #5bcefa);
+    background: linear-gradient(
+        90deg,
+        #5bcefa,
+        #f5a9b8,
+        #fff,
+        #f5a9b8,
+        #5bcefa
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -588,7 +770,7 @@ body.dark-page nav .theme-toggle.active { color: #44c1ff; }
 }
 
 .text-arbor {
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
     font-size: 0.9em;
     line-height: 1.5;
     color: #c6d0f5;
@@ -645,39 +827,88 @@ body.dark-page .markdown-content {
     color: #c6d0f5;
     max-width: 100%;
     padding: 0;
+    font-family: "Newsreader", "Crimson Pro", Georgia, serif;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 body.dark-page .markdown-content h1 {
-    color: #a0aacc;
-    font-size: 1.5em;
-    font-weight: 200;
+    color: #9140d0;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: "Newsreader", serif;
+    line-height: 1.2;
+    margin-top: 1em;
+    margin-bottom: 0.67em;
 }
 body.dark-page .markdown-content h2 {
-    color: #a0aacc;
-    font-size: 1.35em;
-    font-weight: 200;
+    color: #9140d0;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: "Newsreader", serif;
+    line-height: 1.2;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
 }
 
 body.dark-page .markdown-content h3 {
-    color: #a0aacc;
-    font-size: 1.2em;
-    font-weight: 200;
+    color: #9140d0;
+    font-size: 1.17em;
+    font-weight: 700;
+    font-family: "Newsreader", serif;
+    line-height: 1.2;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 body.dark-page .markdown-content p {
-    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0;
 }
 body.dark-page .markdown-content li {
     color: #c6d0f5;
     opacity: 0.85;
+    margin-bottom: 0.25em;
+    line-height: 1.5;
+}
+
+/* Editorial bullet design — em-dash marker with hanging indent */
+body.dark-page .markdown-content ul {
+    list-style: none;
+    padding-left: 1.25em;
+    margin-bottom: 1em;
+}
+body.dark-page .markdown-content ul > li {
+    position: relative;
+    padding-left: 0.75em;
+}
+body.dark-page .markdown-content ul > li::before {
+    content: "—";
+    position: absolute;
+    left: -0.55em;
+    top: 0;
+    color: #9140d0;
+    opacity: 0.8;
+    font-weight: 400;
+}
+body.dark-page .markdown-content ol {
+    padding-left: 1.5em;
+    margin-bottom: 1em;
+}
+body.dark-page .markdown-content ol > li::marker {
+    color: #9140d0;
+    opacity: 0.8;
+    font-family: "Newsreader", serif;
 }
 
 body.dark-page .markdown-content a {
-    color: #9058f8;
+    color: #94e2d5;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
 }
 
 body.dark-page .markdown-content a:hover {
-    color: #c6d0f5;
+    color: #a6e3a1;
 }
 
 body.dark-page .markdown-content code {
@@ -691,13 +922,56 @@ body.dark-page .markdown-content pre {
 }
 
 body.dark-page .markdown-content blockquote {
-    color: #a0aacc;
-    border-left-color: #9058f8;
+    color: #809cd1;
+    border-left-color: #d07277;
+    font-family: "CMU Serif", "Newsreader", serif;
+    font-style: italic;
 }
 
 body.dark-page .markdown-content em,
 body.dark-page .markdown-content i {
-    color: #a0aacc;
+    color: #89dceb;
+}
+
+body.dark-page .markdown-content strong,
+body.dark-page .markdown-content b {
+    color: #bf956a;
+    font-weight: 700;
+}
+
+/* Post metadata — author, date, tags (Glassmorphic Nu Disco palette) */
+body.dark-page .markdown-content .post-meta {
+    margin-bottom: 1.5em;
+}
+body.dark-page .markdown-content .post-author {
+    color: #9140d0;
+}
+body.dark-page .markdown-content .post-date {
+    color: #809cd1;
+}
+body.dark-page .markdown-content .post-tag {
+    font-size: 0.8em;
+    border: 1px solid rgba(148, 226, 213, 0.4);
+    border-radius: 0;
+    padding: 2px 6px;
+    margin-left: 8px;
+    font-family: "Fira Code", monospace;
+    text-decoration: none;
+    color: #94e2d5;
+    opacity: 0.85;
+    transition:
+        opacity 0.2s,
+        border-color 0.2s;
+}
+body.dark-page .markdown-content .post-tag:hover {
+    opacity: 1;
+    border-color: #94e2d5;
+    color: #94e2d5;
+}
+body.dark-page .markdown-content .post-tag:hover {
+    opacity: 1;
+    border-color: #74ade8;
+    color: #74ade8;
 }
 
 body.dark-page .post-navigation {
@@ -708,7 +982,7 @@ body.dark-page .post-navigation {
 
 body.dark-page .post-navigation a {
     color: #5900ff;
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
     font-size: 0.85em;
     text-decoration: none;
 }
@@ -725,7 +999,7 @@ body.page-writing .tags-cloud {
 
 body.page-writing .tags-cloud .tags-label {
     opacity: 0.6;
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
     font-size: 0.9em;
 }
 
@@ -735,18 +1009,22 @@ body.page-writing .tags-cloud a {
     border-radius: 0px;
     padding: 2px 6px;
     margin-left: 8px;
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
     font-size: 0.8em;
     text-decoration: none;
     color: #c6d0f5;
     display: inline-block;
     margin-bottom: 6px;
     box-shadow: 2px 2px 0 #7f3de8;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    transition:
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
 }
 
 body.page-writing .tags-cloud a:hover {
-    box-shadow: 2px 2px 0 #7f3de8, 0 0 10px rgba(198, 208, 245, 0.15);
+    box-shadow:
+        2px 2px 0 #7f3de8,
+        0 0 10px rgba(198, 208, 245, 0.15);
     text-shadow: 0 0 6px rgba(198, 208, 245, 0.25);
 }
 
@@ -792,7 +1070,9 @@ body.page-writing h2::before {
     left: -1.2em;
     color: #b39ddb;
     opacity: 0;
-    transition: opacity 120ms, transform 120ms;
+    transition:
+        opacity 120ms,
+        transform 120ms;
 }
 .post-list li:hover::before {
     opacity: 1;

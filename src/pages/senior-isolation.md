@@ -43,7 +43,7 @@ A Canadian survey found 63% of seniors felt they had been treated unfairly based
 
 **Fear of falling**
 
-About 20–60 % of community-dwelling older adults have fear of falling, and 20–55 % report limited daily activities due to fear of falling. Falls result in deterioration of physical functioning. and quality of life. studies have found that senior citizens with a fall history have a FOF prevalence of 40–73%. One-third of people over 65 will fall at least once a year. Among Canadian seniors, falls remain the leading cause of injury-related hospitalizations, and absolute numbers are on the rise ([source](https://www.phac-aspc.gc.ca/seniors-aines/publications/public/injury-blessure/seniors_falls-chutes_aines/assets/pdf/seniors_falls-chutes_aines-eng.pdf\)))
+About 20–60 % of community-dwelling older adults have fear of falling, and 20–55 % report limited daily activities due to fear of falling. Falls result in deterioration of physical functioning. and quality of life. studies have found that senior citizens with a fall history have a FOF prevalence of 40–73%. One-third of people over 65 will fall at least once a year. Among Canadian seniors, falls remain the leading cause of injury-related hospitalizations, and absolute numbers are on the rise ([source](https://www.phac-aspc.gc.ca/seniors-aines/publications/public/injury-blessure/seniors_falls-chutes_aines/assets/pdf/seniors_falls-chutes_aines-eng.pdf)))
 
 Even if 7/12 million community-dwelling seniors adopt anti-fall devices, they can turn into fall-encouragement devices without adequate repair. For example, cane tips can become worn, wheels on walkers and wheelchairs can become loose, or equipment can be too heavy or the wrong height. Attitudes about devices aren’t well-known, but in the seniors without devices, some claim to have no need, some avoid it due to stigma, and some due to fear of dependence and lack of training([source](https://pubmed.ncbi.nlm.nih.gov/27573318/)).
 
@@ -158,7 +158,7 @@ These companies offer a combination of software and hardware solutions for senio
 1. **Intuition Robotics, founded 2015**
     ![elliq](/assets/images/elliq.webp)
     1. Team: Founders: Dor Skuler, Itai Mendelsohn, Roy Amir. Has 50 - 100 employees.
-    2. Money raised: Raised a total of $58 million from over 5 rounds. Their latest funding was raised on Feb 13, 2020 in a Series B round.
+    2. Money raised: Raised a total of \$58 million from over 5 rounds. Their latest funding was raised on Feb 13, 2020 in a Series B round.
     3. Markets served: Launched in 2018. US and other English-speaking countries, plan to expand into Japan
     4. Impact to date: According to the 2022 [impact report](https://2969058.fs1.hubspotusercontent-na1.net/hubfs/2969058/Loneliness%20White%20Paper-2.pdf), ElliQ both reduces loneliness for 80% of users and helps 82% stay mentally active. At least 800 seniors have been impacted in a partnership with New York State Office for the Aging, but the exact number is not known since it is a private company.
     5. Solution: ElliQ includes a physical voice assistant and a tablet with software. The physical assistant is like Alexa; The main difference being it engages seniors without prompting. It includes a camera and it’s head can also move back and forth. Together with the software it supports four categories of use:
@@ -198,7 +198,7 @@ While well-intentioned, current designs like ElliQ, ROBEAR and SAM heavily invol
 Meanwhile, seniors felt close to robots which look like familiar animals with soft fur, facial expressions, voice and breathing movements.
 
 Companion robot market size estimated to be 
-$9.2 billion USD and expected to expand to $36.3 billion USD by [2028](https://www.digitaljournal.com/pr/news/companion-robots-market-2023-growth-trend-share-and-forecast-till-2030-123-pages-report#:~:text=The%20global%20Companion%20Robots%20market%20size%20was%20valued%20at%20USD,apparent%20companionship%20for%20human%20beings). Financially viable, but will likely be expensive to compensate for costs. Hence, market to middle-upper class in developed countries.
+\$9.2 billion USD and expected to expand to \$36.3 billion USD by [2028](https://www.digitaljournal.com/pr/news/companion-robots-market-2023-growth-trend-share-and-forecast-till-2030-123-pages-report#:~:text=The%20global%20Companion%20Robots%20market%20size%20was%20valued%20at%20USD,apparent%20companionship%20for%20human%20beings). Financially viable, but will likely be expensive to compensate for costs. Hence, market to middle-upper class in developed countries.
 
 ## How companion robots work
 ![pipeline](/assets/images/companion-pipeline.png)
