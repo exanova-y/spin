@@ -25,7 +25,7 @@
             ${l.label}
           </a>`;
         }).join('')}
-        <button class="theme-toggle" title="Toggle pane background">❄</button>
+        <button class="theme-toggle" title="Toggle light mode">☾</button>
       </nav>`;
 
     document.currentScript.insertAdjacentHTML('afterend', html);
@@ -33,8 +33,8 @@
     document.currentScript.nextElementSibling
       .querySelector('.theme-toggle')
       .addEventListener('click', function () {
-        const pane = this.closest('.pane');
-        pane.classList.toggle('transparent');
+        document.body.classList.toggle('light-mode');
         this.classList.toggle('active');
+        this.textContent = document.body.classList.contains('light-mode') ? '☀' : '☾';
       });
   })();

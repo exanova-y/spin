@@ -1081,3 +1081,31 @@ body.page-writing h2::before {
 .post-list li:hover .title {
     color: #fff;
 }
+
+/* --- Light Mode --- */
+body.light-mode {
+    background: #e8e4df url('/assets/images/nuclear-circle-crops.jpg') center/cover fixed;
+    color: #1a1a2e;
+}
+body.light-mode a { color: #5b21b6; }
+body.light-mode a:hover { color: #7c3aed; }
+body.light-mode .site-link { color: #92400e; }
+body.light-mode footer p { color: #6b7280; }
+body.light-mode .make-purple {
+    background: linear-gradient(90deg, #5b21b6, #059669);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+body.light-mode .box,
+body.light-mode .long-box {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(45px);
+    -webkit-backdrop-filter: blur(50px);
+}
+body.light-mode .box[style*="9058f8"],
+body.light-mode .box[style*="7287fd"],
+body.light-mode .long-box[style*="9058f8"],
+body.light-mode .long-box[style*="7287fd"] {
+    border-color: rgba(144, 88, 248, 0.3) !important;
+    box-shadow: 0 4px 30px rgba(144, 88, 248, 0.12);
+}

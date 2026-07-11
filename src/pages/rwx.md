@@ -6,7 +6,7 @@ author: "Yoyo"
 category: lab
 tags: ["feral-scholars"]
 ---
-How to ingest hundreds of papers in hours, run experiments, and write up 5000 words in an afternoon in a neolab context. Tested and true.
+How to ingest hundreds of papers in hours, run in-silico experiments, and write up 5000 words in an afternoon when you're too broke to afford journal subscriptions. Tested and true.
 
 ## R: Literature review
 [Jiabin Huang research advice](https://github.com/jbhuang0604/awesome-tips) offers a variety of tips for researchers.
@@ -62,8 +62,7 @@ Take advantage of mornings, lunch, evenings, walks to update results and brainst
 
 Meetings should not be the first time results are presented, since almost no one will digest them live and provide insightful suggestions.
 
-## W
-### Drafting papers
+## W: drafting papers
 - Throughout this entire time, you should be accumulating data points in all sections of the paper in parallel, rather than starting from scratch.
 - Figures drive the narrative. See: [https://x.com/jbhuang0604/status/1437443017510621185](https://x.com/jbhuang0604/status/1437443017510621185), [https://x.com/jbhuang0604/status/1665738070002483201](https://x.com/jbhuang0604/status/1665738070002483201), and [https://github.com/jbhuang0604/awesome-tips/blob/main/paper-writing.md](https://github.com/jbhuang0604/awesome-tips/blob/main/paper-writing.md)
 - Write these first: Introduction, Related Work, Methods
@@ -80,6 +79,7 @@ If you are researching at a small startup, it is extremely difficult to simultan
 
 ## Links
 ### Where to find free PDFs
+![let me in](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExajVlNzJibWI5azBiejZqdWxrMG9lamg0Ymh6MWp4YnZyenIybDdsNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yx400dIdkwWdsCgWYp/giphy.gif)
 - SciHub
 - Anna's Archive
 - Many PDFs exist informally within the network on are.na, curius.app, or Grok.
