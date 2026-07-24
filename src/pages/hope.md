@@ -6,7 +6,8 @@ author: "Yoyo"
 category: stories
 ---
 
-A series of personal logs on hope and preservation while financing college tuition. Status: *being updated*
+The role of optimism.
+Status: *being updated*
 
 ---
 
