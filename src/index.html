@@ -11,6 +11,37 @@
     <!--<script>const neko = createNeko({speed:24,fps:120,behaviorMode:0,idleThreshold:6,allowBehaviorChange:true,startX:0,startY:0});neko.start();</script>-->
 </head>
 <body>
+    <div id="paper-wallpaper" aria-hidden="true"></div>
+    <script type="module">
+        // GrainGradient wallpaper blended over the dimmed nuclear-circle-crops image
+        import {
+            ShaderMount,
+            grainGradientFragmentShader,
+            getShaderColorFromString
+        } from 'https://esm.sh/@paper-design/shaders@0.0.78';
+
+        const mount = document.getElementById('paper-wallpaper');
+        if (mount && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            try {
+                new ShaderMount(mount, grainGradientFragmentShader, {
+                    u_colors: [
+                        getShaderColorFromString('#7300ff'),
+                        getShaderColorFromString('#eba8ff'),
+                        getShaderColorFromString('#00bfff'),
+                        getShaderColorFromString('#2b00ff')
+                    ],
+                    u_colorsCount: 4,
+                    u_colorBack: getShaderColorFromString('#000000'),
+                    u_softness: 0.5,
+                    u_intensity: 0.5,
+                    u_noise: 0.25,
+                    u_shape: 4 // GrainGradientShapes.corners
+                }, undefined, 1, undefined, undefined, undefined, ['u_colors']);
+            } catch (e) {
+                console.warn('Paper wallpaper failed to mount:', e);
+            }
+        }
+    </script>
     <header>
        
     </header>
@@ -81,7 +112,7 @@
             <div class="box" style="height: 170px; width: 45%; overflow: hidden; border: 1px solid #7287fd">
                 <p><span class="make-purple">[ site info ]</span></p>
                 <p>1217 curius bookmarks have been added to this site ✓</p>
-                <p>peacesign.adiabatic.garden is a work in progress ○ </p>
+                <p><i>peacesign.adiabatic.garden</i> is a work in progress ○ </p>
                 <p><a href="/pages/to-get">⊹ Yoyo wishlist</a></p>
             </div>
 
@@ -125,7 +156,7 @@
                 <section>
                     <p><span class="make-purple">[ funding ]</span></p>
                     <p><a href="/writing" class="site-link"></a></p>
-                    <p>adiabatic.garden is funded by macbooks, keyboards and GPUs scrapped from underground tunnels and warehouses 𖤓 consider donating! major supporters include: Plurigrid, 1517 Medici, Merge, @edchucation and certain kind individuals.</p>
+                    <p>adiabatic.garden is funded by computers, keyboards and GPUs scrapped from underground tunnels and warehouses. consider donating! major supporters include: Plurigrid, 1517 Medici, Merge, @edchucation and certain kind individuals.</p>
                 </section>
             </div>
 
@@ -191,7 +222,7 @@
         </div>
         <div class="particle-toggle">
             <label>
-                <input type="checkbox" id="vectorToggle" checked>
+                <input type="checkbox" id="vectorToggle">
                 See vector fields
             </label>
             <nav><button class="theme-toggle" title="Toggle light mode" onclick="document.body.classList.toggle('light-mode');this.textContent=document.body.classList.contains('light-mode')?'☀':'☾'">☾</button></nav>

@@ -170,6 +170,27 @@ body {
     font-size: 14px;
 }
 
+/* Paper Shaders wallpaper — fixed full-screen canvas mount over dimmed image */
+#paper-wallpaper {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+    background: #9fadbc;
+    background-image: url("/assets/images/nuclear-circle-crops-dark.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#paper-wallpaper canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    mix-blend-mode: soft-light;
+}
+
 /* --- Typography & Links --- */
 h1,
 h2,
@@ -416,10 +437,10 @@ main {
 }
 
 .box {
-    border: 1px solid #00fcb5; /* Thin line border matching text color */
+    border: 1px solid rgba(127, 61, 232, 0.45); /* translucent blue/violet edge */
     padding: 20px;
-    width: 31%; /* Adjustable width */
-    height: 200px; /* Adjustable height */
+    width: 31%;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -428,14 +449,18 @@ main {
     transition: all 0.3s ease;
     overflow-wrap: break-word;
     word-wrap: break-word;
+    background: rgba(8, 10, 24, 0.55);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    box-shadow: 0 4px 30px rgba(20, 24, 64, 0.35), inset 0 0 0 1px rgba(144, 200, 255, 0.05);
 }
 
 .box:hover {
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 6px 40px rgba(80, 120, 255, 0.25), inset 0 0 0 1px rgba(160, 200, 255, 0.18);
 }
 
 .long-box {
-    border: 1px solid #00fc50; /* Thin line border matching text color */
+    border: 1px solid rgba(127, 61, 232, 0.45);
     padding: 10px;
     width: 100%;
     height: 40px;
@@ -446,7 +471,10 @@ main {
     text-align: left;
     transition: all 0.3s ease;
     overflow-wrap: break-word;
-    /* word-wrap: break-word; */
+    background: rgba(8, 10, 24, 0.55);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    box-shadow: 0 4px 30px rgba(20, 24, 64, 0.35), inset 0 0 0 1px rgba(144, 200, 255, 0.05);
 }
 
 /* to make box slimmer? */
