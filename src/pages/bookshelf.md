@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: "fav media"
+title: "bookshelf"
 date: 2026-07-23
 author: "Yoyo"
 category: lab

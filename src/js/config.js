@@ -3,7 +3,7 @@ const siteConfig = {
     // Basic site information
     siteName: "Yoyo",
     siteTagline: "adiabatic.garden",
-    copyright: "by Yoyo is defocusing ultrasound",
+    copyright: "Yoyo",
     
     // Author information
     author: "Yoyo",
