@@ -1,2 +1,2 @@
-pages_project_name = "adiabatic-garden"
+name = "adiabatic-garden"
 pages_build_output_dir = "_site"
