@@ -482,6 +482,53 @@ main {
     box-shadow: 0 2px 6px rgba(236, 0, 0, 0.1);
 }
 
+.music-control {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 9px;
+    border: 1px solid #9058f8;
+    border-radius: 0;
+    color: #c6d0f5;
+    /* background: rgba(8, 10, 24, 0.82); */
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    /* box-shadow: 2px 2px 0 rgba(127, 61, 232, 0.45); */
+    font-family: "Fira Code", monospace;
+    font-size: 0.8em;
+}
+
+.music-control button {
+    width: 28px;
+    height: 24px;
+    padding: 0;
+    border: 0px;
+    border-radius: 0;
+    color: #c6d0f5;
+    background: transparent;
+    font: inherit;
+    line-height: 1;
+    cursor: pointer;
+}
+/* 
+.music-control button:hover,
+.music-control button:focus-visible {
+    color: #fff;
+    background: rgba(144, 88, 248, 0.2);
+    outline: none;
+} */
+
+@media (max-width: 600px) {
+    .music-control {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
 /* --- Markdown Content --- */
 .markdown-content {
     max-width: 700px;

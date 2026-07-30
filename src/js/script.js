@@ -19,8 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize time and weather
     initTimeAndWeather();
     
-    // Initialize random query display
-    initRandomQuery();
+    // Start the homepage soundtrack
+    initBackgroundMusic();
+
+    // Initialize random query display when the optional query widget is present
+    if (typeof initRandomQuery === 'function') {
+        initRandomQuery();
+    }
     
     // Simple hover effect for navigation links
     const navLinks = document.querySelectorAll('nav a');
@@ -44,6 +49,74 @@ document.addEventListener('DOMContentLoaded', function() {
     lastUpdated.style.fontSize = '0.8em';
     footer.appendChild(lastUpdated);
 });
+
+function initBackgroundMusic() {
+    const audio = document.getElementById('backgroundMusic');
+    const toggle = document.getElementById('musicToggle');
+
+    if (!audio || !toggle) {
+        return;
+    }
+
+    function updateMusicControl() {
+        const isPlaying = !audio.paused && !audio.ended;
+        toggle.textContent = isPlaying ? 'Ⅱ' : '▶';
+        toggle.setAttribute('aria-label', isPlaying ? 'Pause music' : 'Play music');
+        toggle.setAttribute('aria-pressed', String(isPlaying));
+        toggle.title = isPlaying ? 'Pause music' : 'Play music';
+    }
+
+    function removeUnlockListeners() {
+        document.removeEventListener('pointerdown', unlockMusic);
+        document.removeEventListener('keydown', unlockMusic);
+    }
+
+    function playMusic() {
+        const playAttempt = audio.play();
+
+        if (playAttempt) {
+            playAttempt.then(function() {
+                removeUnlockListeners();
+                updateMusicControl();
+            }).catch(updateMusicControl);
+        }
+    }
+
+    toggle.addEventListener('click', function() {
+        if (audio.paused || audio.ended) {
+            playMusic();
+        } else {
+            audio.pause();
+        }
+    });
+
+    audio.addEventListener('play', function() {
+        removeUnlockListeners();
+        updateMusicControl();
+    });
+    audio.addEventListener('pause', updateMusicControl);
+    audio.addEventListener('ended', updateMusicControl);
+
+    // Audible autoplay may be blocked. In that case, begin on the visitor's
+    // first interaction without making them hunt for the player.
+    function unlockMusic(event) {
+        if (event.target === toggle || toggle.contains(event.target)) {
+            return;
+        }
+
+        if (audio.paused) {
+            playMusic();
+        }
+
+        removeUnlockListeners();
+    }
+
+    document.addEventListener('pointerdown', unlockMusic);
+    document.addEventListener('keydown', unlockMusic);
+
+    updateMusicControl();
+    playMusic();
+}
 
 // Function to apply configuration variables across the site
 function applyConfigVariables() {
