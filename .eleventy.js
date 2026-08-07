@@ -10,7 +10,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/*.jpg");
   eleventyConfig.addPassthroughCopy("src/*.webp");
   eleventyConfig.addPassthroughCopy("src/*.mp4");
-  eleventyConfig.addPassthroughCopy({"instrumentals.mp3": "instrumentals.mp3"});
+  eleventyConfig.addPassthroughCopy({"03. Deep Space Travels.mp3": "03. Deep Space Travels.mp3"});
 
   // YouTube embed shortcode
   eleventyConfig.addShortcode("youtube", function(id) {
