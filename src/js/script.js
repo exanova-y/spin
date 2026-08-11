@@ -13,9 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize particle system
     initParticleSystem();
     
-    // Initialize vector field
-    initVectorField();
-    
     // Initialize time and weather
     initTimeAndWeather();
     

@@ -264,20 +264,6 @@ main {
     font-weight: normal;
 }
 
-.particle-toggle {
-    text-align: left;
-    margin: 20px 0;
-}
-
-.particle-toggle label {
-    cursor: pointer;
-    font-size: 0.9em;
-}
-.particle-toggle input[type="checkbox"] {
-    margin-right: 8px;
-    cursor: pointer;
-}
-
 .markdown-content img.figure {
     max-width: 60%;
     display: block;
