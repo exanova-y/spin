@@ -14,6 +14,7 @@ cool people in no particular order
 - [dexy](https://sites.google.com/view/dexuantang/home) - ee phd student who builds tms coils
 
 theorists
+- [infinite modal noah](https://x.com/NoahChrein) - category theory
 - [guillefix](https://guillefix.me/) - nudge
 - [yuxi on the wired](https://yuxi.ml) - scaling laws
 - [yudhi](https://www.yudhister.me/notes/) - good at proofs
