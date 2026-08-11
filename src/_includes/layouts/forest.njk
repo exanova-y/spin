@@ -1,0 +1,49 @@
+---
+layout: layouts/base.njk
+bodyClass: page-forest
+---
+<div class="forest-intro">
+  <a class="forest-back" href="/writing/">← Writing</a>
+  <h1>{{ title }}</h1>
+  {% if description %}<p>{{ description }}</p>{% endif %}
+</div>
+
+<div class="forest-layout">
+  <main class="forest-document markdown-content" aria-label="{{ title }}">
+    {% for note in collections[collectionName] %}
+      <section class="forest-note" id="{{ note.data.noteId }}" data-note-id="{{ note.data.noteId }}">
+        <h2 class="forest-note-title">
+          <span>{{ note.data.title }}</span>
+          <a class="note-address" href="{{ note.url }}" aria-label="Open {{ note.data.title }} at its canonical address">[{{ note.data.noteId }}]</a>
+        </h2>
+        <p class="forest-note-meta">
+          {% if note.data.author %}{{ note.data.author }} · {% endif %}{{ note.date | formatDate }}
+        </p>
+        <div class="forest-note-content">
+          {{ note.templateContent | inlineNote(note.data.noteId) | safe }}
+        </div>
+      </section>
+    {% endfor %}
+  </main>
+
+  <nav class="forest-toc" aria-label="Table of contents">
+    <h2>Contents</h2>
+    <ol>
+      {% for note in collections[collectionName] %}
+        <li>
+          <a href="#{{ note.data.noteId }}">{{ note.data.title }}</a>
+          {% set headings = note.data.noteId | inlineNoteHeadings %}
+          {% if headings.length %}
+            <ol>
+              {% for heading in headings %}
+                <li><a href="#{{ heading.id }}">{{ heading.title }}</a></li>
+              {% endfor %}
+            </ol>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </nav>
+</div>
+
+<script src="/js/forest.js"></script>

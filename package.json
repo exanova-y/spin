@@ -6,12 +6,17 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "cheerio": "^1.1.2",
+    "gray-matter": "^4.0.3",
     "serve": "^14.2.5",
     "wrangler": "^4.99.0"
   },
   "scripts": {
     "start": "eleventy --serve",
     "build": "rm -rf _site && eleventy",
+    "forest:prepare": "node scripts/prepare-forest.mjs",
+    "forest:build": "bash scripts/build-forest.sh",
+    "forest:serve": "npx serve forest/output",
     "deploy": "npm run build && npx wrangler pages deploy _site --skip-caching",
     "fetch:curius": "node scripts/fetch-curius.js",
     "embed:curius": "uv run scripts/embed-curius.py"

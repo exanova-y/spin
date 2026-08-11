@@ -66,17 +66,14 @@ function initBackgroundMusic() {
         toggle.title = isPlaying ? 'Pause music' : 'Play music';
     }
 
-    function removeUnlockListeners() {
-        document.removeEventListener('pointerdown', unlockMusic);
-        document.removeEventListener('keydown', unlockMusic);
-    }
-
     function playMusic() {
+        if (!audio.src) {
+            audio.src = audio.dataset.src;
+        }
         const playAttempt = audio.play();
 
         if (playAttempt) {
             playAttempt.then(function() {
-                removeUnlockListeners();
                 updateMusicControl();
             }).catch(updateMusicControl);
         }
@@ -91,31 +88,12 @@ function initBackgroundMusic() {
     });
 
     audio.addEventListener('play', function() {
-        removeUnlockListeners();
         updateMusicControl();
     });
     audio.addEventListener('pause', updateMusicControl);
     audio.addEventListener('ended', updateMusicControl);
 
-    // Audible autoplay may be blocked. In that case, begin on the visitor's
-    // first interaction without making them hunt for the player.
-    function unlockMusic(event) {
-        if (event.target === toggle || toggle.contains(event.target)) {
-            return;
-        }
-
-        if (audio.paused) {
-            playMusic();
-        }
-
-        removeUnlockListeners();
-    }
-
-    document.addEventListener('pointerdown', unlockMusic);
-    document.addEventListener('keydown', unlockMusic);
-
     updateMusicControl();
-    playMusic();
 }
 
 // Function to apply configuration variables across the site

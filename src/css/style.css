@@ -1,9 +1,8 @@
 /* Minimalist website CSS */
 
 /* --- Font Imports --- */
-/* Google Fonts: Bitter (Headers), Source serif 4 (Body), Crimson Pro (Body) */
-@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap");
-/* @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..144,200..900;1,8..144,200..900&display=swap'); */
+/* One request for the remote typefaces used across the site. */
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap");
 
 /* Local Font: Fira Code (kept for code blocks) */
 @font-face {
@@ -12,6 +11,7 @@
         format("woff2");
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "Fira Code";
@@ -19,6 +19,7 @@
         format("woff2");
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "Fira Code";
@@ -26,6 +27,7 @@
         format("woff2");
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "Fira Code";
@@ -33,6 +35,7 @@
         format("woff2");
     font-weight: 600;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "Fira Code";
@@ -40,10 +43,8 @@
         format("woff2");
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
-
-/* JetBrains Mono for enhanced readability */
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 /* CMU Serif (Computer Modern Unicode) — Knuth's LaTeX default, self-hosted */
 @font-face {
@@ -52,6 +53,7 @@
         format("woff2");
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "CMU Serif";
@@ -59,6 +61,7 @@
         format("woff2");
     font-weight: 400;
     font-style: italic;
+    font-display: swap;
 }
 @font-face {
     font-family: "CMU Serif";
@@ -66,6 +69,7 @@
         format("woff2");
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: "CMU Serif";
@@ -73,18 +77,8 @@
         format("woff2");
     font-weight: 700;
     font-style: italic;
+    font-display: swap;
 }
-
-/* Newsreader — on-screen serif by Production Type, commissioned by Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap");
-
-/* Inter */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-/* Work sans */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-
-/* Roboto Mono */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;1,300&display=swap");
 
 /* --- Base Styles --- */
 * {
@@ -179,7 +173,7 @@ body {
     z-index: -1;
     pointer-events: none;
     background: #9fadbc;
-    background-image: url("/assets/images/nuclear-circle-crops-dark.jpg");
+    background-image: url("/assets/images/nuclear-circle-crops-dark-compressed.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -902,7 +896,7 @@ body.dark-page .markdown-content {
     color: #c6d0f5;
     max-width: 100%;
     padding: 0;
-    font-family: "Newsreader", "Crimson Pro", Georgia, serif;
+    font-family: "Newsreader", Georgia, serif;
     font-size: 16px;
     line-height: 1.5;
 }
@@ -1155,6 +1149,220 @@ body.page-writing h2::before {
 }
 .post-list li:hover .title {
     color: #fff;
+}
+
+/* ===== Composed writing / Forester-style section views ===== */
+
+.note-address,
+body.dark-page .markdown-content .note-address {
+    color: #838ba7;
+    font-family: "Fira Code", monospace;
+    font-size: 0.58em;
+    font-weight: 400;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.note-address:hover,
+body.dark-page .markdown-content .note-address:hover {
+    color: #94e2d5;
+}
+
+.section-view-link {
+    color: inherit;
+}
+
+body.page-forest.fullscreen .pane {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+}
+
+.forest-intro {
+    max-width: 1180px;
+    margin: 0 auto 2.5rem;
+}
+
+.forest-intro h1 {
+    margin-top: 0.75rem;
+}
+
+.forest-intro p {
+    max-width: 46rem;
+    color: #838ba7;
+}
+
+.forest-back {
+    font-size: 0.85em;
+}
+
+.forest-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 16rem;
+    gap: clamp(2rem, 5vw, 4.5rem);
+    max-width: 1180px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+body.dark-page .forest-document {
+    max-width: 780px;
+    margin: 0;
+    counter-reset: forest-note;
+}
+
+.forest-note {
+    counter-increment: forest-note;
+    counter-reset: forest-subsection;
+    scroll-margin-top: 2rem;
+    padding: 0 0 5rem;
+    margin: 0 0 4rem;
+    border-bottom: 1px solid rgba(198, 208, 245, 0.1);
+}
+
+.forest-note:last-child {
+    border-bottom: 0;
+}
+
+body.dark-page .forest-note-title {
+    display: flex;
+    gap: 0.65rem;
+    align-items: baseline;
+    margin-top: 0;
+    font-size: clamp(1.55rem, 3vw, 2rem);
+}
+
+.forest-note-title::before {
+    content: counter(forest-note) ".";
+    color: #838ba7;
+    font-family: "Fira Code", monospace;
+    font-size: 0.58em;
+    font-weight: 400;
+}
+
+body.dark-page .forest-note-meta {
+    margin: -0.5rem 0 2rem;
+    color: #6d738a;
+    font-family: "Fira Code", monospace;
+    font-size: 0.72rem;
+}
+
+.forest-note-content > :first-child {
+    margin-top: 0;
+}
+
+body.dark-page .forest-note-content h3 {
+    counter-increment: forest-subsection;
+    scroll-margin-top: 2rem;
+}
+
+body.dark-page .forest-note-content h3::before {
+    content: counter(forest-note) "." counter(forest-subsection) " ";
+    color: #838ba7;
+    font-family: "Fira Code", monospace;
+    font-size: 0.72em;
+    font-weight: 400;
+}
+
+.forest-note-content h4,
+.forest-note-content h5,
+.forest-note-content h6 {
+    scroll-margin-top: 2rem;
+}
+
+.forest-toc {
+    position: sticky;
+    top: 4.5rem;
+    align-self: start;
+    max-height: calc(100vh - 6.5rem);
+    overflow-y: auto;
+    padding-right: 0.75rem;
+    scrollbar-width: thin;
+}
+
+.forest-toc h2 {
+    margin: 0 0 1rem;
+    color: #b39ddb;
+    font-family: "Fira Code", monospace;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.forest-toc ol {
+    list-style: none;
+    padding: 0;
+    counter-reset: toc-note;
+}
+
+.forest-toc > ol > li {
+    counter-increment: toc-note;
+    counter-reset: toc-subsection;
+    margin-bottom: 0.65rem;
+}
+
+.forest-toc ol ol {
+    margin: 0.4rem 0 0 1rem;
+}
+
+.forest-toc ol ol li {
+    counter-increment: toc-subsection;
+    margin: 0.28rem 0;
+}
+
+.forest-toc a {
+    display: block;
+    color: #6d738a;
+    font-size: 0.72rem;
+    line-height: 1.35;
+    text-decoration: none;
+}
+
+.forest-toc > ol > li > a::before {
+    content: counter(toc-note) ". ";
+}
+
+.forest-toc ol ol a::before {
+    content: counter(toc-note) "." counter(toc-subsection) " ";
+}
+
+.forest-toc a:hover,
+.forest-toc a[aria-current="location"] {
+    color: #94e2d5;
+}
+
+@media (max-width: 60rem) {
+    body.page-forest.fullscreen .pane {
+        padding-left: clamp(1.25rem, 5vw, 3rem);
+        padding-right: clamp(1.25rem, 5vw, 3rem);
+    }
+
+    .forest-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .forest-toc {
+        grid-row: 1;
+        position: static;
+        max-height: 18rem;
+        padding: 1rem;
+        border: 1px solid rgba(198, 208, 245, 0.1);
+    }
+}
+
+@media (max-width: 40rem) {
+    body.dark-page .forest-note-title {
+        display: block;
+    }
+
+    .forest-note-title::before {
+        margin-right: 0.5rem;
+    }
+
+    .forest-note-title .note-address {
+        display: block;
+        margin-top: 0.5rem;
+    }
 }
 
 /* --- Light Mode --- */

@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 <div id="content" class="markdown-content">
-  <h3>{{ title }}</h3>
+  <h3 class="post-title">{{ title }}{% if noteId %} <a class="note-address" href="{{ page.url }}">[{{ noteId }}]</a>{% endif %}</h3>
   {% if date %}
   <p class="post-meta">
     <em>by <span class="post-author">{{ author or "Yoyo" }}</span> • <span class="post-date">{{ date | formatDate }}</span></em>
@@ -37,7 +37,7 @@ layout: layouts/base.njk
   <a href="/writing" class="back-link">← Back to writing</a>
 </div>
 
-<script>
+{% if content | containsMath %}<script>
   document.addEventListener('DOMContentLoaded', function() {
     const content = document.getElementById('content');
     if (typeof renderMathInElement === 'function') {
@@ -50,4 +50,4 @@ layout: layouts/base.njk
       });
     }
   });
-</script>
+</script>{% endif %}

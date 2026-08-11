@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 title: "Writing"
 bodyClass: "page-writing"
+permalink: /writing/index.html
 ---
 <div class="tab-panel">
 
@@ -21,7 +22,7 @@ bodyClass: "page-writing"
     {% endfor %}
     </ul>
 
-    <h2 class="make-purple">Lab notebook</h2>
+    <h2 class="make-purple"><a class="section-view-link" href="/writing/lab-notebook/">Lab notebook</a></h2>
     <ul class="post-list">
     {% for post in collections.lab %}
         <li><span class="date">{{ post.date | formatDate }}</span><a class="title" href="{{ post.url }}">{{ post.data.title }}</a></li>
@@ -35,7 +36,7 @@ bodyClass: "page-writing"
     {% endfor %}
     </ul>
 
-    <h2 class="make-purple">Stories existing purely in your imagination</h2>
+    <h2 class="make-purple"><a class="section-view-link" href="/writing/stories/">Stories existing purely in your imagination</a></h2>
     <ul class="post-list">
     {% for post in collections.stories %}
         <li><span class="date">{{ post.date | formatDate }}</span><a class="title" href="{{ post.url }}">{{ post.data.title }}</a></li>

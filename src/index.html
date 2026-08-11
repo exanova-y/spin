@@ -5,24 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>adiabatic.garden</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/config.js"></script> <!-- for the site menu and name-->
+    <script defer src="/js/config.js"></script> <!-- for the site menu and name-->
     <!-- <script src="/js/navigation.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- this is a markdown parser-->
     <!--<script>const neko = createNeko({speed:24,fps:120,behaviorMode:0,idleThreshold:6,allowBehaviorChange:true,startX:0,startY:0});neko.start();</script>-->
 </head>
 <body>
     <div id="paper-wallpaper" aria-hidden="true"></div>
     <script type="module">
-        // GrainGradient wallpaper blended over the dimmed nuclear-circle-crops image
-        import {
-            ShaderMount,
-            grainGradientFragmentShader,
-            getShaderColorFromString
-        } from 'https://esm.sh/@paper-design/shaders@0.0.78';
-
         const mount = document.getElementById('paper-wallpaper');
-        if (mount && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const canAnimate = mount
+            && !matchMedia('(prefers-reduced-motion: reduce)').matches
+            && !matchMedia('(max-width: 48rem)').matches
+            && !navigator.connection?.saveData;
+
+        async function mountWallpaper() {
             try {
+                const {
+                    ShaderMount,
+                    grainGradientFragmentShader,
+                    getShaderColorFromString
+                } = await import('https://esm.sh/@paper-design/shaders@0.0.78');
                 new ShaderMount(mount, grainGradientFragmentShader, {
                     u_colors: [
                         getShaderColorFromString('#7300ff'),
@@ -41,6 +43,14 @@
                 console.warn('Paper wallpaper failed to mount:', e);
             }
         }
+
+        if (canAnimate) {
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(mountWallpaper, { timeout: 3000 });
+            } else {
+                setTimeout(mountWallpaper, 1200);
+            }
+        }
     </script>
     <header>
        
@@ -56,12 +66,12 @@
             <button
                 type="button"
                 id="musicToggle"
-                aria-label="Pause music"
-                aria-pressed="true"
-                title="Pause music"
-            >Ⅱ</button>
+                aria-label="Play music"
+                aria-pressed="false"
+                title="Play music"
+            >▶</button>
         </div>
-        <audio id="backgroundMusic" src="/03.%20Deep%20Space%20Travels.mp3" autoplay preload="auto"></audio>
+        <audio id="backgroundMusic" data-src="/03.%20Deep%20Space%20Travels.mp3" preload="none"></audio>
         <div class="box-grid">
             <div class="box" style="height: 150px; width: 10%; position: relative;overflow: hidden; object-fit: cover;">
                 <img src="/assets/images/plant.jpg" alt="fish" style="width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; top: 0; left: 0;">
@@ -94,6 +104,7 @@
                 <div class="box" style="width: 45%; height: 290px; overflow: hidden; border: 1px solid #00fc50;">
                     <section>
                         <p><span class="make-purple">[ bookmarks ]</span></p>
+                        <p>Signals and systems ○ </p>
                         <p>The City and the Stars ○ </a></p>
                         <p>Permutation City ✓</p>
                         <p><a href="https://www.youtube.com/watch?v=cFwHAMf0kEc">Jack Gallant: Representations of the World in the Human Brain</a> ✓</p>
@@ -111,10 +122,11 @@
                         <p>other things built</p>
                         <p><a href="/favs/laser-cutter">⟐ reassembling a laser cutter </a></p>
                         <p><a href="/favs/microdrones">⟐ microdrone assembly</a></p>
-                        <p><a href="/favs/swarm-mapping">⟐ swarm robots at uwaterloo</a>
+                        <p><a href="/favs/swarm-mapping">⟐ hand gestures for swarm robots at uwaterloo</a>
                         <p>approach</p>
                         <p><a href="/pages/rwx">⊹ The rwx methodology</a></p>
                         <br>
+                        <p>You can also support my work on <a href="https://ko-fi.com/yoyo_yuan">ko-fi</a></p>
                     </section>
                 </div>
 
@@ -147,9 +159,9 @@
         <div style="display: flex; flex-direction: row; width: 100%; gap: 20px;">
             <div class="box" style="height: 130px; width: 100%; overflow: hidden;">
                 <p><span class="make-purple">historically inhabited: </span>Shenzhen, Waterloo, SF, Tokyo, etc.</p>
-                <p><span id="purple-txt">the *levity* of the subcultural society: </span> </p>
+                <p><span id="purple-txt">the <i>levity</i> of the subcultural society: </span> </p>
                 <!-- <p><span id="lavender-txt">Institutions:</span> Minerva University class of 2028, 1517 Medici grantees.</p> -->
-                <p><span id="purple-txt">virtues:</span>authenticity, fascination, excellent work, playfulness, infovores, tinkering, deep friendship</p>
+                <p><span id="purple-txt">what I endorse: </span>authenticity, fascination, excellent work, playfulness, infovores, tinkering, deep friendship</p>
                 <!-- <p><span id="lavender-txt">Not interested in: </span></p>Bad-faith arguments.</p> -->
                 <p><span id="purple-txt">major influences: </span>Nicky Case</p>
             </div>
