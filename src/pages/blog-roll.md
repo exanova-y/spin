@@ -20,7 +20,8 @@ theorists
 - [yudhi](https://www.yudhister.me/notes/) - good at proofs
 - lightcone - working on focused ultrasound
 
-very link-dense tpot users
+from tpot
+- [naregon](https://mesityl.neocities.org/)
 - [alex k chen](https://www.alexkchen.com/) - knows a ton of people
 - [bmorphism](https://plurigrid.com/) 
 - [schlynthesis](https://x.com/schlynthesis)
