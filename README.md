@@ -78,6 +78,7 @@ permalink: "/neuroscience/mri-and-ultrasound/"   # Custom variable URL!
 │   ├── favs/                     # Favorite posts (.md)
 │   ├── pages/                    # Lab notebooks, problems, & story posts (.md)
 │   ├── index.html                # Main homepage grid
+│   ├── ascension.html            # Contained halftone video poem page
 │   ├── writing.html              # Dynamic, auto-generated post index list
 │   └── me.html, readlogs.html, etc. # Static pages inheriting from base layout
 ├── .eleventy.js                  # Eleventy build & static-copy configuration

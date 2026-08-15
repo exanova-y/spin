@@ -44,6 +44,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/archive");
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/computer-modern/fonts/cmu-typewriter-text-200-roman.woff2":
+      "assets/fonts/cmu-typewriter-text-200-roman.woff2"
+  });
   
   // Pass-through copy of media files at the root level of src
   eleventyConfig.addPassthroughCopy("src/*.png");

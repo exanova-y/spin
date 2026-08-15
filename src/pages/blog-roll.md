@@ -4,22 +4,22 @@ title: "blog roll"
 ---
 
 cool people in no particular order
-- [eigenlucy](https://eigenlucy.com/) - self taught, continental philosophy and ee
-- [vmfunc](https://vmfunc.re/)
+- [eigenlucy](https://eigenlucy.com/) - cultist. self taught, continental philosophy and ee
+- [vmfunc](https://vmfunc.re/) 
 - [isoleucine](https://isoleucine.co.uk/)
 - riya bitstream
 - [tetraslam](https://www.tetraslam.world/) - a very strong builder. travelled to 50 countries
-- [aman bhargava](https://aman-bhargava.com/)
+- [aman bhargava](https://aman-bhargava.com/) cultist rhetorician
 - [lucia, computer conoisseur](https://chmod.site/) - very competent, based in NYC, great sense of aesthetics
 - [dexy](https://sites.google.com/view/dexuantang/home) - ee phd student who builds tms coils
 
 theorists
 - [infinite modal noah](https://x.com/NoahChrein) - category theory
-- [guillefix](https://guillefix.me/) - nudge
+- [guillefix](https://guillefix.me/) - furry at nudge
 - [yuxi on the wired](https://yuxi.ml) - scaling laws
 - [yudhi](https://www.yudhister.me/notes/) - good at proofs
 - lightcone - working on focused ultrasound
-
+  
 from tpot
 - [naregon](https://mesityl.neocities.org/)
 - [alex k chen](https://www.alexkchen.com/) - knows a ton of people
