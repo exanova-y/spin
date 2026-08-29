@@ -3,15 +3,30 @@ layout: layouts/post.njk
 title: "blog roll"
 ---
 
-cool people in no particular order
+cool blogs in no particular order. if you have an issue with your name listed here, feel free to ping me and I will take it off.
+
+- [alex k chen](https://www.alexkchen.com/) - old friend, knows a few thousand people
 - [eigenlucy](https://eigenlucy.com/) - cultist. self taught, continental philosophy and ee
-- [vmfunc](https://vmfunc.re/) 
-- [isoleucine](https://isoleucine.co.uk/)
-- riya bitstream
-- [tetraslam](https://www.tetraslam.world/) - a very strong builder. travelled to 50 countries
-- [aman bhargava](https://aman-bhargava.com/) cultist rhetorician
-- [lucia, computer conoisseur](https://chmod.site/) - very competent, based in NYC, great sense of aesthetics
 - [dexy](https://sites.google.com/view/dexuantang/home) - ee phd student who builds tms coils
+- [aman from rome](https://aman-bhargava.com/) - magic words!
+- [jade wang](en.wikipedia.org/wiki/Jade_Wang) - 17 years of classical music, cs, neuro phd, hacker hostels, science fiction memoirs and foresight dinners
+- [lucia computer conoisseur](https://chmod.site/) - very competent, based in NYC, great sense of aesthetics
+
+broader internet sites, including people I haven't yet met
+- [mesityl](https://mesityl.net/)
+- ashish xiangyi kumar
+- [maxine](https://maxine.science/)
+- [beat](https://beathagenlocher.com/me/) - probably the top 3 at crawling social graphs out of this entire list after jade wang.
+- [jenny qu](https://x.com/GuanniQu)
+- [vmfunc](https://vmfunc.re/) 
+- [ihar](https://x.com/iharabukhouski) - california institute of machine consciousness
+- [wendi yan](https://wendiyan.com/)
+- [aryl](https://aryl.org/)s
+
+want to go: 
+- chaos communication congress
+- dweb camp
+- https://www.emfcamp.org/
 
 theorists
 - [infinite modal noah](https://x.com/NoahChrein) - category theory
@@ -19,11 +34,9 @@ theorists
 - [yuxi on the wired](https://yuxi.ml) - scaling laws
 - [yudhi](https://www.yudhister.me/notes/) - good at proofs
 - lightcone - working on focused ultrasound
-  
-from tpot
-- [naregon](https://mesityl.neocities.org/)
-- [alex k chen](https://www.alexkchen.com/) - knows a ton of people
-- [bmorphism](https://plurigrid.com/) 
+
+twitter:
+- [plurigrid](https://plurigrid.com/) 
 - [schlynthesis](https://x.com/schlynthesis)
 - [sichu](https://x.com/lu_sichu)
 
@@ -34,6 +47,10 @@ other peers
 - jared mantell
 - vik/sarah
 
+builders
+- riya bitstream
+- [tetraslam](https://www.tetraslam.world/) - a very strong builder. travelled to 50 countries
+
 substack, literature and design friends
 - [lydia nottingham](https://lydianottingham.substack.com/) - good structural thinker
 - [ada, adaptive good](https://adaptivegood.substack.com/)
@@ -43,10 +60,8 @@ substack, literature and design friends
 - alexey guzey
 - [naia](https://a.nyc/)
 
-people I haven't met:
+twitter:
 - [smirnova](https://mizukiakiyama.com/)
 - [theia vogel](https://vgel.me/)
-- [wendi yan](https://wendiyan.com/)
-- [aryl](https://aryl.org/)
 
 for a comprehensive list, see my twitter following

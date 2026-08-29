@@ -17,7 +17,7 @@ Since the early 20th century, quantum mechanics has become one of the most basic
 
 Quantum simulation is a concept created by Feynman in 1982. To solve the problem that classic computers cannot simulate the quantum system accurately, Feynman suggested using a manageable quantum device to simulate the quantum behavior in other systems, which was the original motivation for the development of quantum computing, as quantum simulation has high requirements for computers with a large number of calculations [1]. For example, in quantum chemistry, classic computers cannot even simulate the behavior of molecules in median size. In condensed matter physics, quantum simulation is an ideal platform for research in a quantum phase transition and high-temperature superconductor (HTS) [2]. Methods for quantum simulation have sprung up in decades, and therefore a paper to summarize and compare the methods is necessary for the efficiency of future study. This paper summarizes two methods for quantum simulation, ultracold atom simulation and integrated photonic simulation. Firstly, for ultracold atom simulation, its reasons for being an ideal platform for quantum simulation, such as the considerable controllability of ultracold atoms, will be introduced, along with a discussion of the technical advantages of ultracold atom simulators challenging ideas. Then for integrated photonic simulation, it aims to combine photon sources, routing, optical processing and photon detectors on one chip for practicality, and its necessity in the quantum simulation will be demonstrated in this paper. 
 
-### 2. Ultracold atom simulators
+### Ultracold atom simulators
 ![image](/assets/images//q-sim/1.png)
 Figure 1. The mind map of this section.
 
@@ -31,7 +31,7 @@ Ultracold atoms are defined as atoms at extremely low temperatures, usually in t
 
 The ultracold atom system is highly manageable. In solid materials, the internal structure is fixed by the rigid structure of materials. In contrast, in ultracold atom experiments, factors like the dimensions of the potential well, indices of the light field, number of atom gases, temperature, and the strength of the magnetic field can all be regulated according to the requirements of the experiment [7]. This is how quantum simulation is done in subsections.
 
-2.1 *Preparation of ultracold atom gases.*
+*Preparation of ultracold atom gases.*
 
 Preparation of ultracold atom gases needs the combination of many sets of technology. In the procedure, atoms are made cooled and trapped by the laser and evaporation cooling technique and the magnetic trap. The key of the first step is the Doppler cooling and Zeeman effect. The Zeeman reducer coordinates with a magneto-optical trap in this step. As atoms gain and lose kinetic energy respectively when transmitting and absorbing photons, it receives recoil force from photons. According to the Doppler effect, the frequency of incident light sensed by atoms with different speeds is different, and therefore they receive force with different magnitudes. Thus, regulating the incident frequency in different directions and altering atoms' resonant frequency according to the Zeeman effect, a force opposite to the direction of atomic motion exerts on atoms to decrease the speed of atoms.
 
@@ -92,7 +92,7 @@ The great achievements of the quantum simulation obtained in the decade have ben
 
 Due to the purity of ultracold atoms, experimental results often agree well with the theory. Therefore, quantum simulations of ultra-cold atoms are often criticized as repeated verifications of theories. Nonetheless, while achieving great results in ultracold atom quantum simulation, we also see its limitations and bottlenecks. Thus, how to surpass the general theoretical simulation is a key point in the study of ultra-cold atom quantum simulation. The interaction between atoms makes our research work beyond the general single-particle image and enter the field of multi-body physics. This is a feature and advantage of ultra-cold atom quantum simulation and an important aspect of its scientific significance. Finding a new foothold is the key to development. In recent years, topological quantum simulation research has developed rapidly in ultracold atomic systems, which is an important direction. But at the same time, we must also see that topological quantum simulation is also developing rapidly in systems such as phonons and photons. In addition, in recent years, the direction of quantum computing has been greatly developed, especially the superconducting qubit system, which has greatly improved its quantum simulation capabilities. In addition, in recent years, the direction of quantum computing has been greatly developed, especially the superconducting qubit system, which has greatly improved its quantum simulation capabilities [9].
 
-### 3. Integrated Quantum Photonics
+### Integrated Quantum Photonics
 ![image](/assets/images//q-sim/9.png)
 Figure 9. The flowchart of this section
 
@@ -172,7 +172,7 @@ For instance, a model was recently shown to recognize and select pure photon emi
 
 With these challenges solved, large-scale quantum photonic circuits with many photons can probably be used for simulation in the next decade.
 
-### 4. Conclusions
+### Conclusions
 
 Quantum computing and quantum simulation develop very fast; numerous achievements and new applications have spawned. This paper makes an overview of the past achievements of quantum simulation. 
 

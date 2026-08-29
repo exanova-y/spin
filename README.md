@@ -51,6 +51,8 @@ $$
 $$
 ```
 
+On the standalone homepage, wrap a formula in `<span class="math">...</span>`; its scoped KaTeX renderer avoids interpreting unrelated text as math.
+
 If you ever want to decouple a file's physical name from its compiled web URL, you can define a permalink variable directly in the post's front matter:
 ---
 layout: layouts/post.njk
@@ -62,6 +64,51 @@ permalink: "/neuroscience/mri-and-ultrasound/"   # Custom variable URL!
 
 3. Git-commit and push! Your `/writing` page directory will automatically update and sort the post chronologically (newest first).
 
+Each post's source Markdown is also published beside its rendered page: for example,
+`/pages/hope/` is available as plain text at `/pages/hope.md`.
+The homepage and About page publish shared Person JSON-LD; each post references that
+identity in its Article JSON-LD author data.
+
+---
+
+## 🌲 Forester-style trees
+
+Writing is rendered the way [forester](https://forest.localcharts.org/lc-0002.xml)
+renders a forest: a note is a *tree*, and its own sections are trees in their own
+right — numbered, collapsible, and separately addressable.
+
+Every note gets a stable public address (`note-0048`) from `src/_data/noteIds.js`,
+shown next to its title as `[note-0048]`. **Never reuse an address** after removing
+a note. Headings inside a note are addressed under it (`#note-0048-links`), so the
+same anchor works on the note's own page and in a composed view.
+
+Two layouts share one renderer (`src/_includes/forest-tree.njk`):
+
+| Layout | Used by | The note is… |
+| --- | --- | --- |
+| `layouts/post.njk` | every `.md` note | the root tree, with its own contents sidebar and backmatter |
+| `layouts/forest.njk` | `src/writing/*.njk` | one numbered subtree among many, transcluded into a whole collection |
+
+A note's **taxon** (the genre printed before its number — "Note 4", "Story 2")
+comes from its `category`; set `taxon: "…"` in front matter to override it. Only
+numbered trees carry a label, so a note on its own page shows just its title and
+address — the taxon would repeat what the address already says.
+
+To compose a new collection into a single document, add a file to `src/writing/`:
+
+```yaml
+---
+layout: layouts/forest.njk
+title: Lab notebook
+description: Experiments, research notes, and technical fragments in one view.
+collectionName: lab          # any collection defined in .eleventy.js
+permalink: /writing/lab-notebook/index.html
+---
+```
+
+Following forester, a transcluded note's backmatter is suppressed — related
+links appear only on the note's own page, where it is the root.
+
 ---
 
 ## 📂 Project Structure
@@ -69,19 +116,28 @@ permalink: "/neuroscience/mri-and-ultrasound/"   # Custom variable URL!
 ```text
 ├── src/                          # Raw editable source files
 │   ├── _includes/
+│   │   ├── forest-tree.njk       # Recursive tree + contents macros (forester style)
 │   │   └── layouts/
-│   │       ├── base.njk          # Global page shell (styles, dynamic tab bar)
-│   │       └── post.njk          # Blog post layout (Math rendering, back button)
+│   │       ├── base.njk          # Global page shell (styles, KaTeX bootstrap)
+│   │       ├── forest.njk        # A whole collection composed into one document
+│   │       └── post.njk          # One note as the root of its own tree
 │   ├── assets/                   # Static images, videos, and fonts
 │   ├── css/                      # Site stylesheets
-│   ├── js/                       # Client-side scripts (snow.js, config.js)
+│   ├── js/                       # Client-side scripts, including randomized presence labels
+│   │   └── forest.js             # Tree collapse/expand and contents tracking
 │   ├── favs/                     # Favorite posts (.md)
 │   ├── pages/                    # Lab notebooks, problems, & story posts (.md)
+│   ├── writing/                  # One forest view per collection (see below)
 │   ├── index.html                # Main homepage grid
-│   ├── ascension.html            # Contained halftone video poem page
-│   ├── writing.html              # Dynamic, auto-generated post index list
+│   ├── psychosis.html            # Poem with preserved lines and vertically tiled halftone video
+│   ├── writing.html              # Dynamic post index at /writing/, links to each forest
 │   └── me.html, readlogs.html, etc. # Static pages inheriting from base layout
+├── lib/
+│   ├── forest.js                 # Turns a note's HTML into a tree of subtrees
+│   └── note-data.js              # Computed front matter shared by note directories
 ├── .eleventy.js                  # Eleventy build & static-copy configuration
+├── llms.txt                      # LLM-oriented site guide, published at /llms.txt
+├── src/sitemap.xml               # Curated machine-readable site index
 ├── vercel.json                   # Vercel configuration for clean, extensionless URLs
 ├── wrangler.toml                 # Cloudflare Pages deployment configuration
 └── _site/                        # Generated output directory (ignored by Git)

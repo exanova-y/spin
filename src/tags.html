@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+bodyClass: "page-forest page-tag"
 pagination:
   data: collections
   size: 1
@@ -9,27 +10,58 @@ pagination:
     - post
     - posts
     - pages
-    - favs
+    - highlights
     - lab
     - problems
     - stories
+    - notes
+    - unfiled
 permalink: /tags/{{ tag | slugify }}/
+eleventyComputed:
+  title: "#{{ tag }}"
 ---
-<div class="tab-panel">
-  <h2 class="make-purple">#{{ tag }}</h2>
-  <br>
-  
-  {% set taglist = collections[tag] %}
-  {% if taglist.length == 0 %}
-    <p style="opacity: 0.6;">No posts with this tag.</p>
-  {% else %}
-    {% for post in taglist %}
-      <p><a href="{{ post.url }}">{{ post.date | formatDate }} {{ post.data.title }}</a></p>
-    {% endfor %}
+{#- A tag is a forest: every note carrying it, composed into one document, each
+    note a separately-addressable tree. The same rendering as a section view —
+    see `layouts/forest.njk` — with the tag standing in for the collection. -#}
+{% from "forest-tree.njk" import tree, toc %}
+{% set trees = collections[tag] | forestTrees %}
+
+<header class="forest-header">
+  <a class="link local" href="/writing/">« Writing</a>
+</header>
+
+<div id="grid-wrapper">
+  <article id="content" class="markdown-content">
+    <section class="block">
+      <details id="tag-{{ tag | slugify }}" open>
+        <summary>
+          <header>
+            <h1><span class="taxon">Tag</span>#{{ tag }}</h1>
+            <div class="metadata">
+              <ul>
+                <li class="meta-item">{{ trees.length }} note{{ "" if trees.length == 1 else "s" }}</li>
+              </ul>
+            </div>
+          </header>
+        </summary>
+        <div class="tree-content">
+          {% if not trees.length %}
+          <p class="forest-description">No notes carry this tag.</p>
+          {% endif %}
+          {%- for node in trees %}{{ tree(node) }}{% endfor -%}
+        </div>
+      </details>
+    </section>
+  </article>
+
+  {% if trees.length %}
+  <nav id="toc" aria-label="Table of contents">
+    <div class="block">
+      <h1>Table of Contents</h1>
+      {{ toc(trees) }}
+    </div>
+  </nav>
   {% endif %}
-  
-  <br>
-  <div class="post-navigation">
-    <a href="/writing" class="back-link">← Back to writing</a>
-  </div>
 </div>
+
+<script src="/js/forest.js" defer></script>

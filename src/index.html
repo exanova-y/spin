@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>adiabatic.garden</title>
+    <script type="application/ld+json">{{ person | jsonify | safe }}</script>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.css" integrity="sha384-UA8juhPf75SzzAMA/4fo3yOU7sBJ0om7SCD2GHq0fZqZco6tr1UCV7nUbk9J90JM" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.45/dist/katex.min.js" integrity="sha384-Tt7wBxLKwSzFVRET4O4U9H6v8MNaQ/CjN2FMP4xFm0ErrFu6aNqoonRVW5W40iGI" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.math').forEach((element) => {
+                katex.render(element.textContent, element, { throwOnError: false });
+            });
+        });
+    </script>
     <script defer src="/js/config.js"></script> <!-- for the site menu and name-->
     <!-- <script src="/js/navigation.js"></script> -->
-    <!--<script>const neko = createNeko({speed:24,fps:120,behaviorMode:0,idleThreshold:6,allowBehaviorChange:true,startX:0,startY:0});neko.start();</script>-->
 </head>
 <body>
     <div id="paper-wallpaper" aria-hidden="true"></div>
@@ -79,8 +88,7 @@
 
             <div class="box" style="height: 150px; width: 55%; overflow: hidden;">
                 <section class="body">
-                    <p>Yoyo Yuan. I am working on transcranial focused ultrasound and assembling an fNIRS device. I also believe present autoresearch could be a lot better. I'm a natural sciences student at Minerva.</p>
-                    <p>Contact hi@adiabatic.garden or adiabaticgarden on x/discord/tg. </p>
+                    <p>Yoyo. I am working on focused ultrasound, neurotech hardware and autoresearch. I like: authentic interactions, maximizing fascination, books, deep friendship, rhythm games, hyperpop. I'm a natural sciences student at Minerva. <a href="about">About</a> <a href="writing">writing</a></p>
                     <br>
                 </section>
             </div>
@@ -92,7 +100,7 @@
                 <div class="user-status" style="position: relative; z-index: 1;">
                     <span id="local-time"></span><span id="turquoise-not-discord-txt"> San Francisco, CA</span>
                     <p id="local-weather"></p>
-                    <span>User status: </span><span id="turquoise-txt"></span>
+                    <span>user status:</span><span id="turquoise-txt"></span>
                     <!-- <span>User status: </span><span id="lavender-txt">Off social media for winter break.</span> -->
 
                 </div>
@@ -104,9 +112,11 @@
                 <div class="box" style="width: 45%; height: 290px; overflow: hidden; border: 1px solid #00fc50;">
                     <section>
                         <p><span class="make-purple">[ bookmarks ]</span></p>
-                        <p>Signals and systems ○ </p>
-                        <p>The City and the Stars ○ </a></p>
+                        <p>Signals and systems Alan V. Oppenheim ○ </p>
+                        <p>Embedded operating systems ○</p>
+                        <p>Accelerando ○</p>
                         <p>Permutation City ✓</p>
+                        <!--<p>The City and the Stars Arthur C. Clarke(paused) </a></p>-->
                         <p><a href="https://www.youtube.com/watch?v=cFwHAMf0kEc">Jack Gallant: Representations of the World in the Human Brain</a> ✓</p>
                         <p><a href="/pages/bookshelf" class="site-link">◌ bookshelf</a> & <a href="https://curius.app/yoyo-yuan">curius</a></p>
                     </section>
@@ -117,16 +127,15 @@
                         <p><span class="make-purple">[ projects/research ]</span></p>
                         neurotech
                         <p><a href="https://github.com/exanova-y/nyc-neuromodec-2026">⊹ Notes from NYC neuromodulation 2026</a></p>
-                        <p><a href="/favs/diy-mea">⊹ Low cost, DIY MEA collaboration with Eigenlucy</a></p>
-                        <p><a href="/pages/early-may-observelog">⊹ Receiving focused ultrasound stimulation at Lucas Center/Observelog</a></p>
+                        <p><a href="/highlights/diy-mea">⊹ low cost, DIY MEA collaboration with Eigenlucy</a></p>
+                        <p><a href="/pages/early-may-observelog">⊹ receiving focused ultrasound stimulation at Lucas Center/Observelog</a></p>
                         <p>other things built</p>
-                        <p><a href="/favs/laser-cutter">⟐ reassembling a laser cutter </a></p>
-                        <p><a href="/favs/microdrones">⟐ microdrone assembly</a></p>
-                        <p><a href="/favs/swarm-mapping">⟐ mapping haptic hand gestures for swarm robots at uwaterloo</a>
+                        <p><a href="/highlights/laser-cutter">⟐ reassembling a laser cutter </a></p>
+                        <p><a href="/highlights/microdrones">⟐ microdrone assembly</a></p>
+                        <p><a href="/highlights/swarm-mapping">⟐ mapping haptic hand gestures for swarm robots at uwaterloo</a>
                         <p>approach</p>
                         <p><a href="/pages/rwx">⊹ The rwx methodology</a></p>
                         <br>
-                        <p>You can also support my work on <a href="https://ko-fi.com/yoyo_yuan">ko-fi</a></p>
                     </section>
                 </div>
 
@@ -135,11 +144,10 @@
 
         <div style="display: flex; flex-direction: row; width: 100%; gap: 20px;">
             <div class="box" style="height: 170px; width: 45%; overflow: hidden; border: 1px solid #7287fd">
-                <p><span class="make-purple">[ site info ]</span></p>
+                <p><span class="make-purple">[ status ]</span></p>
+                <p>"we're building the autopoietic ergodicity for the next trillion terabytes of computronium. a research-grade substrate for decentralized computing designed for extreme robustness in nash bargaining and verifiable correctness across distributed attention markets." ok ✓</p>
                 <p>this site can now play stellaris music ✓</p>
                 <p>1217 curius bookmarks have been added to this site ✓</p>
-                <p><a href="https://peacesign.adiabatic.garden">peacesign (incomplete)</a> helps aggregate information and hrt/meds tracking ○ </p>
-                <p><a href="/pages/to-get">⊹ Yoyo wishlist</a></p>
             </div>
 
 
@@ -157,11 +165,12 @@
         </div>
         <br>
         <div style="display: flex; flex-direction: row; width: 100%; gap: 20px;">
-            <div class="box" style="height: 130px; width: 100%; overflow: hidden;">
+            <div class="box" style="height: 150px; width: 100%; overflow: hidden;">
                 <p><span class="make-purple">historically inhabited: </span>Shenzhen, Waterloo, SF, Tokyo, etc.</p>
-                <!--<p><span id="purple-txt">the <i>levity</i> of the subcultural society: </span> </p>-->
-                <p><span id="purple-txt">support: </span>authenticity, fascination, excellent work, playfulness, infovores, tinkering, deep friendship</p>
-                <p><span id="lavender-txt">music: </span>Ada Rook, Mili <a href="/psychosis">psychosis 2019</a></p>
+                <p><span id="purple-txt">the <i>levity</i> of the subcultural society: </span>I'm often found at noisebridge, vivarium and sometimes foresight nodes</p>
+                <!--<p>need: cryptonomicon, diamond age, skulls, openlifu (have access), opennirscap, 40C3, physics of fus, hydrophone/oscilloscope, hugs</p>-->
+                <p><span id="purple-txt">want to see more of: </span>authenticity, maximizing fascination, good futures, playfulness, deep friendship, adversity, infovores, tinkering</p>
+                <p><span id="lavender-txt">music: </span>Black Dresses, Machine Girl and Mili are some fav artists. I'm into hyperpop, breakcore, hardcore, dnb and rhythm games. listen to <a href="https://x.com/adiabaticgarden/status/2088821244271698353">psychosis 2019</a>, see <a href="https://open.spotify.com/playlist/0tgJ9UVLvkbxoz3inBllja?si=49d17b0c3b524c2d">playlist</a></p>
                 <p><span id="purple-txt">major influences: </span>Nicky Case</p>
             </div>
         </div>
@@ -243,7 +252,9 @@
     <footer>
         <p>&copy; <span data-config="copyright"></span></p>
     </footer>
-    <script src="/js/oneko.js" data-cat="/assets/images/oneko.gif"></script>
+    <!-- Snowfall cursor: https://cursorlyjs.onrender.com/ -->
+    <script defer src="https://cdn.jsdelivr.net/gh/iamashruu/cursorly.js@1.0.5/dist/cursorly.min.js" integrity="sha384-+xdcv2OodHpk2Lbw6kjFeRTqCgks0GlSj8ujuhuturp21BqxUV19TR/quSLXVHHy" crossorigin="anonymous"></script>
+    <script defer src="/js/cursor.js"></script>
     <script src="js/queries.js"></script>
     <script src="js/script.js"></script>
 </body>

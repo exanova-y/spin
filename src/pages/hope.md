@@ -12,7 +12,7 @@ Status: *being updated*
 ---
 
 2025:
-Successfully gotten two semesters worth of college tuition.
+Successfully gotten funding.
 
 Jul 2, 2026:
 On thursday evening, I saved the friend who had severe depression and lost the work trial. I bit my teeth. Eventually, I delegated the bulk of this to someone more competent.

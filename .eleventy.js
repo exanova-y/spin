@@ -1,7 +1,11 @@
-const cheerio = require("cheerio");
+const forest = require("./lib/forest");
 
-const inlineNoteHeadings = new Map();
 const bookmarkIndexCache = new WeakMap();
+
+// The categories that have a section of their own under `/writing/`. Anything
+// else lands in `unfiled`, which the writing index lists as "Everything else".
+const SECTION_CATEGORIES = new Set(["lab", "problems", "stories"]);
+
 const STOPWORDS = new Set([
   "the","and","for","are","but","not","you","all","can","had","her","was",
   "one","our","out","has","have","been","some","them","than","its","over",
@@ -28,16 +32,6 @@ function tokenize(text, weight) {
   return tokens;
 }
 
-function headingSlug(text, fallback) {
-  const slug = text
-    .normalize("NFKD")
-    .toLowerCase()
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^\p{Letter}\p{Number}]+/gu, "-")
-    .replace(/^-|-$/g, "");
-  return slug || fallback;
-}
-
 module.exports = function(eleventyConfig) {
   // Pass-through copy of static folders
   eleventyConfig.addPassthroughCopy("src/css");
@@ -54,7 +48,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/*.jpg");
   eleventyConfig.addPassthroughCopy("src/*.webp");
   eleventyConfig.addPassthroughCopy("src/*.mp4");
+  eleventyConfig.addPassthroughCopy("src/pages/*.md");
+  eleventyConfig.addPassthroughCopy("src/highlights/*.md");
+  eleventyConfig.addPassthroughCopy("src/sitemap.xml");
   eleventyConfig.addPassthroughCopy({"03. Deep Space Travels.mp3": "03. Deep Space Travels.mp3"});
+  eleventyConfig.addPassthroughCopy({"llms.txt": "llms.txt"});
 
   // YouTube embed shortcode
   eleventyConfig.addShortcode("youtube", function(id) {
@@ -73,57 +71,41 @@ module.exports = function(eleventyConfig) {
     return `${month}-${day}-${year}`;
   });
 
-  // Prepare a note for a composed "forest" view. Heading and footnote ids are
-  // namespaced so independently-authored pages remain valid in one document.
-  eleventyConfig.addFilter("inlineNote", function(html, prefix) {
-    const $ = cheerio.load(html || "", null, false);
-    const headings = $("h1,h2,h3,h4,h5,h6").toArray();
-    const minimumLevel = headings.length
-      ? Math.min(...headings.map((heading) => Number(heading.tagName.slice(1))))
-      : 1;
-    const usedIds = new Set();
-    const fragmentMap = new Map();
-    const outline = [];
-
-    headings.forEach((heading, index) => {
-      const $heading = $(heading);
-      const originalId = $heading.attr("id");
-      const baseId = originalId || headingSlug($heading.text(), `section-${index + 1}`);
-      let localId = baseId;
-      let duplicate = 2;
-      while (usedIds.has(localId)) localId = `${baseId}-${duplicate++}`;
-      usedIds.add(localId);
-
-      const id = `${prefix}-${localId}`;
-      const level = Math.min(Number(heading.tagName.slice(1)) - minimumLevel + 3, 6);
-      fragmentMap.set(originalId || baseId, id);
-      outline.push({ id, title: $heading.text().trim(), level });
-      $heading.replaceWith(`<h${level} id="${id}">${$heading.html()}</h${level}>`);
-    });
-
-    // Footnote ids and any other fragment targets can also repeat between notes.
-    $("[id]").each((_, element) => {
-      const $element = $(element);
-      const oldId = $element.attr("id");
-      if (!oldId || oldId.startsWith(`${prefix}-`)) return;
-      const id = `${prefix}-${oldId}`;
-      fragmentMap.set(oldId, id);
-      $element.attr("id", id);
-    });
-    $("a[href^='#']").each((_, element) => {
-      const $element = $(element);
-      const fragment = $element.attr("href").slice(1);
-      if (fragmentMap.has(fragment)) $element.attr("href", `#${fragmentMap.get(fragment)}`);
-    });
-    $("img").attr("loading", "lazy").attr("decoding", "async");
-    $("iframe").attr("loading", "lazy");
-
-    inlineNoteHeadings.set(prefix, outline.filter((heading) => heading.level === 3));
-    return $.html();
+  eleventyConfig.addFilter("jsonify", function(value) {
+    return JSON.stringify(value);
   });
 
-  eleventyConfig.addFilter("inlineNoteHeadings", function(prefix) {
-    return inlineNoteHeadings.get(prefix) || [];
+  eleventyConfig.addFilter("articleJsonLd", function(person, title, date, url) {
+    const { "@context": _context, ...author } = person;
+    const article = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": `https://adiabatic.garden${url}#article`,
+      headline: title,
+      url: `https://adiabatic.garden${url}`,
+      author
+    };
+    if (date) {
+      article.datePublished = date instanceof Date
+        ? date.toISOString().slice(0, 10)
+        : String(date);
+    }
+    return article;
+  });
+
+  // Compose a collection into one forester-style document: every note becomes a
+  // numbered, separately-addressable tree whose own headings are its subtrees.
+  eleventyConfig.addFilter("forestTrees", function(notes) {
+    const trees = (notes || []).map((note) =>
+      forest.buildNote(note.templateContent, note.data, note.url)
+    );
+    return forest.numberForest(trees);
+  });
+
+  // The same rendering for a note on its own page: it is the root of the tree,
+  // so it carries no number of its own and its sections number from one.
+  eleventyConfig.addFilter("forestTree", function(html, data, url) {
+    return forest.numberRoot(forest.buildNote(html, data, url));
   });
 
   eleventyConfig.addFilter("containsMath", function(content) {
@@ -204,8 +186,22 @@ module.exports = function(eleventyConfig) {
   });
 
   // Dynamic collections sorted by date (newest first)
-  eleventyConfig.addCollection("favs", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/favs/*.md").sort((a, b) => b.date - a.date);
+  eleventyConfig.addCollection("highlights", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/highlights/*.md").sort((a, b) => b.date - a.date);
+  });
+
+  // Every note, whichever section claims it — the count the writing index prints.
+  eleventyConfig.addCollection("notes", function(collectionApi) {
+    return collectionApi.getFilteredByGlob(["src/pages/*.md", "src/highlights/*.md"])
+      .sort((a, b) => b.date - a.date);
+  });
+
+  // Notes no section claims: a category of their own, or none at all. Without
+  // this the writing index would silently drop them.
+  eleventyConfig.addCollection("unfiled", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/pages/*.md")
+      .filter(item => !SECTION_CATEGORIES.has(item.data.category))
+      .sort((a, b) => b.date - a.date);
   });
   
   eleventyConfig.addCollection("lab", function(collectionApi) {

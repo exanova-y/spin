@@ -9,13 +9,13 @@ const sharedState = {
 document.addEventListener('DOMContentLoaded', function() {
     // Apply site-wide configuration variables
     applyConfigVariables();
-    
+
     // Initialize particle system
     initParticleSystem();
-    
+
     // Initialize time and weather
     initTimeAndWeather();
-    
+
     // Start the homepage soundtrack
     initBackgroundMusic();
 
@@ -23,20 +23,20 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typeof initRandomQuery === 'function') {
         initRandomQuery();
     }
-    
+
     // Simple hover effect for navigation links
     const navLinks = document.querySelectorAll('nav a');
-    
+
     navLinks.forEach(link => {
         link.addEventListener('mouseenter', function() {
             this.style.fontStyle = 'italic';
         });
-        
+
         link.addEventListener('mouseleave', function() {
             this.style.fontStyle = 'normal';
         });
     });
-    
+
     // Add a simple "last updated" date to the footer
     const footer = document.querySelector('footer');
     const lastUpdated = document.createElement('p');
@@ -100,31 +100,31 @@ function applyConfigVariables() {
         console.error('Site configuration not found. Make sure config.js is loaded before script.js');
         return;
     }
-    
+
     // Set page title if not already custom set
     if (document.title === 'Minimalist Website' || document.title.endsWith('- Minimalist Website')) {
         const pageName = document.title.replace(' - Minimalist Website', '');
         document.title = pageName ? `${pageName} - ${siteConfig.siteName}` : siteConfig.siteName;
     }
-    
+
     // Update copyright in footer
     const footerCopyright = document.querySelector('footer p');
     if (footerCopyright && footerCopyright.textContent.includes('')) {
         footerCopyright.textContent = ` ${siteConfig.copyright}`;
     }
-    
+
     // Update site tagline if it exists
     const taglineElement = document.querySelector('.art-caption p');
     if (taglineElement) {
         taglineElement.textContent = siteConfig.siteTagline;
     }
-    
+
     // Process all elements with data-config attributes
     const configElements = document.querySelectorAll('[data-config]');
     configElements.forEach(element => {
         const configPath = element.getAttribute('data-config').split('.');
         let value = siteConfig;
-        
+
         // Navigate through the config object using the path
         for (const key of configPath) {
             if (value && value[key] !== undefined) {
@@ -135,7 +135,7 @@ function applyConfigVariables() {
                 break;
             }
         }
-        
+
         // Apply the value if found
         if (value !== null) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
@@ -159,19 +159,19 @@ function initParticleSystem() {
     canvas.style.pointerEvents = 'none';
     canvas.style.zIndex = '9999';
     document.body.appendChild(canvas);
-    
+
     const ctx = canvas.getContext('2d');
     const particles = [];
     let animationId;
     let isActive = false;
-    
+
     function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     }
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-    
+
     class Particle {
         constructor(x, y) {
             this.x = x !== undefined ? x : Math.random() * canvas.width; // if x is passed, then use it, otherwise use a random x
@@ -181,16 +181,16 @@ function initParticleSystem() {
             const speed = Math.random() * 3 + 1;
             this.vx = Math.cos(angle) * speed;
             this.vy = Math.sin(angle) * speed;
-            
+
             this.radius = Math.random() * 2 + 1.5;
             const alpha = Math.random() * 0.2 + 0.4; // transparency between 0.3 to 0.8
             this.color = `hsla(${Math.random() * 60 + 200}, 100%, ${Math.random() * 30 + 50}%, ${alpha})`;
         }
-        
+
         update() {
             this.x += this.vx;
             this.y += this.vy;
-            
+
             // bounce.
             if (this.x < 0 || this.x > canvas.width) {
                 this.vx *= -1;
@@ -201,7 +201,7 @@ function initParticleSystem() {
                 this.y = Math.max(0, Math.min(canvas.height, this.y));
             }
         }
-        
+
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
@@ -209,25 +209,25 @@ function initParticleSystem() {
             ctx.fill();
         }
     }
-    
+
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
+
         particles.forEach(particle => {
             particle.update();
             particle.draw();
         });
-        
+
         if (isActive) {
             animationId = requestAnimationFrame(animate);
         }
     }
-    
+
     const toggle = document.getElementById('particleToggle');
     if (toggle) {
         toggle.addEventListener('change', function() {
             isActive = this.checked;
-            
+
             if (isActive) {
                 animate();
             } else {
@@ -237,7 +237,7 @@ function initParticleSystem() {
             }
         });
     }
-    
+
     document.addEventListener('mousemove', function(e) {
         if (isActive) {
             particles.push(new Particle(e.clientX, e.clientY));
@@ -260,21 +260,21 @@ function initVectorField() {
     canvas.style.pointerEvents = 'none';
     canvas.style.zIndex = '9998';
     document.body.appendChild(canvas);
-    
+
     const ctx = canvas.getContext('2d');
     let animationId;
     let isActive = false;
     // 1. Increased Density: Smaller grid size means more arrows
-    const gridSize = 25; 
+    const gridSize = 25;
     const attractors = [];
-    
+
     function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     }
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-    
+
     class Attractor {
         constructor() {
             this.x = Math.random() * canvas.width;
@@ -282,18 +282,18 @@ function initVectorField() {
             this.strength = (Math.random() - 0.5) * 2;
             // 2. Updated Colors: Purple base with Green accents handled in drawing
             this.color = this.strength > 0 ? '#8b5cf6' : '#10b981'; // Purple or Green
-            
+
             const angle = Math.random() * Math.PI * 2;
             // 3. Smoother Motion: Slower, drifting attractors
             const speed = Math.random() * 0.3 + 0.1;
             this.vx = Math.cos(angle) * speed;
             this.vy = Math.sin(angle) * speed;
         }
-        
+
         update() {
             this.x += this.vx;
             this.y += this.vy;
-            
+
             if (this.x < 0 || this.x > canvas.width) {
                 this.vx *= -1;
                 this.x = Math.max(0, Math.min(canvas.width, this.x));
@@ -304,24 +304,24 @@ function initVectorField() {
             }
         }
     }
-    
+
     function getVectorAt(x, y) {
         let vx = 0;
         let vy = 0;
-        
+
         attractors.forEach(attractor => {
             const dx = attractor.x - x;
             const dy = attractor.y - y;
             // Add a small epsilon to prevent division by zero
-            const dist = Math.sqrt(dx * dx + dy * dy) + 10; 
-            
+            const dist = Math.sqrt(dx * dx + dy * dy) + 10;
+
             // Inverse square law for more natural field drop-off
             const force = (attractor.strength * 500) / (dist);
-            
+
             vx += (dx / dist) * force;
             vy += (dy / dist) * force;
         });
-        
+
         const mag = Math.sqrt(vx * vx + vy * vy);
         // Limit maximum vector length for visual consistency
         if (mag > 0) {
@@ -330,49 +330,49 @@ function initVectorField() {
             vx *= scale;
             vy *= scale;
         }
-        
+
         return { vx, vy, mag };
     }
-    
+
     function drawVector(x, y, vx, vy, mag) {
         // 3. Flow Lines: Draw curved paths instead of straight lines
         // Use the vector to determine control point for a quadratic curve
-        
+
         const arrowLen = Math.min(mag * 1.5, 20); // Variable length based on strength
         if (arrowLen < 2) return; // Don't draw tiny noise
 
         const angle = Math.atan2(vy, vx);
-        
+
         // 2. Color Scheme:
         // 15% chance for green accent, otherwise purple gradient
         // Use a deterministic "random" based on position so it doesn't flicker
-        const isGreen = (Math.sin(x * y) > 0.7); 
-        
+        const isGreen = (Math.sin(x * y) > 0.7);
+
         let color;
         if (isGreen) {
              // Subtle Green (#10b981)
             color = `hsla(160, 84%, 39%, ${Math.min(mag / 10 + 0.15, 0.4)})`;
         } else {
             // Purple Gradient (#b794f6 to #8b5cf6) - Hue 260 to 270
-            const hue = 260 + (mag * 2); 
+            const hue = 260 + (mag * 2);
             const opacity = Math.min(mag / 15 + 0.15, 0.4); // Vary opacity for depth
             color = `hsla(${hue}, 80%, 70%, ${opacity})`;
         }
-        
+
         ctx.strokeStyle = color;
         ctx.lineWidth = isGreen ? 1.5 : 1; // Slight emphasis on green arrows
-        
+
         ctx.beginPath();
-        
+
         // Curved body of the arrow
         const endX = x + vx * 1.2;
         const endY = y + vy * 1.2;
-        
+
         // Simple curve approximation
         ctx.moveTo(x, y);
         ctx.quadraticCurveTo(x + vx * 0.5 + vy * 0.2, y + vy * 0.5 - vx * 0.2, endX, endY);
         ctx.stroke();
-        
+
         // Arrowhead
         const headLen = arrowLen * 0.25;
         ctx.beginPath();
@@ -388,7 +388,7 @@ function initVectorField() {
         );
         ctx.stroke();
     }
-    
+
     function drawAttractors() {
         attractors.forEach(attractor => {
             ctx.beginPath();
@@ -401,37 +401,37 @@ function initVectorField() {
             ctx.shadowBlur = 0; // Reset shadow
         });
     }
-    
+
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
+
         attractors.forEach(attractor => attractor.update());
-        
-        // Use a seeded random or noise for "jitter" if desired, 
+
+        // Use a seeded random or noise for "jitter" if desired,
         // but here we stick to the grid for clean flow
         for (let x = gridSize / 2; x < canvas.width; x += gridSize) {
             for (let y = gridSize / 2; y < canvas.height; y += gridSize) {
                 // Add slight position jitter for organic feel
                 const jitterX = (Math.sin(y) * 5);
                 const jitterY = (Math.cos(x) * 5);
-                
+
                 const { vx, vy, mag } = getVectorAt(x + jitterX, y + jitterY);
                 drawVector(x + jitterX, y + jitterY, vx, vy, mag);
             }
         }
-        
+
         drawAttractors();
-        
+
         if (isActive) {
             animationId = requestAnimationFrame(animate);
         }
     }
-    
+
     const toggle = document.getElementById('vectorToggle');
-    
+
     function updateState() {
         isActive = toggle.checked;
-        
+
         if (isActive) {
             // Only re-initialize attractors if we're starting fresh
             if (attractors.length === 0) {
@@ -457,7 +457,7 @@ function initVectorField() {
     if (toggle) {
         // 1. Listen for changes
         toggle.addEventListener('change', updateState);
-        
+
         // 2. Check immediately on load
         // This ensures if the box is checked by default (or browser cache), it runs.
         if (toggle.checked) {
@@ -471,12 +471,12 @@ function initTimeAndWeather() {
     // const location = "Tokyo, Japan";
     const timeDisplay = document.getElementById('local-time');
     const weatherDisplay = document.getElementById('local-weather');
-    
+
     // Update Time
     function updateTime() {
         const now = new Date();
-        const timeString = now.toLocaleTimeString([], { 
-            hour: '2-digit', 
+        const timeString = now.toLocaleTimeString([], {
+            hour: '2-digit',
             minute: '2-digit',
             timeZone: 'America/Los_Angeles'
         });
@@ -492,12 +492,12 @@ function initTimeAndWeather() {
             // shanghai
             const lat = 31.16442302696994;
             const lon = 121.80796930982098;
-            
+
             try {
                 // Open-Meteo API: Free, no key required
                 const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
                 const data = await response.json();
-                
+
                 if (data.current_weather) {
                     const temp = data.current_weather.temperature;
                     const code = data.current_weather.weathercode;
@@ -517,7 +517,7 @@ function initTimeAndWeather() {
             console.error("Weather fetch error:", e);
         }
     }
-    
+
     fetchWeather();
     // Update weather every 30 minutes
     setInterval(fetchWeather, 30 * 60 * 1000);
@@ -541,17 +541,27 @@ async function getDiscordStatus() {
 
 function updateStatusUI(status) {
     const statusElement = document.getElementById("turquoise-txt");
-    
-    // Mapping internal status to readable text
+
+    // deranged statuses
     const statusMap = {
-        online: "Online",
-        idle: "AFK/Idle",
-        dnd: "Busy",
-        offline: "Offline"
+        online: [ "actually online and responsive"
+        ],
+        idle: "think condensating",
+        "arxiv compost heaping...":
+        "computronium transfer function > 10 bits/s":
+        : "we're building the autopoietic ergodicity for the next trillion terabytes of computronium. a research-grade substrate for decentralized computing designed for extreme robustness in nash bargaining and unverifiable correctness across distributed systems.",
+          "moravec operations",
+          "sleep deprived",
+          "poasting unhinged ecstatic content",
+          "weaponizing links on curius",
+          "ingesting 300 new papers"
+        dnd: ["do not disturb"],
+        offline: ["busy nash bargaining", "sleeping.", "trapped in a ratchet effect", "floating on the streets"]
     };
 
-    statusElement.innerText = statusMap[status] || "Unknown";
-    
+    const statuses = statusMap[status] || ["unknown"];
+    statusElement.innerText = statuses[Math.floor(Math.random() * statuses.length)];
+
     // Optional: Add CSS classes for coloring
     statusElement.className = `status-${status}`;
 }

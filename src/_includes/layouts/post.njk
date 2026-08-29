@@ -1,53 +1,59 @@
 ---
 layout: layouts/base.njk
+bodyClass: page-forest
 ---
-<div id="content" class="markdown-content">
-  <h3 class="post-title">{{ title }}{% if noteId %} <a class="note-address" href="{{ page.url }}">[{{ noteId }}]</a>{% endif %}</h3>
-  {% if date %}
-  <p class="post-meta">
-    <em>by <span class="post-author">{{ author or "Yoyo" }}</span> • <span class="post-date">{{ date | formatDate }}</span></em>
-    {% if tags %}
-      {% for tag in tags %}
-        {% if tag != "pages" and tag != "favs" %}
-          <a href="/tags/{{ tag | slugify }}/" class="post-tag">#{{ tag }}</a>
-        {% endif %}
-      {% endfor %}
+{% from "forest-tree.njk" import tree, toc %}
+{% set node = content | forestTree({
+  noteId: noteId,
+  title: title,
+  date: date,
+  author: author or "Yoyo",
+  tags: tags,
+  category: category,
+  taxon: taxon
+}, page.url) %}
+
+<header class="forest-header">
+  <a class="link local" href="/writing/">« Writing</a>
+</header>
+
+<div id="grid-wrapper">
+  <article id="content" class="markdown-content">
+    {{ tree(node) }}
+
+    {#- Precomputed embedding matches (related.json) win; TF-IDF is the fallback. -#}
+    {% set rel = related[page.url] if related else null %}
+    {% if not rel %}{% set rel = curius | relatedBookmarks(title, tags, content, 5) %}{% endif %}
+    {% if rel.length %}
+    <footer>
+      <section class="block link-list hide-metadata">
+        <details id="{{ node.anchor }}-related" open>
+          <summary>
+            <header><h1>Related links from Yoyo's bookshelf</h1></header>
+          </summary>
+          <div class="tree-content">
+            <ul>
+              {% for b in rel %}
+              <li><a class="link external" href="{{ b.link }}" target="_blank" rel="noopener">{{ b.title }}</a>
+                {%- if b.snippet %}<br><span class="link-snippet">{{ b.snippet | truncate(120) }}</span>{% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </details>
+      </section>
+    </footer>
     {% endif %}
-  </p>
+  </article>
+
+  {% if node.children.length %}
+  <nav id="toc" aria-label="Table of contents">
+    <div class="block">
+      <h1>Table of Contents</h1>
+      {{ toc(node.children) }}
+    </div>
+  </nav>
   {% endif %}
-  <br>
-  {{ content | safe }}
-
-{# Prefer precomputed embedding matches (related.json); fall back to build-time TF-IDF #}
-{% set rel = related[page.url] if related else null %}
-{% if not rel %}
-  {% set rel = curius | relatedBookmarks(title, tags, content, 5) %}
-{% endif %}
-{% if rel.length %}
-<br>
-<h4>Related links from Yoyo's bookshelf</h4>
-<ul>
-{% for b in rel %}
-  <li><a href="{{ b.link }}" target="_blank" rel="noopener">{{ b.title }}</a>{% if b.snippet %}<br><span style="opacity: 0.6; font-size: 0.85em;">{{ b.snippet | truncate(120) }}</span>{% endif %}</li>
-{% endfor %}
-</ul>
-{% endif %}
-</div>
-<div class="post-navigation">
-  <a href="/writing" class="back-link">← Back to writing</a>
 </div>
 
-{% if content | containsMath %}<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const content = document.getElementById('content');
-    if (typeof renderMathInElement === 'function') {
-      renderMathInElement(content, {
-        delimiters: [
-          { left: '$$', right: '$$', display: true },
-          { left: '$',  right: '$',  display: false }
-        ],
-        throwOnError: false
-      });
-    }
-  });
-</script>{% endif %}
+<script src="/js/forest.js" defer></script>

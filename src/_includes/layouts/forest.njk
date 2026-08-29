@@ -2,48 +2,44 @@
 layout: layouts/base.njk
 bodyClass: page-forest
 ---
-<div class="forest-intro">
-  <a class="forest-back" href="/writing/">← Writing</a>
-  <h1>{{ title }}</h1>
-  {% if description %}<p>{{ description }}</p>{% endif %}
-</div>
+{% from "forest-tree.njk" import tree, toc, label %}
+{% set trees = collections[collectionName] | forestTrees %}
 
-<div class="forest-layout">
-  <main class="forest-document markdown-content" aria-label="{{ title }}">
-    {% for note in collections[collectionName] %}
-      <section class="forest-note" id="{{ note.data.noteId }}" data-note-id="{{ note.data.noteId }}">
-        <h2 class="forest-note-title">
-          <span>{{ note.data.title }}</span>
-          <a class="note-address" href="{{ note.url }}" aria-label="Open {{ note.data.title }} at its canonical address">[{{ note.data.noteId }}]</a>
-        </h2>
-        <p class="forest-note-meta">
-          {% if note.data.author %}{{ note.data.author }} · {% endif %}{{ note.date | formatDate }}
-        </p>
-        <div class="forest-note-content">
-          {{ note.templateContent | inlineNote(note.data.noteId) | safe }}
+<header class="forest-header">
+  <a class="link local" href="/writing/">« Writing</a>
+</header>
+
+<div id="grid-wrapper">
+  <article class="markdown-content">
+    <section class="block">
+      <details id="{{ collectionName }}" open>
+        <summary>
+          <header>
+            <h1>{{ title }}</h1>
+            <div class="metadata">
+              <ul>
+                <li class="meta-item">{{ trees.length }} note{{ "" if trees.length == 1 else "s" }}</li>
+              </ul>
+            </div>
+          </header>
+        </summary>
+        <div class="tree-content">
+          {% if description %}<p class="forest-description">{{ description }}</p>{% endif %}
+          {{ content | safe }}
+          {%- for node in trees %}{{ tree(node) }}{% endfor -%}
         </div>
-      </section>
-    {% endfor %}
-  </main>
+      </details>
+    </section>
+  </article>
 
-  <nav class="forest-toc" aria-label="Table of contents">
-    <h2>Contents</h2>
-    <ol>
-      {% for note in collections[collectionName] %}
-        <li>
-          <a href="#{{ note.data.noteId }}">{{ note.data.title }}</a>
-          {% set headings = note.data.noteId | inlineNoteHeadings %}
-          {% if headings.length %}
-            <ol>
-              {% for heading in headings %}
-                <li><a href="#{{ heading.id }}">{{ heading.title }}</a></li>
-              {% endfor %}
-            </ol>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ol>
+  {% if trees.length %}
+  <nav id="toc" aria-label="Table of contents">
+    <div class="block">
+      <h1>Table of Contents</h1>
+      {{ toc(trees) }}
+    </div>
   </nav>
+  {% endif %}
 </div>
 
-<script src="/js/forest.js"></script>
+<script src="/js/forest.js" defer></script>

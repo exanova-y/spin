@@ -6,7 +6,7 @@ author: "Yoyo"
 category: lab
 tags: ["feral-scholars"]
 ---
-How to ingest hundreds of papers in hours, run in-silico experiments, and write up 5000 words in an afternoon when you're too broke to afford journal subscriptions. Tested and true.
+Autoresearch weaponization to ingest hundreds of papers in hours, run in-silico experiments, and write up 5000 words in an afternoon when you're too broke to afford journal subscriptions. Tested and true.
 
 ## R: Literature review
 [Jiabin Huang research advice](https://github.com/jbhuang0604/awesome-tips) offers a variety of tips for researchers.

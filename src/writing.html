@@ -1,52 +1,139 @@
 ---
 layout: layouts/base.njk
 title: "Writing"
-bodyClass: "page-writing"
+bodyClass: "page-forest page-writing"
 permalink: /writing/index.html
 ---
-<div class="tab-panel">
+{#- The index is itself a forest, in forester's sense: a root tree whose
+    subtrees are the sections. A section here is a *link list* — only the titles
+    of its notes. The notes themselves, composed into one continuous document,
+    live at the section's own address, which its heading's slug points to. -#}
 
-    <div class="tags-cloud">
-        <span class="tags-label">Tags:</span>
-        {% for name, posts in collections %}
-            {% if name != "all" and name != "pages" and name != "favs" and name != "lab" and name != "problems" and name != "stories" and name != "post" and name != "posts" and posts.length > 0 %}
-                <a href="/tags/{{ name | slugify }}/">#{{ name }} ({{ posts.length }})</a>
-            {% endif %}
+{% set sections = [
+  { key: "highlights", title: "Highlights",                                 route: "/writing/highlights/" },
+  { key: "lab",        title: "Lab notebook",                               route: "/writing/lab-notebook/" },
+  { key: "problems",   title: "Big social problems!",                       route: "/writing/problems/" },
+  { key: "stories",    title: "Stories existing purely in your imagination", route: "/writing/stories/" }
+] %}
+
+{#- Tag collections come from front matter, so `collections` also holds the
+    sections and eleventy's own bookkeeping. Those are not tags. -#}
+{% set notTags = ["all", "post", "posts", "pages", "highlights", "lab", "problems", "stories", "notes", "unfiled"] %}
+
+<header class="forest-header">
+  <a class="link local" href="/">« adiabatic.garden</a>
+</header>
+
+<div id="grid-wrapper">
+  <article id="content" class="markdown-content">
+    <section class="block">
+      <details id="writing" open>
+        <summary>
+          <header>
+            <h1>Writing</h1>
+            <div class="metadata">
+              <ul>
+                <li class="meta-item">{{ collections.notes.length }} notes</li>
+                <li class="meta-item"><address class="author">Yoyo</address></li>
+              </ul>
+            </div>
+          </header>
+        </summary>
+        <div class="tree-content">
+          {% for section in sections %}
+          {% set posts = collections[section.key] %}
+          <section class="block link-list" data-taxon="Section">
+            <details id="{{ section.key }}" open>
+              <summary>
+                <header>
+                  <h1><span class="taxon">{{ loop.index }}</span><a class="section-view-link" href="{{ section.route }}">{{ section.title }}</a>
+                    <a class="slug" href="{{ section.route }}" title="{{ section.title }}, composed">[{{ section.key }}]</a>
+                  </h1>
+                  <div class="metadata">
+                    <ul>
+                      <li class="meta-item">{{ posts.length }} note{{ "" if posts.length == 1 else "s" }}</li>
+                    </ul>
+                  </div>
+                </header>
+              </summary>
+              <div class="tree-content">
+                <ul>
+                  {% for post in posts %}
+                  {#- A few notes carry no front matter at all; their address is
+                      the only name they have. -#}
+                  <li><a class="link local" href="{{ post.url }}">{{ post.data.title or post.data.page.fileSlug }}</a>
+                    <span class="link-date">{{ post.date | formatDate }}</span>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </details>
+          </section>
+          {% endfor %}
+
+          {#- Tags cut across the sections, so they get a tree of their own. -#}
+          <section class="block link-list" data-taxon="Section">
+            <details id="tags" open>
+              <summary>
+                <header>
+                  <h1><span class="taxon">{{ sections.length + 1 }}</span>Tags</h1>
+                </header>
+              </summary>
+              <div class="tree-content">
+                <div class="tags-cloud">
+                  {% for name, posts in collections %}
+                    {% if name not in notTags and posts.length > 0 %}
+                      <a class="link local" href="/tags/{{ name | slugify }}/">#{{ name }} <span class="tag-count">{{ posts.length }}</span></a>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </details>
+          </section>
+
+          <section class="block link-list" data-taxon="Section">
+            <details id="elsewhere" open>
+              <summary>
+                <header>
+                  <h1><span class="taxon">{{ sections.length + 2 }}</span>Elsewhere</h1>
+                </header>
+              </summary>
+              <div class="tree-content">
+                <ul>
+                  <li><a class="link external" href="https://feralscholars.substack.com/p/euphoria" target="_blank" rel="noopener">Euphoria</a>
+                    <span class="link-date">11-07-2025</span></li>
+                  <li><a class="link external" href="https://feralscholars.substack.com/p/yoyo-2027" target="_blank" rel="noopener">Yoyo 2027</a>
+                    <span class="link-date">11-23-2025</span></li>
+                </ul>
+              </div>
+            </details>
+          </section>
+        </div>
+      </details>
+    </section>
+  </article>
+
+  <nav id="toc" aria-label="Table of contents">
+    <div class="block">
+      <h1>Table of Contents</h1>
+      <ul class="block">
+        {% for section in sections %}
+        <li>
+          <a class="bullet" href="{{ section.route }}" title="{{ section.title }}, composed">■</a>
+          <span class="link local" data-target="#{{ section.key }}"><span class="taxon">{{ loop.index }}</span>{{ section.title }}</span>
+        </li>
         {% endfor %}
+        <li>
+          <a class="bullet" href="#tags" title="Tags">■</a>
+          <span class="link local" data-target="#tags"><span class="taxon">{{ sections.length + 1 }}</span>Tags</span>
+        </li>
+        <li>
+          <a class="bullet" href="#elsewhere" title="Elsewhere">■</a>
+          <span class="link local" data-target="#elsewhere"><span class="taxon">{{ sections.length + 2 }}</span>Elsewhere</span>
+        </li>
+      </ul>
     </div>
-
-    <h2 class="make-purple">Favs</h2>
-    <ul class="post-list">
-    {% for post in collections.favs %}
-        <li><span class="date">{{ post.date | formatDate }}</span><a class="title" href="{{ post.url }}">{{ post.data.title }}</a></li>
-    {% endfor %}
-    </ul>
-
-    <h2 class="make-purple"><a class="section-view-link" href="/writing/lab-notebook/">Lab notebook</a></h2>
-    <ul class="post-list">
-    {% for post in collections.lab %}
-        <li><span class="date">{{ post.date | formatDate }}</span><a class="title" href="{{ post.url }}">{{ post.data.title }}</a></li>
-    {% endfor %}
-    </ul>
-
-    <p><h2 class="make-purple">Big social problems!</h2></p>
-    <ul class="post-list">
-    {% for post in collections.problems %}
-        <li><span class="date">{{ post.date | formatDate }}</span><a class="title" href="{{ post.url }}">{{ post.data.title }}</a></li>
-    {% endfor %}
-    </ul>
-
-    <h2 class="make-purple"><a class="section-view-link" href="/writing/stories/">Stories existing purely in your imagination</a></h2>
-    <ul class="post-list">
-    {% for post in collections.stories %}
-        <li><span class="date">{{ post.date | formatDate }}</span><a class="title" href="{{ post.url }}">{{ post.data.title }}</a></li>
-    {% endfor %}
-    </ul>
-
-    <h2 class="make-purple">Personal blogging</h2>
-    <ul class="post-list">
-        <li><span class="date">11-07-2025</span><a class="title" href="https://feralscholars.substack.com/p/euphoria">Euphoria</a></li>
-        <li><span class="date">11-23-2025</span><a class="title" href="https://feralscholars.substack.com/p/yoyo-2027">Yoyo 2027</a></li>
-    </ul>
-
+  </nav>
 </div>
+
+<script src="/js/forest.js" defer></script>

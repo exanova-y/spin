@@ -1,17 +1,17 @@
 ---
 layout: layouts/post.njk
-title: "bookshelf"
+title: "Bookshelf"
 date: 2026-07-23
 author: "Yoyo"
 category: lab
 tags: ["literature"]
 ---
-
 - Linus Pauling and the chemistry of life ⭐
-- Living Proof: Stories of Resilience in mathematics
+- Living Proof: Stories of Resilience in mathematics ⭐
 - Ben Barres Autobiography ⭐
-- Shape of a Life ⭐
+- Shape of a Life 
 - Permutation City ⭐
+- Accelerando (reading)
 - Hormone Hunters, the Discovery of Adrenaline
 - Ender's Game
 - Measurements of Decay 
@@ -27,15 +27,15 @@ tags: ["literature"]
 - Summa Technologiae
 - Temporary Autonomous Zones
 - Cute accelerationism
-- Gormenghast Trilogy
+- Gormenghast Trilogy (paused)
 - Ontology of Childhood, Viktor Pelevin
 - Journal of my other self ⭐
 - Signs and Symbols
 - The Picture of Dorian Gray
 - The Count of Monte Cristo
+Follow me on Goodreads!
 
-Shortform:
-
+Shortform (Befriend me on Curius!)
 - [Audrey Tang - Lessons learned from Contributing to Open Source Communities](https://medium.com/@audrey.tang/lessons-i-ve-learned-32f5d8107e34) ⭐ - I really liked the neural patterns of Audrey but don't have more sources from them
 - Take Your Time, Nicky Case ⭐ - Nicky Case is awesome and has been my primary influence since teenage
 - Notes on Work, Weike Wang ⭐
@@ -62,13 +62,13 @@ Shortform:
 - Ten Things You Don't Do in Dubai - BBC News
 - From Afghanistan with Love
 
+
 Other media:
 - Nadia the Secret of Blue Water
 - [Iran, 1 and 2 on Geocities](https://www.geocities.ws/entrixo/iran1.html)
 - Jiabin Huang Awesome Tips
 
 Want to read:
-- Accelerando
 - Cryptonomicon
 - 万历十五年
 - Left Hand of Darkness
@@ -76,4 +76,3 @@ Want to read:
 - Divine Comedy
 - The Floer Jungle
 - Hikikomori, Adolescence without End
-
