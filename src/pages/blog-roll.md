@@ -11,12 +11,14 @@ cool blogs in no particular order. if you have an issue with your name listed he
 - [aman from rome](https://aman-bhargava.com/) - magic words!
 - [jade wang](en.wikipedia.org/wiki/Jade_Wang) - 17 years of classical music, cs, neuro phd, hacker hostels, science fiction memoirs and foresight dinners
 - [lucia computer conoisseur](https://chmod.site/) - very competent, based in NYC, great sense of aesthetics
-
+- [hashmitha quantum physics](https://x.com/Physicla_)
+- [beat](https://beathagenlocher.com/me/) - probably the top 3 at crawling social graphs out of this entire list after jade wang.
+- 
 broader internet sites, including people I haven't yet met
 - [mesityl](https://mesityl.net/)
 - ashish xiangyi kumar
 - [maxine](https://maxine.science/)
-- [beat](https://beathagenlocher.com/me/) - probably the top 3 at crawling social graphs out of this entire list after jade wang.
+
 - [jenny qu](https://x.com/GuanniQu)
 - [vmfunc](https://vmfunc.re/) 
 - [ihar](https://x.com/iharabukhouski) - california institute of machine consciousness

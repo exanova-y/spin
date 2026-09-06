@@ -123,7 +123,7 @@ links appear only on the note's own page, where it is the root.
 │   │       └── post.njk          # One note as the root of its own tree
 │   ├── assets/                   # Static images, videos, and fonts
 │   ├── css/                      # Site stylesheets
-│   ├── js/                       # Client-side scripts, including randomized presence labels
+│   ├── js/                       # Client scripts, including Lanyard presence; offline stays literal
 │   │   └── forest.js             # Tree collapse/expand and contents tracking
 │   ├── favs/                     # Favorite posts (.md)
 │   ├── pages/                    # Lab notebooks, problems, & story posts (.md)

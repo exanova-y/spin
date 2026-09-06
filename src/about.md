@@ -11,25 +11,29 @@ Welcome to the garden. I am Yoyo.
 
 I value interacting with others authentically, deep friendship and human flourishing. I find myself really getting along with those on the international superhighway between major cities and who have recalibrated social norms 5 - 6 times. Ping me `hi at adiabatic.garden` or  `adiabaticgarden` on x/telegram/discord.
 
-Most of my time is spent in [rwx cycles](https://adiabatic.garden/pages/rwx). I'm currently researching and building neurotech hardware. Openwater has been kind enough to let me test lifu pulse sequences at their lab. I've also just visited NYC neuromodulation and [open-sourced my notes](https://github.com/exanova-y/nyc-neuromodec-2026). I'm heavily self-taught. This also means, you can tell me about any errors in my work, and not blame the curriculums of Minerva University (I graduate in 2028). At this moment I'm reading signals and systems & embedded programming.
+My early formative years were spent in hackerspaces in Shenzhen, programming forums, reading endless mathNEWS from UWaterloo, math/physics/open sauce YouTube and bay area internet. When I was 8, I downloaded English syntax into my brain from the programming forums. My fondest memories were scrapping monitors and e-waste in MIT tunnels (I hear of caltech tunnels yet have not been. Dear algorithm, take me there!). When a friend gave me a macbook and desktop GPU in 2025, I practically began doing my own research, running full waveform inversion and making microelectrode arrays.
+
+These days, I'm figuring out more efficient ways to run focused ultrasound simulations and also representations in autoresearch. I shall build an ever-so-powerful infrastructure around around the Earth like Lain. 
+
+I hate poor infra! Towards universal prosperity mandate. At this moment I'm reading feynman acoustic notes.
 
 ### Things I'm thinking about
-- Focused ultrasound and bandwidth
-- Strong vs weak autoresearch, AI for science, closed loop research labs, lights out factories
-- Accelerando, permutation city, survival infrastructure for [chaotic eras](https://three-body-problem.fandom.com/wiki/Chaotic_Era)
-- Resource gradients, limiting factors, reversibility and order, network effects, coordination, incentive structure, funds, coasean bargaining, nash deadlock
-- A world with more authenticity, less hostility, coercion and violence
+- focused ultrasound and bandwidth
+- strong vs weak autoresearch, AI for science, closed loop research labs, lights out factories
+- accelerando, permutation city, survival infrastructure for [chaotic eras](https://three-body-problem.fandom.com/wiki/Chaotic_Era)
+- resource gradients, limiting factors, reversibility and order, network effects, coordination, incentive structure, funds, coasean bargaining, nash deadlock
+- a world with more authenticity, less hostility, coercion and violence
 
 ### I like
-- [Bookmarking on the internet](https://adiabatic.garden/pages/bookshelf)
-- Rhythm games, breakbeats, drum and bass, hyperpop [see my song psychosis 2019](https://x.com/adiabaticgarden/status/2088821244271698353?s=20)
-- [Pharmacokinetics simulators](https://estrannai.se/) and hormone titration
-- Systems, infrastructure, maps, trapdoors
-- Hard problems
-- Information overload
-  - "There's a high density of links on your blog." People often inform me. Indeed! You can consider me to be a computronium heat sink. Input papers, perform transforms and computational capacity becomes asymptotically online.
+- [bookmarking on the internet](https://adiabatic.garden/pages/bookshelf)
+- rhythm games, breakbeats, drum and bass, hyperpop [see my song psychosis 2019](https://x.com/adiabaticgarden/status/2088821244271698353?s=20)
+- [pharmacokinetics simulators](https://estrannai.se/) and hormone titration
+- systems, infrastructure, maps, trapdoors
+- hard problems
+- information overload
+  - "there's a high density of links on your blog." People often inform me. Indeed! You can consider me to be a computronium heat sink. Input papers, perform transforms and computational capacity becomes asymptotically online.
 - e-waste
-  - Sometimes I go out to [scrap for e-waste](https://adiabatic.garden/pages/e-waste). I'm grateful to have found laptops, desktop GPUs and monitors for my research. The best e-waste is found in large quantities in MIT underground tunnels and I've yet to visit caltech tunnels.
+  - sometimes I go out to [scrap for e-waste](https://adiabatic.garden/pages/e-waste). I'm grateful to have found laptops, desktop GPUs and monitors for my research. The best e-waste is found in large quantities in MIT underground tunnels and I've yet to visit caltech tunnels.
 - [Fascination, people](https://adiabatic.garden/pages/blog-roll)
 
 ### Hopeful ruliads

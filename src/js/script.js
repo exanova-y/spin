@@ -528,13 +528,20 @@ async function getDiscordStatus() {
     const userId = siteConfig.discordId; // Replace with your actual ID
     try {
         const response = await fetch(`https://api.lanyard.rest/v1/users/${userId}`);
+        if (!response.ok) {
+            throw new Error(`Lanyard returned HTTP ${response.status}`);
+        }
+
         const data = await response.json();
 
         if (data.success) {
             const status = data.data.discord_status;
             updateStatusUI(status);
+        } else {
+            throw new Error("Lanyard did not return presence data");
         }
     } catch (error) {
+        updateStatusUI("unavailable");
         console.error("Error fetching status:", error);
     }
 }
@@ -544,19 +551,21 @@ function updateStatusUI(status) {
 
     // deranged statuses
     const statusMap = {
-        online: [ "actually online and responsive"
+        online: ["actually online and responsive"],
+        idle: [
+            "think condensating",
+            "arxiv compost heaping...",
+            "computronium transfer function > 10 bits/s",
+            "we're building the autopoietic ergodicity for the next trillion terabytes of computronium. a research-grade substrate for decentralized computing designed for extreme robustness in nash bargaining and unverifiable correctness across distributed systems.",
+            "moravec operations",
+            "sleep deprived",
+            "poasting unhinged ecstatic content",
+            "weaponizing links on curius",
+            "ingesting 300 new papers"
         ],
-        idle: "think condensating",
-        "arxiv compost heaping...":
-        "computronium transfer function > 10 bits/s":
-        : "we're building the autopoietic ergodicity for the next trillion terabytes of computronium. a research-grade substrate for decentralized computing designed for extreme robustness in nash bargaining and unverifiable correctness across distributed systems.",
-          "moravec operations",
-          "sleep deprived",
-          "poasting unhinged ecstatic content",
-          "weaponizing links on curius",
-          "ingesting 300 new papers"
         dnd: ["do not disturb"],
-        offline: ["busy nash bargaining", "sleeping.", "trapped in a ratchet effect", "floating on the streets"]
+        offline: ["offline"],
+        unavailable: ["status unavailable"]
     };
 
     const statuses = statusMap[status] || ["unknown"];
